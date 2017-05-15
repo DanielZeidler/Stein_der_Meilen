@@ -43,7 +43,16 @@ Situationen (evtl. Animation):
 -Licht geht an
 
 
-
+Grafiktemplates:
+-Menschen(verschiedene Größen) + verschiedene Gegenstände für o.g. Situationen
+-Windmühle
+-Tiere
+-Bäume(verschieden Arten, Größen, Farben)
+-2 Siedlungen
+-Wagen (mit Kisten)
+-Sternenhimmel
+-Wasserhebung durch Dampfmaschine
+-Glühbirne
 
 Figuren:
 
