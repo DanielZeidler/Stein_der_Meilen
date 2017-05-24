@@ -12,7 +12,7 @@ public class MouseClickOnItem : MonoBehaviour {
 
     private Vector2 cursorHotspot;
 
-    private void Start()
+    void Start()
     {
         Cursor.SetCursor(defaultTexture, hotSpot, cursorMode);
     }

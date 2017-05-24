@@ -4,10 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour {
+    
+    public string scene;
 
-
-    public void LoadScene(string scene)
+    private void OnMouseDown()
     {
-       SceneManager.LoadScene("Assets/Save/"+scene+".unity", LoadSceneMode.Single);  
+        LoadScene();
+    }
+
+    public void LoadScene()
+    {
+        if(scene.Length > 0)
+        {
+            SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        }
+        
     }
 }
