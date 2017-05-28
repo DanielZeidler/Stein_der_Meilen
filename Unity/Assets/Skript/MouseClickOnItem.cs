@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseClickOnItem : MonoBehaviour {
 
@@ -11,7 +12,9 @@ public class MouseClickOnItem : MonoBehaviour {
     public bool isClicked = false;
 
     private Vector2 cursorHotspot;
+    
 
+  
     void Start()
     {
         Cursor.SetCursor(defaultTexture, hotSpot, cursorMode);
