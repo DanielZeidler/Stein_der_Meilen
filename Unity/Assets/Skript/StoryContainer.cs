@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StoryContainer : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class StoryContainer : MonoBehaviour
     public Dictionary<int, string[]> paragraphen;
     public static int actParagraph = 0;
     public static int actTextbaustein = 0;
-
+    public bool play = false;
+    public float playSpeed;
     private static StoryContainer _instance;
 
     public static StoryContainer Instance
@@ -64,20 +66,50 @@ public class StoryContainer : MonoBehaviour
             tmp[n] = textbausteine[i];
         }
         paragraphen.Add(3, tmp);
-/*
-        foreach(int i in paragraphen.Keys)
+
+    }
+
+    public void setText()
+    {
+        Text text = null;
+        text = GameObject.Find("StoryText").GetComponent<Text>();
+        text.text = "";
+        string paragraph = "";
+        if (text != null)
         {
-            foreach (string s in paragraphen[i])
+            foreach (string textbaustein in paragraphen[actParagraph])
             {
-                Debug.Log(s);
+                paragraph += textbaustein + "\n";
+                
             }
+            StartCoroutine(TextScroll(text, paragraph));
         }
-        */
+    }
+
+    private IEnumerator TextScroll(Text text,string lineOfText)
+    {
+        Debug.Log("Core");
+        int letter = 0;
+
+        while(letter < lineOfText.Length && play)
+        {
+            Canvas.ForceUpdateCanvases();
+            GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
+            Canvas.ForceUpdateCanvases();
+
+            text.text += lineOfText[letter];
+            letter++;
+            yield return new WaitForSeconds(playSpeed);
+        }
+        Canvas.ForceUpdateCanvases();
+        GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
+        Canvas.ForceUpdateCanvases();
+        text.text = lineOfText;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

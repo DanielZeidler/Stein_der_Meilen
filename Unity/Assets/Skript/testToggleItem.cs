@@ -6,24 +6,16 @@ public class testToggleItem : MonoBehaviour {
 
     public string targetName;
     public bool value;
-
-    private GameManager gamMan;
+    
 
     private void Start()
     {
-        gamMan = GameManager.Instance;
     }
 
     private void OnMouseDown()
     {
-        toggleButtonInteractable();
+        GameManager.Instance.toggleErfindungButtonInteractable(targetName);
     }
 
-    public void toggleButtonInteractable()
-    {
-        if (gamMan.getButtonMap().ContainsKey(targetName))
-        {
-            gamMan.toggleErfindungButtonInteractable(targetName);
-        }
-    }
+   
 }
