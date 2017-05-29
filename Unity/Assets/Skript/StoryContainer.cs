@@ -6,9 +6,9 @@ public class StoryContainer : MonoBehaviour
 {
     
     public string[] textbausteine;
-    private Dictionary<int, string[]> paragraphen;
-
-
+    public Dictionary<int, string[]> paragraphen;
+    public static int actParagraph = 0;
+    public static int actTextbaustein = 0;
 
     private static StoryContainer _instance;
 
@@ -35,35 +35,36 @@ public class StoryContainer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //map textbausteine to paragraphen
         string[] tmp = new string[4];
         for (int i = 0, n=0; i <= 3; i++,n++)
         {
             tmp[n]= textbausteine[i];
         }
         
-        paragraphen.Add(1, tmp);
+        paragraphen.Add(0, tmp);
 
         tmp = new string[4];
         for (int i = 4,n=0; i <= 7; i++,n++)
         {
             tmp[n] = textbausteine[i];
         }
-        paragraphen.Add(2, tmp);
+        paragraphen.Add(1, tmp);
 
         tmp = new string[6];
         for (int i = 8, n=0; i <= 13; i++,n++)
         {
             tmp[n] = textbausteine[i];
         }
-        paragraphen.Add(3, tmp);
+        paragraphen.Add(2, tmp);
 
         tmp = new string[7];
         for (int i = 14, n=0; i <= 20; i++,n++)
         {
             tmp[n] = textbausteine[i];
         }
-        paragraphen.Add(4, tmp);
-
+        paragraphen.Add(3, tmp);
+/*
         foreach(int i in paragraphen.Keys)
         {
             foreach (string s in paragraphen[i])
@@ -71,6 +72,7 @@ public class StoryContainer : MonoBehaviour
                 Debug.Log(s);
             }
         }
+        */
     }
 
     // Update is called once per frame

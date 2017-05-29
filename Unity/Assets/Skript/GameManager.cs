@@ -17,27 +17,22 @@ public class GameManager : MonoBehaviour {
 
     void Awake()
     {
-        Debug.Log("Awake");
         if (_instance == null)
         {
             _instance = this;
             buttonMap = new Dictionary<string, Button>();
             DontDestroyOnLoad(gameObject);
-            Debug.Log("GameManagerInstance Null");
         }
         else if(_instance != this){
             Destroy(gameObject);
-            Debug.Log("GameManagerInstance not Null");
         }
     }
 
     void Start () {
-        Debug.Log("Start");
         Button[] btnArray = GameObject.Find("ItemPanel").GetComponentsInChildren<Button>();
         //Initialisiere ErfindungenButtons
         if (Instance.buttonMap.Keys.Count == 0 && Instance.buttonMap != null)
         {
-            Debug.Log("Init ErfBtn");
             for (int n = 0; n < btnArray.Length; n++)
             {
                 if (btnArray[n].tag == "ErfindungButton")
