@@ -85,9 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Skript\GameManager.cs" />
-    <Compile Include="Assets\Skript\GameManagerLoader.cs" />
     <Compile Include="Assets\Skript\LoadLevel.cs" />
     <Compile Include="Assets\Skript\MouseClickOnItem.cs" />
+    <Compile Include="Assets\Skript\SingletonLoader.cs" />
+    <Compile Include="Assets\Skript\StoryContainer.cs" />
     <Compile Include="Assets\Skript\testToggleItem.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ApplicationManager.cs" />
