@@ -6,7 +6,6 @@ using UnityEngine;
 public class OnClickPlay : MonoBehaviour {
 
     public string[] paragraph;
-    private int actPara = -1;
     // Use this for initialization
     private void Awake()
     {
