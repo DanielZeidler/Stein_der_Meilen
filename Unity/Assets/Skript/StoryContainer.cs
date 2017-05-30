@@ -11,6 +11,7 @@ public class StoryContainer : MonoBehaviour
     public static int actParagraph = 0;
     public static int actTextbaustein = 0;
     public bool play = false;
+    public bool pause = false;
     public float playSpeed;
     private static StoryContainer _instance;
 
@@ -93,18 +94,23 @@ public class StoryContainer : MonoBehaviour
 
         while(letter < lineOfText.Length && play)
         {
-            Canvas.ForceUpdateCanvases();
-            GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
-            Canvas.ForceUpdateCanvases();
+            if (!pause)
+            {
+                Canvas.ForceUpdateCanvases();
+                GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
+                Canvas.ForceUpdateCanvases();
 
-            text.text += lineOfText[letter];
-            letter++;
+                text.text += lineOfText[letter];
+                letter++;
+            }
             yield return new WaitForSeconds(playSpeed);
         }
+        
+        StoryContainer.Instance.play = false;
+        text.text = lineOfText;
         Canvas.ForceUpdateCanvases();
         GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
         Canvas.ForceUpdateCanvases();
-        text.text = lineOfText;
     }
 
     // Update is called once per frame

@@ -18,9 +18,14 @@ public class OnClickPlay : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        
-        StoryContainer.Instance.play = !StoryContainer.Instance.play;
-        StoryContainer.Instance.setText();
+        if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
+        {
+            StoryContainer.Instance.play = true;
+            StoryContainer.Instance.setText();
+        }else if(StoryContainer.Instance.play && StoryContainer.Instance.pause)
+        {
+            StoryContainer.Instance.pause = false;
+        }
     }
 
 }
