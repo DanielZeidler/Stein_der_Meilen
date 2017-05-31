@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     private static GameManager _instance;
-    private Dictionary<string,Button> buttonMap = null;
+    public  Dictionary<string,bool> buttonMap;
 
     public static GameManager Instance
     {
@@ -20,8 +20,10 @@ public class GameManager : MonoBehaviour {
         if (_instance == null)
         {
             _instance = this;
-            buttonMap = new Dictionary<string, Button>();
+            buttonMap = new Dictionary<string, bool>();
+
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(GameObject.Find("ItemPanel"));
         }
         else if(_instance != this){
             Destroy(gameObject);
@@ -31,14 +33,14 @@ public class GameManager : MonoBehaviour {
     void Start () {
         Button[] btnArray = GameObject.Find("ItemPanel").GetComponentsInChildren<Button>();
         //Initialisiere ErfindungenButtons
-        if (Instance.buttonMap.Keys.Count == 0 && Instance.buttonMap != null)
+        if (buttonMap.Keys.Count == 0 && buttonMap != null)
         {
             for (int n = 0; n < btnArray.Length; n++)
             {
                 if (btnArray[n].tag == "ErfindungButton")
                 {
                     btnArray[n].interactable = false;
-                    Instance.buttonMap.Add(btnArray[n].name, btnArray[n]);
+                    Instance.buttonMap.Add(btnArray[n].name, btnArray[n].interactable);
                 }
             }
         }
@@ -47,29 +49,40 @@ public class GameManager : MonoBehaviour {
 
 	void Update () {
         Button[] btnArray = GameObject.FindObjectsOfType<Button>();
-        for (int n = 0; n < btnArray.Length; n++)
+        if(btnArray != null)
         {
-            if (btnArray[n].tag == "ErfindungButton")
+            for (int n = 0; n < btnArray.Length; n++)
             {
-                btnArray[n].interactable = buttonMap[btnArray[n].name].interactable;
+                if (btnArray[n].tag == "ErfindungButton")
+                {
+                    btnArray[n].interactable = Instance.buttonMap[btnArray[n].name];
+                }
             }
         }
       
     }
 
 
-    public void setErfindungButtonInteractable(string buttonName, bool boolean)
-    {
-        Instance.buttonMap[buttonName].interactable = boolean;
-    }
-
     public void toggleErfindungButtonInteractable(string buttonName)
     {
-        Instance.buttonMap[buttonName].interactable = !Instance.buttonMap[buttonName].interactable;
+        if (Instance.buttonMap.ContainsKey(buttonName))
+        {
+            Instance.buttonMap[buttonName] = !Instance.buttonMap[buttonName];
+        }
+        else
+        {
+            Debug.Log("Kein 'ErfindungButton' mit Namen: " + buttonName);
+        }
+    }
+    public void setErfindungButtonInteractable(string buttonName,bool value)
+    {
+        if (Instance.buttonMap.ContainsKey(buttonName))
+        {
+            Instance.buttonMap[buttonName] = value;
+        }else
+        {
+            Debug.Log("Kein 'ErfindungButton' mit Namen: " + buttonName);
+        }
     }
 
-    public Dictionary<string, Button> getButtonMap()
-    {
-        return Instance.buttonMap;
-    }
 }

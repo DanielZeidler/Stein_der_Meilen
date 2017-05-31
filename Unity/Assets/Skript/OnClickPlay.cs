@@ -6,11 +6,10 @@ using UnityEngine;
 public class OnClickPlay : MonoBehaviour {
 
     public string[] paragraph;
-    private int actPara = 0;
     // Use this for initialization
     private void Awake()
     {
-        paragraph = new string[10];
+        
     }
     void Start () {
         
@@ -18,30 +17,14 @@ public class OnClickPlay : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        setText();
+        if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
+        {
+            StoryContainer.Instance.play = true;
+            StoryContainer.Instance.setText();
+        }else if(StoryContainer.Instance.play && StoryContainer.Instance.pause)
+        {
+            StoryContainer.Instance.pause = false;
+        }
     }
 
-    private void setText()
-    {
-        actPara = StoryContainer.actParagraph;
-        paragraph = StoryContainer.Instance.paragraphen[actPara];
-       
-        Text text = GameObject.Find("StoryText").GetComponent<Text>();
-        string paragraphString = "";
-        foreach (string textbaustein in paragraph)
-        {
-            paragraphString += textbaustein;
-        }
-        text.text = paragraphString;
-    }
-
-    // Update is called once per frame
-    void Update () {
-        if(actPara != StoryContainer.actParagraph)
-        {
-            setText();
-        }
-        
-        
-	}
 }
