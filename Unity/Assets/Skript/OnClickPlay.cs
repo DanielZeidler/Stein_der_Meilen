@@ -4,8 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class OnClickPlay : MonoBehaviour {
-
-    public string[] paragraph;
+    
     // Use this for initialization
     private void Awake()
     {

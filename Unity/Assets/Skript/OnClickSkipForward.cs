@@ -18,9 +18,9 @@ public class OnClickSkipForward : MonoBehaviour {
             StoryContainer.Instance.play = false;
             StoryContainer.Instance.pause = false;
         }
-        else if(StoryContainer.actParagraph < StoryContainer.Instance.paragraphen.Keys.Count - 1)
+        else if(StoryContainer.actTextbaustein < StoryContainer.Instance.textbausteine.Length - 1 && StoryContainer.actStoryPart +1 < StoryContainer.Instance.getAccessStoryPart())
         {
-            StoryContainer.actParagraph++;
+            StoryContainer.actTextbaustein++;
             StoryContainer.Instance.play = true;
             StoryContainer.Instance.pause = false;
             StoryContainer.Instance.setText();

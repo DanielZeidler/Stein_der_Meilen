@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour {
             buttonMap = new Dictionary<string, bool>();
 
             DontDestroyOnLoad(gameObject);
-            DontDestroyOnLoad(GameObject.Find("ItemPanel"));
         }
         else if(_instance != this){
             Destroy(gameObject);

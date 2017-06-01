@@ -13,16 +13,14 @@ public class OnClickSkipBack : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        Debug.Log("SkipBack");
-
         if (StoryContainer.Instance.play)
         {
             StoryContainer.Instance.play = false;
             StoryContainer.Instance.pause = false;
         }
-        else if (StoryContainer.actParagraph > 0)
+        else if (StoryContainer.actTextbaustein > 0)
         {
-            StoryContainer.actParagraph--;
+            StoryContainer.actTextbaustein--;
             StoryContainer.Instance.play = true;
             StoryContainer.Instance.pause = false;
             StoryContainer.Instance.setText();
