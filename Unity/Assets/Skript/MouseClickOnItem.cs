@@ -32,7 +32,16 @@ public class MouseClickOnItem : MonoBehaviour {
             Cursor.SetCursor(defaultTexture, hotSpot, cursorMode);
             isClicked = false;
         }
-        
+        foreach(Button btn in GameObject.FindObjectsOfType<Button>())
+        {
+            if(btn.tag != "ErfindungButton")
+            {
+                btn.onClick.AddListener(delegate {
+                    Cursor.SetCursor(defaultTexture, hotSpot, cursorMode);
+                    isClicked = false;
+                });
+            }
+        }
     }
 
 }

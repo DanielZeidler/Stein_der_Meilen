@@ -13,12 +13,13 @@ public class OnClickSkipForward : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        Debug.Log(StoryContainer.actTextbaustein);
         if (StoryContainer.Instance.play)
         {
             StoryContainer.Instance.play = false;
             StoryContainer.Instance.pause = false;
         }
-        else if(StoryContainer.actTextbaustein < StoryContainer.Instance.textbausteine.Length - 1 && StoryContainer.actStoryPart +1 < StoryContainer.Instance.getAccessStoryPart())
+        else if(StoryContainer.actTextbaustein < StoryContainer.Instance.textbausteine.Length - 1 && StoryContainer.actTextbaustein < StoryContainer.accessStoryPart)
         {
             StoryContainer.actTextbaustein++;
             StoryContainer.Instance.play = true;

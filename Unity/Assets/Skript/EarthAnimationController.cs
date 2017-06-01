@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EarthAnimationController : MonoBehaviour {
+public class EarthAnimationController : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (StoryContainer.actTextbaustein == 1)
         {
             foreach (SpriteRenderer spRen in GameObject.Find("ErdeAnimWrapper").GetComponentsInChildren<SpriteRenderer>()) spRen.enabled = false;

@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class StoryContainer : MonoBehaviour
 {
-    
+
     public string[] textbausteine;
 
-    public static int actStoryPart = 0;
+    public static int accessStoryPart = 1;
     public static int actTextbaustein = 0;
     public static int actLetter;
     private static string actText = "";
@@ -18,11 +18,9 @@ public class StoryContainer : MonoBehaviour
     public bool pause = false;
     public float playSpeed;
 
-    public static bool accessStoryPart_1 = true;
-    public static bool accessStoryPart_2 = false;
-    public static bool accessStoryPart_3 = false;
-    public static bool accessStoryPart_4 = false;
-
+    public static bool interaction = false;
+    public static bool resetInfoBox = false;
+    
     public bool rotationEarth = false;
 
     private static StoryContainer _instance;
@@ -58,25 +56,14 @@ public class StoryContainer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (GameObject.Find("StoryText") != null)
         {
             GameObject.Find("StoryText").GetComponent<Text>().text = actText.Substring(0, actLetter);
         }
         
     }
-
-    public int getAccessStoryPart()
-    {
-        int part = 0;
-
-        if (accessStoryPart_1) part = 3;
-        if (accessStoryPart_2) part = 7;
-        if (accessStoryPart_3) part = 13;
-        if (accessStoryPart_4) part = 20;
-        
-        return part;
-    }
+    
 
     public void setText()
     {
@@ -87,32 +74,50 @@ public class StoryContainer : MonoBehaviour
         {
             StartCoroutine(TextScroll(textbausteine[actTextbaustein]));
         }
+
     }
 
     private IEnumerator TextScroll(string lineOfText)
     {
         int letter = 0;
 
-        while(letter < lineOfText.Length && play)
+        while (letter < lineOfText.Length && play)
         {
             if (!pause)
             {
                 Canvas.ForceUpdateCanvases();
-                GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
-                Canvas.ForceUpdateCanvases();
-                GameObject.Find("StoryText").GetComponent<Text>().text += lineOfText[letter];
+                if(GameObject.Find("ScrollRect") != null)
+                {
+                    GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
+                    Canvas.ForceUpdateCanvases();
+                    GameObject.Find("StoryText").GetComponent<Text>().text += lineOfText[letter];
+                }
                 actText = lineOfText;
                 letter++;
                 StoryContainer.actLetter = letter;
             }
             yield return new WaitForSeconds(playSpeed);
         }
-        
+
         StoryContainer.Instance.play = false;
-        GameObject.Find("StoryText").GetComponent<Text>().text = lineOfText;
-        actLetter = lineOfText.Length;
-        Canvas.ForceUpdateCanvases();
-        GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
-        Canvas.ForceUpdateCanvases();
+        
+        if (GameObject.Find("ScrollRect") != null && GameObject.Find("StoryText") != null)
+        {
+            GameObject.Find("StoryText").GetComponent<Text>().text = lineOfText;
+            actLetter = lineOfText.Length;
+            Canvas.ForceUpdateCanvases();
+            GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
+            Canvas.ForceUpdateCanvases();
+        }
+
+        checkInteraction();
+    }
+
+    private void checkInteraction()
+    {
+        if (StoryContainer.actTextbaustein == 1)
+        {
+            StoryContainer.interaction = true;
+        }
     }
 }

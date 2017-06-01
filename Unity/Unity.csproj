@@ -84,6 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Skript\ButtonsInteractable.cs" />
     <Compile Include="Assets\Skript\EarthAnimationController.cs" />
     <Compile Include="Assets\Skript\GameManager.cs" />
     <Compile Include="Assets\Skript\LoadLevel.cs" />
@@ -95,8 +96,9 @@
     <Compile Include="Assets\Skript\OnClickSkipForward.cs" />
     <Compile Include="Assets\Skript\SingletonLoader.cs" />
     <Compile Include="Assets\Skript\StoryContainer.cs" />
+    <Compile Include="Assets\Skript\StoryScreenInteractionController.cs" />
     <Compile Include="Assets\Skript\davinciSpeak.cs" />
-    <Compile Include="Assets\Skript\testToggleItem.cs" />
+    <Compile Include="Assets\Skript\toggleMenu.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ApplicationManager.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ChangeColor.cs" />
