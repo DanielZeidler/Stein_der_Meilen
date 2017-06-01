@@ -52,9 +52,9 @@ public class StoryScreenInteractionController : MonoBehaviour
 
         if (GameObject.Find("WaffenButton").GetComponent<MouseClickOnItem>().isClicked)
         {
-            GameObject.Find("500000vChrButton").GetComponent<Button>().onClick.AddListener(delegate {
+            GameObject.Find("2,2MiovChrButton").GetComponent<Button>().onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                StoryContainer.accessStoryPart = 2;
+                if(StoryContainer.accessStoryPart < 2) StoryContainer.accessStoryPart = 2;
                 GameObject.Find("InfoBoxText").GetComponent<Text>().text = infotexte[1];
                 GameObject.Find("InfoBoxImage").GetComponent<Image>().enabled = true;
                 GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate
@@ -68,63 +68,72 @@ public class StoryScreenInteractionController : MonoBehaviour
 
         if (GameObject.Find("FeuerButton").GetComponent<MouseClickOnItem>().isClicked)
         {
-            GameObject.Find("4JtsdvChrButton").GetComponent<Button>().onClick.AddListener(delegate {
+            GameObject.Find("500000vChrButton").GetComponent<Button>().onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel1 = true;
-                StoryContainer.accessStoryPart = 3;
-            });
-        }
-        if (GameObject.Find("BuchdruckButton").GetComponent<MouseClickOnItem>().isClicked)
-        {
-            GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
-            });
-        }
-        if (GameObject.Find("DampfmaschineButton").GetComponent<MouseClickOnItem>().isClicked)
-        {
-            GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
-            });
-        }
-        if (GameObject.Find("FernrohrButton").GetComponent<MouseClickOnItem>().isClicked)
-        {
-            GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
-            });
-        }
-        if (GameObject.Find("GlasButton").GetComponent<MouseClickOnItem>().isClicked)
-        {
-            GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
-            });
-        }
-        if (GameObject.Find("GluebirneButton").GetComponent<MouseClickOnItem>().isClicked)
-        {
-            GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                if (StoryContainer.accessStoryPart < 4) StoryContainer.accessStoryPart = 4;
             });
         }
         if (GameObject.Find("RadButton").GetComponent<MouseClickOnItem>().isClicked)
         {
-            GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate {
+            GameObject.Find("4JtsdvChrButton").GetComponent<Button>().onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-            });
-        }
-        if (GameObject.Find("SchiesspulverButton").GetComponent<MouseClickOnItem>().isClicked)
-        {
-            GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                if (StoryContainer.accessStoryPart < 5) StoryContainer.accessStoryPart = 5;
             });
         }
         if (GameObject.Find("SchriftButton").GetComponent<MouseClickOnItem>().isClicked)
         {
-            GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate {
+            GameObject.Find("3500vChrButton").GetComponent<Button>().onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
+                if (StoryContainer.accessStoryPart < 6) StoryContainer.accessStoryPart = 6;
+            });
+        }
+        if (GameObject.Find("GlasButton").GetComponent<MouseClickOnItem>().isClicked)
+        {
+            GameObject.Find("1800vChrButton").GetComponent<Button>().onClick.AddListener(delegate {
+                GameManager.Instance.accessMinispiel0 = true;
+                if (StoryContainer.accessStoryPart < 8) StoryContainer.accessStoryPart = 8;
+            });
+        }
+        if (GameObject.Find("SchiesspulverButton").GetComponent<MouseClickOnItem>().isClicked)
+        {
+            GameObject.Find("1044Button").GetComponent<Button>().onClick.AddListener(delegate {
+                GameManager.Instance.accessMinispiel0 = true;
+                if (StoryContainer.accessStoryPart < 9) StoryContainer.accessStoryPart = 9;
             });
         }
         if (GameObject.Find("WindmuehleButton").GetComponent<MouseClickOnItem>().isClicked)
         {
-            GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate {
+            GameObject.Find("1180Button").GetComponent<Button>().onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
+                if (StoryContainer.accessStoryPart < 10) StoryContainer.accessStoryPart = 10;
+            });
+        }
+        if (GameObject.Find("BuchdruckButton").GetComponent<MouseClickOnItem>().isClicked)
+        {
+            GameObject.Find("1450Button").GetComponent<Button>().onClick.AddListener(delegate {
+                GameManager.Instance.accessMinispiel0 = true;
+                if (StoryContainer.accessStoryPart < 14) StoryContainer.accessStoryPart = 14;
+            });
+        }
+        if (GameObject.Find("FernrohrButton").GetComponent<MouseClickOnItem>().isClicked)
+        {
+            GameObject.Find("1608Button").GetComponent<Button>().onClick.AddListener(delegate {
+                GameManager.Instance.accessMinispiel0 = true;
+                if (StoryContainer.accessStoryPart < 16) StoryContainer.accessStoryPart = 16;
+            });
+        }
+        if (GameObject.Find("DampfmaschineButton").GetComponent<MouseClickOnItem>().isClicked)
+        {
+            GameObject.Find("1712Button").GetComponent<Button>().onClick.AddListener(delegate {
+                GameManager.Instance.accessMinispiel0 = true;
+                if (StoryContainer.accessStoryPart < 17) StoryContainer.accessStoryPart = 17;
+            });
+        }
+        if (GameObject.Find("GluebirneButton").GetComponent<MouseClickOnItem>().isClicked)
+        {
+            GameObject.Find("1880Button").GetComponent<Button>().onClick.AddListener(delegate {
+                GameManager.Instance.accessMinispiel0 = true;
+                if (StoryContainer.accessStoryPart < 19) StoryContainer.accessStoryPart = 19;
             });
         }
     }
