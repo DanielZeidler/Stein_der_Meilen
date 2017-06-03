@@ -13,7 +13,6 @@ public class OnClickSkipForward : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        Debug.Log(StoryContainer.actTextbaustein);
         if (StoryContainer.Instance.play)
         {
             StoryContainer.Instance.play = false;

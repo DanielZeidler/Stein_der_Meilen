@@ -33,6 +33,24 @@ public class EarthAnimationController : MonoBehaviour
             StoryContainer.Instance.rotationEarth = true;
             foreach (SpriteRenderer spRen in GameObject.Find("menschMitFeuerWrapper").GetComponentsInChildren<SpriteRenderer>()) spRen.enabled = true;
         }
+        else if (StoryContainer.actTextbaustein == 4)
+        {
+            foreach (SpriteRenderer spRen in GameObject.Find("ErdeAnimWrapper").GetComponentsInChildren<SpriteRenderer>()) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in GameObject.Find("menschKisteWrapper").GetComponentsInChildren<SpriteRenderer>()) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 5)
+        {
+            foreach (SpriteRenderer spRen in GameObject.Find("ErdeAnimWrapper").GetComponentsInChildren<SpriteRenderer>()) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in GameObject.Find("wagenWrapper").GetComponentsInChildren<SpriteRenderer>()) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 6)
+        {
+            foreach (SpriteRenderer spRen in GameObject.Find("ErdeAnimWrapper").GetComponentsInChildren<SpriteRenderer>()) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in GameObject.Find("menschSteintafelWrapper").GetComponentsInChildren<SpriteRenderer>()) spRen.enabled = true;
+        }
         else
         {
             StoryContainer.Instance.rotationEarth = false;

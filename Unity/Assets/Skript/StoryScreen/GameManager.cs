@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             {
                 if (btnArray[n].tag == "ErfindungButton")
                 {
-                    btnArray[n].interactable = true;
+                    btnArray[n].interactable = false;
                     Instance.buttonMap.Add(btnArray[n].name, btnArray[n].interactable);
                 }
             }
