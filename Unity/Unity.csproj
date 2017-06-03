@@ -84,21 +84,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Skript\ButtonsInteractable.cs" />
-    <Compile Include="Assets\Skript\EarthAnimationController.cs" />
-    <Compile Include="Assets\Skript\GameManager.cs" />
-    <Compile Include="Assets\Skript\LoadLevel.cs" />
-    <Compile Include="Assets\Skript\MouseClickOnItem.cs" />
-    <Compile Include="Assets\Skript\MovingEarth.cs" />
-    <Compile Include="Assets\Skript\OnClickPause.cs" />
-    <Compile Include="Assets\Skript\OnClickPlay.cs" />
-    <Compile Include="Assets\Skript\OnClickSkipBack.cs" />
-    <Compile Include="Assets\Skript\OnClickSkipForward.cs" />
-    <Compile Include="Assets\Skript\SingletonLoader.cs" />
-    <Compile Include="Assets\Skript\StoryContainer.cs" />
-    <Compile Include="Assets\Skript\StoryScreenInteractionController.cs" />
-    <Compile Include="Assets\Skript\davinciSpeak.cs" />
-    <Compile Include="Assets\Skript\toggleMenu.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\ButtonsInteractable.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\EarthAnimationController.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\GameManager.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\LoadLevel.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\MouseClickOnItem.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\MovingEarth.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\OnClickPause.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\OnClickPlay.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\OnClickSkipBack.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\OnClickSkipForward.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\SingletonLoader.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\StoryContainer.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\StoryScreenInteractionController.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\davinciSpeak.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\toggleMenu.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ApplicationManager.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ChangeColor.cs" />
@@ -113,6 +113,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
     <None Include="Assets\Unity Sample UI\Fonts\Jupiter\LICENSE.txt" />
     <None Include="Assets\Unity Sample UI\Materials\UI-Default-No-Alpha.shader" />
     <None Include="Assets\Unity Sample UI\Textures and Sprites\SF UI\Background\LICENSE.txt" />

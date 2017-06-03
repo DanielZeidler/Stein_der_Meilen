@@ -9,9 +9,9 @@ public class toggleMenu : MonoBehaviour {
     {
         if (GameObject.Find("MenuPanel") != null)
         {
-            if (GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text == "hide Menu")
+            if (GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text == "hide menu")
             {
-                GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text = "show Menu";
+                GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text = "SHOW MENU";
 
                 GameObject.Find("MenuPanel").GetComponent<Image>().enabled = false;
 
@@ -27,9 +27,9 @@ public class toggleMenu : MonoBehaviour {
                 GameObject.Find("CreditsButton").GetComponentInChildren<Image>().enabled = false;
 
             }
-            else if(GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text == "show Menu")
+            else if(GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text == "SHOW MENU")
             {
-                GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text = "hide Menu";
+                GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text = "hide menu";
 
                 GameObject.Find("MenuPanel").GetComponent<Image>().enabled = true;
 

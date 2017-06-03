@@ -131,6 +131,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
     <None Include="Assets\Unity Sample UI\Fonts\Jupiter\LICENSE.txt" />
     <None Include="Assets\Unity Sample UI\Materials\UI-Default-No-Alpha.shader" />
     <None Include="Assets\Unity Sample UI\Textures and Sprites\SF UI\Background\LICENSE.txt" />
