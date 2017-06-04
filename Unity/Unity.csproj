@@ -84,7 +84,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Skript\StoryScreen\ButtonsInteractable.cs" />
     <Compile Include="Assets\Skript\StoryScreen\EarthAnimationController.cs" />
     <Compile Include="Assets\Skript\StoryScreen\GameManager.cs" />
     <Compile Include="Assets\Skript\StoryScreen\LoadLevel.cs" />
@@ -98,6 +97,9 @@
     <Compile Include="Assets\Skript\StoryScreen\StoryContainer.cs" />
     <Compile Include="Assets\Skript\StoryScreen\StoryScreenInteractionController.cs" />
     <Compile Include="Assets\Skript\StoryScreen\davinciSpeak.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\edisonSpeak.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\gutenbergSpeak.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\hansSpeak.cs" />
     <Compile Include="Assets\Skript\StoryScreen\toggleMenu.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ApplicationManager.cs" />

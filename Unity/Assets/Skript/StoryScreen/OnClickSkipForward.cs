@@ -23,7 +23,7 @@ public class OnClickSkipForward : MonoBehaviour {
             StoryContainer.actTextbaustein++;
             StoryContainer.Instance.play = true;
             StoryContainer.Instance.pause = false;
-            StoryContainer.Instance.setText();
+            StoryScreenInteractionController.Instance.setText();
         }
     }
 

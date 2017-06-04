@@ -1,11 +1,16 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     private Dictionary<string, bool> buttonMap;
     public Dictionary<int, bool> minispielAccess;
+
+    public Scene actScene;
+
+    public Button minispieleButton;
 
     public bool accessMinispiel0 = false;
     public bool accessMinispiel1 = false;
@@ -31,6 +36,9 @@ public class GameManager : MonoBehaviour
             _instance = this;
             buttonMap = new Dictionary<string, bool>();
             minispielAccess = new Dictionary<int, bool>();
+
+            minispieleButton = GameObject.Find("MinispieleButton").GetComponent<Button>();
+
             DontDestroyOnLoad(gameObject);
         }
         else if (_instance != this)
@@ -40,7 +48,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        Button[] btnArray = GameObject.Find("ItemPanel").GetComponentsInChildren<Button>();
+        GameObject[] btnArray = GameObject.FindGameObjectsWithTag("ErfindungButton");
         //Initialisiere ErfindungenButtons
         if (buttonMap.Keys.Count == 0 && buttonMap != null)
         {
@@ -48,28 +56,22 @@ public class GameManager : MonoBehaviour
             {
                 if (btnArray[n].tag == "ErfindungButton")
                 {
-                    btnArray[n].interactable = false;
-                    Instance.buttonMap.Add(btnArray[n].name, btnArray[n].interactable);
+                    Button btn = btnArray[n].GetComponent<Button>();
+                    btn.interactable = false;
+                    Instance.buttonMap.Add(btnArray[n].name, btn.interactable);
                 }
             }
         }
-        
+        actScene = SceneManager.GetActiveScene();
     }
     void Update()
     {
-        Button[] btnArray = GameObject.FindObjectsOfType<Button>();
-        if (btnArray != null)
+        if(accessMinispiel0 && minispieleButton != null) minispieleButton.interactable = true;
+        if (StoryScreenInteractionController.erfindungenButtonMap.Count > 0 && actScene.name == "StoryScreen") 
         {
-            for (int n = 0; n < btnArray.Length; n++)
-            {
-                if (btnArray[n].tag == "ErfindungButton")
-                {
-                    btnArray[n].interactable = Instance.buttonMap[btnArray[n].name];
-                }
-            }
+            foreach (Button btn in StoryScreenInteractionController.erfindungenButtonMap.Values) buttonMap[btn.name] = btn.interactable;
         }
-        if(accessMinispiel0 && GameObject.Find("MinispieleButton") != null) GameObject.Find("MinispieleButton").GetComponent<Button>().interactable = true;
-
+        
     }
 
     public bool setErfindungButtonInteractable(string buttonName, bool value)

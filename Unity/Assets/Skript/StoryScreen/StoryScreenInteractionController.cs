@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
-
 
 /*
  * 
@@ -13,38 +14,133 @@ using UnityEngine.UI;
 public class StoryScreenInteractionController : MonoBehaviour
 {
     public string[] infotexte;
+    
+    private Text infoBoxText;
+    private Image InfoBoxImage;
+    private GameObject itemPanel;
 
-    private ButtonsInteractable btnInter;
+    private Dictionary<string, Button> btnMap;
+    private Dictionary<string, MouseClickOnItem> erfindungenMap;
+
+    public static Dictionary<string, Button> erfindungenButtonMap;
+
+    private RectTransform timelineMarkerFlare;
+    private ParticleSystem dustStorm;
+
+    private static Text storyText;
+    private static ScrollRect scrollRect;
+
+    private static StoryScreenInteractionController _instance;
+    public static StoryScreenInteractionController Instance
+    {
+        get { return _instance; }
+    }
+
     private void Awake()
     {
-        btnInter = GameObject.Find("ItemPanel").GetComponent<ButtonsInteractable>();
+        if (_instance == null)
+        {
+            _instance = this;
+            btnMap = new Dictionary<string, Button>();
+            erfindungenMap = new Dictionary<string, MouseClickOnItem>();
+            erfindungenButtonMap = new Dictionary<string, Button>();
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     // Use this for initialization
     void Start()
     {
+        storyText = GameObject.Find("StoryText").GetComponent<Text>();
+        scrollRect = GameObject.Find("ScrollRect").GetComponent<ScrollRect>();
+        if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
+        {
+            StoryContainer.Instance.play = true;
+            setText();
+        }
+        else if (StoryContainer.Instance.play && StoryContainer.Instance.pause)
+        {
+            StoryContainer.Instance.pause = false;
+        }
+        if (GameObject.Find("ScrollRect").GetComponent<ScrollRect>() != null)
+        {
+            Canvas.ForceUpdateCanvases();
+            GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
+            Canvas.ForceUpdateCanvases();
+        }
+
+        infoBoxText = GameObject.Find("InfoBoxText").GetComponent<Text>();
+        InfoBoxImage = GameObject.Find("InfoBoxImage").GetComponent<Image>();
+        itemPanel = GameObject.Find("ItemPanel");
+
+        timelineMarkerFlare = GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>();
+        dustStorm = GameObject.Find("DustStorm").GetComponent<ParticleSystem>();
+
+        btnMap.Add("2,2MiovChrButton", GameObject.Find("2,2MiovChrButton").GetComponent<Button>());
+        btnMap.Add("500000vChrButton", GameObject.Find("500000vChrButton").GetComponent<Button>());
+        btnMap.Add("4JtsdvChrButton", GameObject.Find("4JtsdvChrButton").GetComponent<Button>());
+        btnMap.Add("3500vChrButton", GameObject.Find("3500vChrButton").GetComponent<Button>());
+        btnMap.Add("1800vChrButton", GameObject.Find("1800vChrButton").GetComponent<Button>());
+        btnMap.Add("1044Button", GameObject.Find("1044Button").GetComponent<Button>());
+        btnMap.Add("1180Button", GameObject.Find("1180Button").GetComponent<Button>());
+        btnMap.Add("1450Button", GameObject.Find("1450Button").GetComponent<Button>());
+        btnMap.Add("1608Button", GameObject.Find("1608Button").GetComponent<Button>());
+        btnMap.Add("1712Button", GameObject.Find("1712Button").GetComponent<Button>());
+        btnMap.Add("1880Button", GameObject.Find("1880Button").GetComponent<Button>());
+
+        erfindungenButtonMap.Add("WaffenButton", GameObject.Find("WaffenButton").GetComponent<Button>());
+        erfindungenButtonMap.Add("FeuerButton", GameObject.Find("FeuerButton").GetComponent<Button>());
+        erfindungenButtonMap.Add("RadButton", GameObject.Find("RadButton").GetComponent<Button>());
+        erfindungenButtonMap.Add("SchriftButton", GameObject.Find("SchriftButton").GetComponent<Button>());
+        erfindungenButtonMap.Add("GlasButton", GameObject.Find("GlasButton").GetComponent<Button>());
+        erfindungenButtonMap.Add("SchiesspulverButton", GameObject.Find("SchiesspulverButton").GetComponent<Button>());
+        erfindungenButtonMap.Add("WindmuehleButton", GameObject.Find("WindmuehleButton").GetComponent<Button>());
+        erfindungenButtonMap.Add("BuchdruckButton", GameObject.Find("BuchdruckButton").GetComponent<Button>());
+        erfindungenButtonMap.Add("FernrohrButton", GameObject.Find("FernrohrButton").GetComponent<Button>());
+        erfindungenButtonMap.Add("DampfmaschineButton", GameObject.Find("DampfmaschineButton").GetComponent<Button>());
+        erfindungenButtonMap.Add("GluebirneButton", GameObject.Find("GluebirneButton").GetComponent<Button>());
+
+        erfindungenMap.Add("WaffenButton", GameObject.Find("WaffenButton").GetComponent<MouseClickOnItem>());
+        erfindungenMap.Add("FeuerButton", GameObject.Find("FeuerButton").GetComponent<MouseClickOnItem>());
+        erfindungenMap.Add("RadButton", GameObject.Find("RadButton").GetComponent<MouseClickOnItem>());
+        erfindungenMap.Add("SchriftButton", GameObject.Find("SchriftButton").GetComponent<MouseClickOnItem>());
+        erfindungenMap.Add("GlasButton", GameObject.Find("GlasButton").GetComponent<MouseClickOnItem>());
+        erfindungenMap.Add("SchiesspulverButton", GameObject.Find("SchiesspulverButton").GetComponent<MouseClickOnItem>());
+        erfindungenMap.Add("WindmuehleButton", GameObject.Find("WindmuehleButton").GetComponent<MouseClickOnItem>());
+        erfindungenMap.Add("BuchdruckButton", GameObject.Find("BuchdruckButton").GetComponent<MouseClickOnItem>());
+        erfindungenMap.Add("FernrohrButton", GameObject.Find("FernrohrButton").GetComponent<MouseClickOnItem>());
+        erfindungenMap.Add("DampfmaschineButton", GameObject.Find("DampfmaschineButton").GetComponent<MouseClickOnItem>());
+        erfindungenMap.Add("GluebirneButton", GameObject.Find("GluebirneButton").GetComponent<MouseClickOnItem>());
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (storyText != null)
+        {
+            storyText.text = StoryContainer.actText.Substring(0, StoryContainer.actLetter);
+        }
+
         if (StoryContainer.resetInfoBox)
         {
-            GameObject.Find("InfoBoxText").GetComponent<Text>().text = "";
-            GameObject.Find("InfoBoxImage").GetComponent<Image>().enabled = false;
+            infoBoxText.text = "";
+            InfoBoxImage.enabled = false;
             StoryContainer.resetInfoBox = false;
             
         }
 
         //Enable FireButton
-        if (StoryContainer.actTextbaustein == 1 && !StoryContainer.Instance.play && GameObject.Find("ItemPanel") != null && StoryContainer.interaction )
+        if (StoryContainer.actTextbaustein == 1 && !StoryContainer.Instance.play && itemPanel != null && StoryContainer.interaction )
         {
-            btnInter.disableButtonsInteractableInGameobjectChildrens(GameObject.Find("ItemPanel"));
-            btnInter.enableButton("WaffenButton");
+            erfindungenButtonMap["WaffenButton"].interactable = true;
             if (!GameManager.Instance.accessMinispiel0)
             {
-                GameObject.Find("InfoBoxText").GetComponent<Text>().text = infotexte[0];
-                GameObject.Find("InfoBoxImage").GetComponent<Image>().enabled = true;
+                infoBoxText.text = infotexte[0];
+                InfoBoxImage.enabled = true;
                 foreach(ParticleSystem partSys in GameObject.Find("StoryHintMarker").GetComponentsInChildren<ParticleSystem>())
                 {
                     partSys.GetComponent<Renderer>().enabled = true;
@@ -55,182 +151,282 @@ public class StoryScreenInteractionController : MonoBehaviour
             StoryContainer.interaction = false;
         }
 
-        if (GameObject.Find("WaffenButton").GetComponent<MouseClickOnItem>().isClicked)
+        if (erfindungenMap["WaffenButton"].isClicked)
         {
-            GameObject.Find("2,2MiovChrButton").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["2,2MiovChrButton"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                if(StoryContainer.accessStoryPart < 2) StoryContainer.accessStoryPart = 2;
-                GameObject.Find("InfoBoxText").GetComponent<Text>().text = infotexte[1];
-                GameObject.Find("InfoBoxImage").GetComponent<Image>().enabled = true;
+                if (StoryContainer.accessStoryPart < 2)
+                {
+                    StoryContainer.accessStoryPart = 2;
+                }
+                infoBoxText.text = infotexte[1];
+                InfoBoxImage.enabled = true;
                 foreach (ParticleSystem partSys in GameObject.Find("StoryHintMarker").GetComponentsInChildren<ParticleSystem>())
                 {
                     partSys.GetComponent<Renderer>().enabled = false;
                 }
-                GameObject.Find("MinispieleButton").GetComponent<Button>().onClick.AddListener(delegate
+                GameManager.Instance.minispieleButton.onClick.AddListener(delegate
                 {
-                    GameObject.Find("InfoBoxText").GetComponent<Text>().text = "";
-                    GameObject.Find("InfoBoxImage").GetComponent<Image>().enabled = false;
-                    btnInter.enableButtonsInteractableInGameobjectChildrens(GameObject.Find("ItemPanel"));
+                    infoBoxText.text = "";
+                    InfoBoxImage.enabled = false;
+                    foreach (Button btn in erfindungenButtonMap.Values) btn.interactable = true;
                 });
             });
         }
 
-        if (GameObject.Find("FeuerButton").GetComponent<MouseClickOnItem>().isClicked)
+        if(erfindungenMap["FeuerButton"].isClicked)
         {
-            GameObject.Find("500000vChrButton").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["500000vChrButton"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel1 = true;
-                if (StoryContainer.accessStoryPart < 4) StoryContainer.accessStoryPart = 4;
+                if (StoryContainer.accessStoryPart < 4)
+                {
+                    StoryContainer.accessStoryPart = 4;
+                }
+                    
             });
         }
-        if (GameObject.Find("RadButton").GetComponent<MouseClickOnItem>().isClicked)
+        if (erfindungenMap["RadButton"].isClicked)
         {
-            GameObject.Find("4JtsdvChrButton").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["4JtsdvChrButton"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                if (StoryContainer.accessStoryPart < 5) StoryContainer.accessStoryPart = 5;
+                if (StoryContainer.accessStoryPart < 5)
+                {
+                    StoryContainer.accessStoryPart = 5;
+                }
             });
         }
-        if (GameObject.Find("SchriftButton").GetComponent<MouseClickOnItem>().isClicked)
+        if (erfindungenMap["SchriftButton"].isClicked)
         {
-            GameObject.Find("3500vChrButton").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["3500vChrButton"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                if (StoryContainer.accessStoryPart < 6) StoryContainer.accessStoryPart = 6;
+                if (StoryContainer.accessStoryPart < 6)
+                {
+                    StoryContainer.accessStoryPart = 6;
+                }
             });
         }
-        if (GameObject.Find("GlasButton").GetComponent<MouseClickOnItem>().isClicked)
+        if (erfindungenMap["GlasButton"].isClicked)
         {
-            GameObject.Find("1800vChrButton").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["1800vChrButton"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                if (StoryContainer.accessStoryPart < 8) StoryContainer.accessStoryPart = 8;
+                if (StoryContainer.accessStoryPart < 8)
+                {
+                    StoryContainer.accessStoryPart = 8;
+                }
             });
         }
-        if (GameObject.Find("SchiesspulverButton").GetComponent<MouseClickOnItem>().isClicked)
+        if (erfindungenMap["SchiesspulverButton"].isClicked)
         {
-            GameObject.Find("1044Button").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["1044Button"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                if (StoryContainer.accessStoryPart < 9) StoryContainer.accessStoryPart = 9;
+                if (StoryContainer.accessStoryPart < 9)
+                {
+                    StoryContainer.accessStoryPart = 9;
+                }
             });
         }
-        if (GameObject.Find("WindmuehleButton").GetComponent<MouseClickOnItem>().isClicked)
+        if (erfindungenMap["WindmuehleButton"].isClicked)
         {
-            GameObject.Find("1180Button").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["1180Button"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                if (StoryContainer.accessStoryPart < 10) StoryContainer.accessStoryPart = 10;
+                if (StoryContainer.accessStoryPart < 10)
+                {
+                    StoryContainer.accessStoryPart = 10;
+                }
             });
         }
-        if (GameObject.Find("BuchdruckButton").GetComponent<MouseClickOnItem>().isClicked)
+        if (erfindungenMap["BuchdruckButton"].isClicked)
         {
-            GameObject.Find("1450Button").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["1450Button"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                if (StoryContainer.accessStoryPart < 14) StoryContainer.accessStoryPart = 14;
+                if (StoryContainer.accessStoryPart < 14)
+                {
+                    StoryContainer.accessStoryPart = 14;
+                }
             });
         }
-        if (GameObject.Find("FernrohrButton").GetComponent<MouseClickOnItem>().isClicked)
+        if (erfindungenMap["FernrohrButton"].isClicked)
         {
-            GameObject.Find("1608Button").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["1608Button"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                if (StoryContainer.accessStoryPart < 16) StoryContainer.accessStoryPart = 16;
+                if (StoryContainer.accessStoryPart < 16)
+                {
+                    StoryContainer.accessStoryPart = 16;
+                }
             });
         }
-        if (GameObject.Find("DampfmaschineButton").GetComponent<MouseClickOnItem>().isClicked)
+        if (erfindungenMap["DampfmaschineButton"].isClicked)
         {
-            GameObject.Find("1712Button").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["1712Button"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                if (StoryContainer.accessStoryPart < 17) StoryContainer.accessStoryPart = 17;
+                if (StoryContainer.accessStoryPart < 17)
+                {
+                    StoryContainer.accessStoryPart = 17;
+                }
             });
         }
-        if (GameObject.Find("GluebirneButton").GetComponent<MouseClickOnItem>().isClicked)
+        if (erfindungenMap["GluebirneButton"].isClicked)
         {
-            GameObject.Find("1880Button").GetComponent<Button>().onClick.AddListener(delegate {
+            btnMap["1880Button"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
-                if (StoryContainer.accessStoryPart < 19) StoryContainer.accessStoryPart = 19;
+                if (StoryContainer.accessStoryPart < 19)
+                {
+                    StoryContainer.accessStoryPart = 19;
+                }
             });
         }
 
 
         if (StoryContainer.actTextbaustein < 1 && StoryContainer.actTextbaustein >= 0)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = new Vector2(0, 0);
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = new Vector2(0, 0);
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 110;
+            timelineMarkerFlare.anchorMin = new Vector2(0, 0);
+            timelineMarkerFlare.anchorMax = new Vector2(0, 0);
+            dustStorm.maxParticles = 110;
         }
         else if (StoryContainer.actTextbaustein < 2 && StoryContainer.actTextbaustein >= 1)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("2,2MiovChrButton").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("2,2MiovChrButton").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 110;
+            Vector2 value = calcMiddleOfRect(btnMap["2,2MiovChrButton"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 110;
         }
         else if (StoryContainer.actTextbaustein < 4 && StoryContainer.actTextbaustein >= 2)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("500000vChrButton").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("500000vChrButton").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 100;
+            Vector2 value = calcMiddleOfRect(btnMap["500000vChrButton"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 100;
         }
         else if (StoryContainer.actTextbaustein < 5 && StoryContainer.actTextbaustein >= 4)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("4JtsdvChrButton").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("4JtsdvChrButton").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 90;
+            Vector2 value = calcMiddleOfRect(btnMap["4JtsdvChrButton"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 90;
         }
         else if (StoryContainer.actTextbaustein < 6 && StoryContainer.actTextbaustein >= 5)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("3500vChrButton").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("3500vChrButton").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 80;
+            Vector2 value = calcMiddleOfRect(btnMap["3500vChrButton"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 80;
         }
         else if (StoryContainer.actTextbaustein < 7 && StoryContainer.actTextbaustein >= 6)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("1800vChrButton").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("1800vChrButton").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 70;
+            Vector2 value = calcMiddleOfRect(btnMap["1800vChrButton"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 70;
         }
         else if (StoryContainer.actTextbaustein < 9 && StoryContainer.actTextbaustein >= 7)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("1044Button").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("1044Button").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 60;
+            Vector2 value = calcMiddleOfRect(btnMap["1044Button"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 60;
         }
         else if (StoryContainer.actTextbaustein < 10 && StoryContainer.actTextbaustein >= 9)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("1180Button").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("1180Button").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 50;
+            Vector2 value = calcMiddleOfRect(btnMap["1180Button"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 50;
         }
         else if (StoryContainer.actTextbaustein < 14 && StoryContainer.actTextbaustein >= 10)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("1450Button").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("1450Button").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 40;
+            Vector2 value = calcMiddleOfRect(btnMap["1450Button"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 40;
         }
         else if (StoryContainer.actTextbaustein < 15 && StoryContainer.actTextbaustein >= 14)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("1608Button").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("1608Button").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 30;
+            Vector2 value = calcMiddleOfRect(btnMap["1608Button"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 30;
         }
         else if (StoryContainer.actTextbaustein < 17 && StoryContainer.actTextbaustein >= 15)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("1712Button").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("1712Button").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 20;
+            Vector2 value = calcMiddleOfRect(btnMap["1712Button"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 20;
         }
         else if (StoryContainer.actTextbaustein < 19 && StoryContainer.actTextbaustein >= 17)
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = calcMiddleOfRect(GameObject.Find("1880Button").GetComponent<RectTransform>());
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = calcMiddleOfRect(GameObject.Find("1880Button").GetComponent<RectTransform>());
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 10;
+            Vector2 value = calcMiddleOfRect(btnMap["1880Button"].GetComponent<RectTransform>());
+            timelineMarkerFlare.anchorMin = value;
+            timelineMarkerFlare.anchorMax = value;
+            dustStorm.maxParticles = 10;
         }
         else
         {
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMin = new Vector2(0, 0);
-            GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>().anchorMax = new Vector2(0, 0);
-            GameObject.Find("DustStorm").GetComponent<ParticleSystem>().maxParticles = 0;
+            timelineMarkerFlare.anchorMin = new Vector2(0, 0); ;
+            timelineMarkerFlare.anchorMax = new Vector2(0, 0); ;
+            dustStorm.maxParticles = 0;
         }
 
         
     }
-    
+
+
     private Vector2 calcMiddleOfRect(RectTransform origRec)
     {
         return new Vector2((origRec.anchorMax.x + origRec.anchorMin.x)/2 - 0.003f, 0.5f);
+    }
+
+    public void setText()
+    {
+        storyText.text = "";
+        if (storyText != null)
+        {
+            StartCoroutine(TextScroll(StoryContainer.Instance.textbausteine[StoryContainer.actTextbaustein]));
+        }
+
+    }
+
+    private IEnumerator TextScroll(string lineOfText)
+    {
+        int letter = 0;
+
+        while (letter < lineOfText.Length && StoryContainer.Instance.play)
+        {
+            if (!StoryContainer.Instance.pause)
+            {
+                Canvas.ForceUpdateCanvases();
+                if (scrollRect != null)
+                {
+                    scrollRect.verticalNormalizedPosition = 0f;
+                    Canvas.ForceUpdateCanvases();
+                    storyText.text += lineOfText[letter];
+                }
+                StoryContainer.actText = lineOfText;
+                letter++;
+                StoryContainer.actLetter = letter;
+            }
+            yield return new WaitForSeconds(StoryContainer.Instance.playSpeed);
+        }
+
+        StoryContainer.Instance.play = false;
+
+        if (scrollRect != null && storyText != null)
+        {
+            storyText.text = lineOfText;
+            StoryContainer.actLetter = lineOfText.Length;
+            Canvas.ForceUpdateCanvases();
+            scrollRect.verticalNormalizedPosition = 0f;
+            Canvas.ForceUpdateCanvases();
+        }
+
+        checkInteraction();
+    }
+
+    private void checkInteraction()
+    {
+        if (StoryContainer.actTextbaustein == 1)
+        {
+            StoryContainer.interaction = true;
+        }
     }
 }

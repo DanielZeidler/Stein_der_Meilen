@@ -5,44 +5,55 @@ using UnityEngine.UI;
 
 public class toggleMenu : MonoBehaviour {
 
+    private Text[] toggleTexts = new Text[3];
+    private Button[] toggleButtons = new Button[3];
+    private Image[] toggleImages = new Image[3];
+
+    private Image menuPanel;
+    private Text toggleMenuText;
+
+    private void Start()
+    {
+        menuPanel = GameObject.Find("MenuPanel").GetComponent<Image>();
+        toggleMenuText = GameObject.Find("toggleMenu").GetComponentInChildren<Text>();
+
+        toggleTexts[0] = GameObject.Find("HelpButton").GetComponentInChildren<Text>();
+        toggleTexts[1] = GameObject.Find("ContrButton").GetComponentInChildren<Text>();
+        toggleTexts[2] = GameObject.Find("CreditsButton").GetComponentInChildren<Text>();
+
+        toggleButtons[0] = GameObject.Find("HelpButton").GetComponentInChildren<Button>();
+        toggleButtons[1] = GameObject.Find("ContrButton").GetComponentInChildren<Button>();
+        toggleButtons[2] = GameObject.Find("CreditsButton").GetComponentInChildren<Button>();
+
+        toggleImages[0] = GameObject.Find("HelpButton").GetComponentInChildren<Image>();
+        toggleImages[1] = GameObject.Find("ContrButton").GetComponentInChildren<Image>();
+        toggleImages[2] = GameObject.Find("CreditsButton").GetComponentInChildren<Image>();
+    }
+
     public void toggleMenuView()
     {
-        if (GameObject.Find("MenuPanel") != null)
+        if (menuPanel != null)
         {
-            if (GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text == "hide menu")
+            if (toggleMenuText.text == "hide menu")
             {
-                GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text = "SHOW MENU";
-
-                GameObject.Find("MenuPanel").GetComponent<Image>().enabled = false;
-
-
-                GameObject.Find("HelpButton").GetComponentInChildren<Text>().enabled = false;
-                GameObject.Find("ContrButton").GetComponentInChildren<Text>().enabled = false;
-                GameObject.Find("CreditsButton").GetComponentInChildren<Text>().enabled = false;
-                GameObject.Find("HelpButton").GetComponentInChildren<Button>().enabled = false;
-                GameObject.Find("ContrButton").GetComponentInChildren<Button>().enabled = false;
-                GameObject.Find("CreditsButton").GetComponentInChildren<Button>().enabled = false;
-                GameObject.Find("HelpButton").GetComponentInChildren<Image>().enabled = false;
-                GameObject.Find("ContrButton").GetComponentInChildren<Image>().enabled = false;
-                GameObject.Find("CreditsButton").GetComponentInChildren<Image>().enabled = false;
-
+                toggleMenuText.text = "SHOW MENU";
+                menuPanel.enabled = false;
+                setValue(false);
             }
-            else if(GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text == "SHOW MENU")
+            else if(toggleMenuText.text == "SHOW MENU")
             {
-                GameObject.Find("toggleMenu").GetComponentInChildren<Text>().text = "hide menu";
-
-                GameObject.Find("MenuPanel").GetComponent<Image>().enabled = true;
-
-                GameObject.Find("HelpButton").GetComponentInChildren<Text>().enabled = true;
-                GameObject.Find("ContrButton").GetComponentInChildren<Text>().enabled = true;
-                GameObject.Find("CreditsButton").GetComponentInChildren<Text>().enabled = true;
-                GameObject.Find("HelpButton").GetComponentInChildren<Button>().enabled = true;
-                GameObject.Find("ContrButton").GetComponentInChildren<Button>().enabled = true;
-                GameObject.Find("CreditsButton").GetComponentInChildren<Button>().enabled = true;
-                GameObject.Find("HelpButton").GetComponentInChildren<Image>().enabled = true;
-                GameObject.Find("ContrButton").GetComponentInChildren<Image>().enabled = true;
-                GameObject.Find("CreditsButton").GetComponentInChildren<Image>().enabled = true;
+                toggleMenuText.text = "hide menu";
+                menuPanel.enabled = true;
+                setValue(true);
             }
         }
     }
+
+    private void setValue(bool value)
+    {
+        foreach (Button btn in toggleButtons) btn.enabled = value;
+        foreach (Image img in toggleImages) img.enabled = value;
+        foreach (Text txt in toggleTexts) txt.enabled = value;
+    }
+    
 }

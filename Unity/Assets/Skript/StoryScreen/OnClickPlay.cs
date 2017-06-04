@@ -19,8 +19,9 @@ public class OnClickPlay : MonoBehaviour {
         if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
         {
             StoryContainer.Instance.play = true;
-            StoryContainer.Instance.setText();
-        }else if(StoryContainer.Instance.play && StoryContainer.Instance.pause)
+            StoryScreenInteractionController.Instance.setText();
+        }
+        else if(StoryContainer.Instance.play && StoryContainer.Instance.pause)
         {
             StoryContainer.Instance.pause = false;
         }
