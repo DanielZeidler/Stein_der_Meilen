@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public Scene actScene;
 
-    public Button minispieleButton;
+    
 
     public bool accessMinispiel0 = false;
     public bool accessMinispiel1 = false;
@@ -36,9 +36,7 @@ public class GameManager : MonoBehaviour
             _instance = this;
             buttonMap = new Dictionary<string, bool>();
             minispielAccess = new Dictionary<int, bool>();
-
-            minispieleButton = GameObject.Find("MinispieleButton").GetComponent<Button>();
-
+            
             DontDestroyOnLoad(gameObject);
         }
         else if (_instance != this)
@@ -66,7 +64,7 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        if(accessMinispiel0 && minispieleButton != null) minispieleButton.interactable = true;
+        if(accessMinispiel0 && StoryScreenInteractionController.Instance.minispieleButton != null) StoryScreenInteractionController.Instance.minispieleButton.interactable = true;
         if (StoryScreenInteractionController.erfindungenButtonMap.Count > 0 && actScene.name == "StoryScreen") 
         {
             foreach (Button btn in StoryScreenInteractionController.erfindungenButtonMap.Values) buttonMap[btn.name] = btn.interactable;

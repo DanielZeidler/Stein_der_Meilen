@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class hansSpeak : MonoBehaviour {
 
-    Animator animator;
-    SpriteRenderer renderer;
+    private Animator animator;
+    private SpriteRenderer renderer;
 
     void Awake()
     {

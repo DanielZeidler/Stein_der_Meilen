@@ -23,6 +23,7 @@ public class StoryScreenInteractionController : MonoBehaviour
     private Dictionary<string, MouseClickOnItem> erfindungenMap;
 
     public static Dictionary<string, Button> erfindungenButtonMap;
+    public Button minispieleButton;
 
     private RectTransform timelineMarkerFlare;
     private ParticleSystem dustStorm;
@@ -57,6 +58,7 @@ public class StoryScreenInteractionController : MonoBehaviour
     {
         storyText = GameObject.Find("StoryText").GetComponent<Text>();
         scrollRect = GameObject.Find("ScrollRect").GetComponent<ScrollRect>();
+        minispieleButton = GameObject.Find("MinispieleButton").GetComponent<Button>();
         if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
         {
             StoryContainer.Instance.play = true;
@@ -165,7 +167,7 @@ public class StoryScreenInteractionController : MonoBehaviour
                 {
                     partSys.GetComponent<Renderer>().enabled = false;
                 }
-                GameManager.Instance.minispieleButton.onClick.AddListener(delegate
+                minispieleButton.onClick.AddListener(delegate
                 {
                     infoBoxText.text = "";
                     InfoBoxImage.enabled = false;
