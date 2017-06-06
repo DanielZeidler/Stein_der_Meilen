@@ -5,16 +5,7 @@ using UnityEngine;
 
 public class OnClickPlay : MonoBehaviour {
     
-    // Use this for initialization
-    private void Awake()
-    {
-        
-    }
-    void Start () {
-        
-    }
-
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
         {
@@ -25,6 +16,7 @@ public class OnClickPlay : MonoBehaviour {
         {
             StoryContainer.Instance.pause = false;
         }
+
     }
 
 }

@@ -30,6 +30,12 @@ public class StoryScreenInteractionController : MonoBehaviour
     private static Text storyText;
     private static ScrollRect scrollRect;
 
+    public AudioSource backgroundMusic;
+
+    private bool oldPlay;
+    private bool oldPause;
+    private bool oldMute;
+
     private static StoryScreenInteractionController _instance;
     public static StoryScreenInteractionController Instance
     {
@@ -58,6 +64,10 @@ public class StoryScreenInteractionController : MonoBehaviour
         storyText = GameObject.Find("StoryText").GetComponent<Text>();
         scrollRect = GameObject.Find("ScrollRect").GetComponent<ScrollRect>();
         minispieleButton = GameObject.Find("MinispieleButton").GetComponent<Button>();
+        backgroundMusic = GameObject.Find("ErdeWrapper").GetComponent<AudioSource>();
+
+        backgroundMusic.Stop();
+
         if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
         {
             StoryContainer.Instance.play = true;
@@ -330,7 +340,37 @@ public class StoryScreenInteractionController : MonoBehaviour
             dustStorm.maxParticles = 0;
         }
 
-        
+        if(oldPlay != StoryContainer.Instance.play || oldPause != StoryContainer.Instance.pause || oldMute != StoryContainer.Instance.mute)
+        {
+            if (StoryContainer.Instance.play && !StoryContainer.Instance.pause)
+            {
+                StoryScreenInteractionController.Instance.backgroundMusic.Play();
+            }
+            if (StoryContainer.Instance.play && StoryContainer.Instance.pause)
+            {
+                StoryScreenInteractionController.Instance.backgroundMusic.Pause();
+            }
+            if (!StoryContainer.Instance.play && StoryContainer.Instance.pause)
+            {
+                StoryScreenInteractionController.Instance.backgroundMusic.Pause();
+            }
+            if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
+            {
+                StoryScreenInteractionController.Instance.backgroundMusic.Stop();
+            }
+            if (StoryContainer.Instance.mute)
+            {
+                StoryScreenInteractionController.Instance.backgroundMusic.mute = true;
+            }
+            if (!StoryContainer.Instance.mute)
+            {
+                StoryScreenInteractionController.Instance.backgroundMusic.mute = false;
+            }
+
+            oldMute = StoryContainer.Instance.mute;
+            oldPause = StoryContainer.Instance.pause;
+            oldPlay = StoryContainer.Instance.play;
+        }
     }
     
     public void setText()

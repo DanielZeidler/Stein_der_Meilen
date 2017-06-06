@@ -14,6 +14,8 @@ public class StoryContainer : MonoBehaviour
 
     public bool play = false;
     public bool pause = false;
+    public bool mute = false;
+
     public float playSpeed;
 
     public static bool interaction = false;

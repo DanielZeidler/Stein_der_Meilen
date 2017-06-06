@@ -90,10 +90,12 @@
     <Compile Include="Assets\Skript\StoryScreen\LoadLevel.cs" />
     <Compile Include="Assets\Skript\StoryScreen\MouseClickOnItem.cs" />
     <Compile Include="Assets\Skript\StoryScreen\MovingEarth.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\OnClickMute.cs" />
     <Compile Include="Assets\Skript\StoryScreen\OnClickPause.cs" />
     <Compile Include="Assets\Skript\StoryScreen\OnClickPlay.cs" />
     <Compile Include="Assets\Skript\StoryScreen\OnClickSkipBack.cs" />
     <Compile Include="Assets\Skript\StoryScreen\OnClickSkipForward.cs" />
+    <Compile Include="Assets\Skript\StoryScreen\OnClickUnmute.cs" />
     <Compile Include="Assets\Skript\StoryScreen\SingletonLoader.cs" />
     <Compile Include="Assets\Skript\StoryScreen\StoryContainer.cs" />
     <Compile Include="Assets\Skript\StoryScreen\StoryScreenInteractionController.cs" />
