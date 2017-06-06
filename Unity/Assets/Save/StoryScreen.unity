@@ -1549,7 +1549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7707781175c45a142ab71a8984a23c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: d42e6049e138c4c4ba86f35545b2128f, type: 3}
+  cursorTexture: {fileID: 2800000, guid: e55b2e159dea5eb468dfd09c339d3623, type: 3}
   defaultTexture: {fileID: 2800000, guid: 7b8e7e5afaf041b4499bbc9f7871700e, type: 3}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
@@ -1625,7 +1625,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 297fbbf0efdd445458d8d3e151e59d09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 433c213bddbf1a047be3f69ee6c18c1f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
