@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 787, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 509
+  controlID: 82
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_MinSize: {x: 308, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 44
+  controlID: 83
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_MinSize: {x: 308, y: 221}
   m_MaxSize: {x: 8008, y: 4021}
   vertical: 0
-  controlID: 23
+  controlID: 131
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -200,10 +200,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 721
+    width: 489
     height: 612
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 104, y: 121}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 15}
@@ -224,12 +224,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 721
+    x: 489
     y: 0
-    width: 619
+    width: 851
     height: 612
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -308,9 +308,9 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 925
+    x: 693
     y: 92
-    width: 615
+    width: 847
     height: 591
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -320,10 +320,10 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-    m_HBaseRangeMin: -307.5
-    m_HBaseRangeMax: 307.5
-    m_VBaseRangeMin: -172.96875
-    m_VBaseRangeMax: 172.96875
+    m_HBaseRangeMin: -423.5
+    m_HBaseRangeMax: 423.5
+    m_VBaseRangeMin: -238.21875
+    m_VBaseRangeMax: 238.21875
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -340,25 +340,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 615
+      width: 847
       height: 574
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 307.5, y: 287}
+    m_Translation: {x: 423.5, y: 287}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -307.5
+      x: -423.5
       y: -287
-      width: 615
+      width: 847
       height: 574
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 615, y: 591}
+  m_LastWindowPixelSize: {x: 847, y: 591}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -390,9 +390,9 @@ MonoBehaviour:
     height: 926
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 628dffff
-    m_LastClickedID: -29342
-    m_ExpandedIDs: 0236feff608affffa68affffec8affff308bffff768bffffbc8bffff028cffff488cffff8e8cffffd68cffff628dffffb6aeffffd8b9ffff3ac2ffff10ceffff02d0ffff78d7ffff54e3ffff6ae9ffff14eaffff46f4ffff2ef7ffffc4f7ffff62f8fffffcf8ffffd0f9fffff4ffffff00000000f8370000d6380000803f0000dc4000002e47000088480000384f0000c25400003e550000905500007c65000066750000f2850000ae8600002a870000
+    m_SelectedIDs: ee280000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 52d5ffff32e8ffffa8edffff22faffffe2fbffff000000005e31000068630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -411,7 +411,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
   m_ExpandedScenes:
-  - MinispielOverview
+  - StoryScreen
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -513,7 +513,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 204
     y: 92
-    width: 717
+    width: 485
     height: 591
 --- !u!114 &17
 MonoBehaviour:
@@ -578,19 +578,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Skript/MinispieleOverview
+    - Assets/Save
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Skript/MinispieleOverview
+  - Assets/Save
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Lernspiel_Git\Stein_der_Meilen\Unity
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 59}
-    m_SelectedIDs: 76940000
-    m_LastClickedID: 38006
-    m_ExpandedIDs: 0000000090290000842d0000462e0000842e000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: e2290000
+    m_LastClickedID: 10722
+    m_ExpandedIDs: 0000000060250000942a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -618,7 +618,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000090290000842d0000842e0000
+    m_ExpandedIDs: 00000000602500007c2900004e2a0000942a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

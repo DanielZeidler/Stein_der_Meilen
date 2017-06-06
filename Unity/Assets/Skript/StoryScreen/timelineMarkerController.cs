@@ -7,13 +7,14 @@ public class timelineMarkerController : MonoBehaviour {
 
     private RectTransform timelineMarkerFlare;
     private Dictionary<string, Button> btnMap;
+
     private void Awake()
     {
         btnMap = new Dictionary<string, Button>();
     }
-    // Use this for initialization
-    void Start () {
 
+    void Start()
+    {
         btnMap.Add("2,2MiovChrButton", GameObject.Find("2,2MiovChrButton").GetComponent<Button>());
         btnMap.Add("500000vChrButton", GameObject.Find("500000vChrButton").GetComponent<Button>());
         btnMap.Add("4JtsdvChrButton", GameObject.Find("4JtsdvChrButton").GetComponent<Button>());
@@ -25,8 +26,12 @@ public class timelineMarkerController : MonoBehaviour {
         btnMap.Add("1608Button", GameObject.Find("1608Button").GetComponent<Button>());
         btnMap.Add("1712Button", GameObject.Find("1712Button").GetComponent<Button>());
         btnMap.Add("1880Button", GameObject.Find("1880Button").GetComponent<Button>());
-
         timelineMarkerFlare = GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>();
+    }
+    
+    // Use this for initialization
+    void Update () {
+        
         if (StoryContainer.actTextbaustein < 1 && StoryContainer.actTextbaustein >= 0)
         {
             timelineMarkerFlare.anchorMin = new Vector2(0, 0);

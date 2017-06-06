@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 45337803}
   - component: {fileID: 45337802}
   - component: {fileID: 45337801}
+  - component: {fileID: 45337804}
   m_Layer: 5
   m_Name: Minispiel8Button
   m_TagString: Untagged
@@ -251,7 +252,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 45337802}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 45337804}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &45337802
@@ -287,6 +299,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45337799}
+--- !u!114 &45337804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 45337799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: StoryScreen
 --- !u!1 &61327658
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +387,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 61327661}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 61327663}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &61327661
@@ -410,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 
+  scene: StoryScreen
 --- !u!1 &78939704
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +642,7 @@ GameObject:
   - component: {fileID: 119304124}
   - component: {fileID: 119304123}
   - component: {fileID: 119304122}
+  - component: {fileID: 119304125}
   m_Layer: 5
   m_Name: Minispiel2Button
   m_TagString: Untagged
@@ -671,7 +707,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 119304123}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 119304125}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &119304123
@@ -707,6 +754,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 119304120}
+--- !u!114 &119304125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 119304120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: StoryScreen
 --- !u!1 &158481656
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +1010,7 @@ GameObject:
   - component: {fileID: 256653811}
   - component: {fileID: 256653810}
   - component: {fileID: 256653809}
+  - component: {fileID: 256653812}
   m_Layer: 5
   m_Name: Minispiel4Button
   m_TagString: Untagged
@@ -1015,7 +1075,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 256653810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 256653812}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &256653810
@@ -1051,6 +1122,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256653807}
+--- !u!114 &256653812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256653807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: StoryScreen
 --- !u!1 &266585055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1324,7 @@ GameObject:
   - component: {fileID: 311194314}
   - component: {fileID: 311194313}
   - component: {fileID: 311194312}
+  - component: {fileID: 311194315}
   m_Layer: 5
   m_Name: Minispiel6Button
   m_TagString: Untagged
@@ -1305,7 +1389,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 311194313}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 311194315}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &311194313
@@ -1341,6 +1436,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 311194310}
+--- !u!114 &311194315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311194310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: StoryScreen
 --- !u!1 &371954387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,6 +1978,7 @@ GameObject:
   - component: {fileID: 615884594}
   - component: {fileID: 615884593}
   - component: {fileID: 615884592}
+  - component: {fileID: 615884595}
   m_Layer: 5
   m_Name: Minispiel7Button
   m_TagString: Untagged
@@ -1935,7 +2043,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 615884593}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 615884595}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &615884593
@@ -1971,6 +2090,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 615884590}
+--- !u!114 &615884595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 615884590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: StoryScreen
 --- !u!1 &696990972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,6 +2224,7 @@ GameObject:
   - component: {fileID: 744907169}
   - component: {fileID: 744907168}
   - component: {fileID: 744907167}
+  - component: {fileID: 744907170}
   m_Layer: 5
   m_Name: Minispiel3Button
   m_TagString: Untagged
@@ -2157,7 +2289,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 744907168}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 744907170}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &744907168
@@ -2193,6 +2336,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 744907165}
+--- !u!114 &744907170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744907165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: StoryScreen
 --- !u!1 &810724266
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,6 +2489,7 @@ GameObject:
   - component: {fileID: 892414841}
   - component: {fileID: 892414840}
   - component: {fileID: 892414839}
+  - component: {fileID: 892414842}
   m_Layer: 5
   m_Name: Minispiel1Button
   m_TagString: Untagged
@@ -2398,7 +2554,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 892414840}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 892414842}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &892414840
@@ -2434,6 +2601,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 892414837}
+--- !u!114 &892414842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 892414837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: firstMinigame
 --- !u!1 &898237739
 GameObject:
   m_ObjectHideFlags: 0
@@ -6852,6 +7031,7 @@ GameObject:
   - component: {fileID: 1362650078}
   - component: {fileID: 1362650077}
   - component: {fileID: 1362650076}
+  - component: {fileID: 1362650079}
   m_Layer: 5
   m_Name: Minispiel10Button
   m_TagString: Untagged
@@ -6916,7 +7096,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1362650077}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1362650079}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1362650077
@@ -6952,6 +7143,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1362650074}
+--- !u!114 &1362650079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1362650074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: StoryScreen
 --- !u!1 &1369868936
 GameObject:
   m_ObjectHideFlags: 0
@@ -7216,6 +7419,7 @@ GameObject:
   - component: {fileID: 1515686758}
   - component: {fileID: 1515686757}
   - component: {fileID: 1515686756}
+  - component: {fileID: 1515686759}
   m_Layer: 5
   m_Name: Minispiel5Button
   m_TagString: Untagged
@@ -7280,7 +7484,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1515686757}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1515686759}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1515686757
@@ -7316,6 +7531,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1515686754}
+--- !u!114 &1515686759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1515686754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: StoryScreen
 --- !u!1 &1534935098
 GameObject:
   m_ObjectHideFlags: 0
@@ -8509,6 +8736,7 @@ GameObject:
   - component: {fileID: 1945599984}
   - component: {fileID: 1945599983}
   - component: {fileID: 1945599982}
+  - component: {fileID: 1945599985}
   m_Layer: 5
   m_Name: Minispiel9Button
   m_TagString: Untagged
@@ -8573,7 +8801,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1945599983}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1945599985}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1945599983
@@ -8609,6 +8848,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1945599980}
+--- !u!114 &1945599985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1945599980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: StoryScreen
 --- !u!1 &1955123167
 GameObject:
   m_ObjectHideFlags: 0

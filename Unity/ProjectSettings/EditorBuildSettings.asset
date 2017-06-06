@@ -10,4 +10,7 @@ EditorBuildSettings:
     guid: b0c6c4382b6a2a9438d5539f317694b2
   - enabled: 1
     path: Assets/Save/MinispielOverview.unity
+    guid: 2ce59a3d147b58248a6119f72f1b1d01
+  - enabled: 1
+    path: Assets/Save/firstMinigame.unity
     guid: 00000000000000000000000000000000
