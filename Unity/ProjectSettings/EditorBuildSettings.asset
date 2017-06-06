@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Save/StoryScreen.unity
     guid: b0c6c4382b6a2a9438d5539f317694b2
   - enabled: 1
-    path: Assets/Save/secondScreen.unity
-    guid: dd04aebe2992e4b4db797c98a3d289ed
+    path: Assets/Save/MinispielOverview.unity
+    guid: 00000000000000000000000000000000

@@ -5,12 +5,12 @@ using UnityEngine;
 public class gutenbergSpeak : MonoBehaviour {
 
     private Animator animator;
-    private SpriteRenderer renderer;
+    private SpriteRenderer spRenderer;
 
     void Awake()
     {
         animator = GameObject.Find("gutenberg").GetComponent<Animator>();
-        renderer = GameObject.Find("gutenberg").GetComponent<SpriteRenderer>();
+        spRenderer = GameObject.Find("gutenberg").GetComponent<SpriteRenderer>();
     }
     private void Start()
     {
@@ -20,11 +20,11 @@ public class gutenbergSpeak : MonoBehaviour {
     {
         if(StoryContainer.actTextbaustein == 12)
         {
-            renderer.enabled = true;
+            spRenderer.enabled = true;
         }
         else
         {
-            renderer.enabled = false;
+            spRenderer.enabled = false;
         }
         if (StoryContainer.Instance.play && !StoryContainer.Instance.pause && StoryContainer.actTextbaustein == 12)
         {

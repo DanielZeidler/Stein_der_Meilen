@@ -5,12 +5,12 @@ using UnityEngine;
 public class davinciSpeak : MonoBehaviour {
 
     private Animator animator;
-    private SpriteRenderer renderer;
+    private SpriteRenderer spRenderer;
 
     void Awake()
     {
         animator = GameObject.Find("davinci").GetComponent<Animator>();
-        renderer = GameObject.Find("davinci").GetComponent<SpriteRenderer>();
+        spRenderer = GameObject.Find("davinci").GetComponent<SpriteRenderer>();
     }
     private void Start()
     {
@@ -20,11 +20,11 @@ public class davinciSpeak : MonoBehaviour {
     {
         if (StoryContainer.actTextbaustein != 12 && StoryContainer.actTextbaustein != 15 && StoryContainer.actTextbaustein != 18)
         {
-            renderer.enabled = true;
+            spRenderer.enabled = true;
         }
         else
         {
-            renderer.enabled = false;
+            spRenderer.enabled = false;
         }
 
         if (StoryContainer.Instance.play && !StoryContainer.Instance.pause && StoryContainer.actTextbaustein != 12 && StoryContainer.actTextbaustein != 15 && StoryContainer.actTextbaustein != 18)

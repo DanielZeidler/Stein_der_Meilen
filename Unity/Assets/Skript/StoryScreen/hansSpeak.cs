@@ -5,12 +5,12 @@ using UnityEngine;
 public class hansSpeak : MonoBehaviour {
 
     private Animator animator;
-    private SpriteRenderer renderer;
+    private SpriteRenderer spRenderer;
 
     void Awake()
     {
         animator = GameObject.Find("lipperhey").GetComponent<Animator>();
-        renderer = GameObject.Find("lipperhey").GetComponent<SpriteRenderer>();
+        spRenderer = GameObject.Find("lipperhey").GetComponent<SpriteRenderer>();
     }
     private void Start()
     {
@@ -20,11 +20,11 @@ public class hansSpeak : MonoBehaviour {
     {
         if (StoryContainer.actTextbaustein == 15)
         {
-            renderer.enabled = true;
+            spRenderer.enabled = true;
         }
         else
         {
-            renderer.enabled = false;
+            spRenderer.enabled = false;
         }
         if (StoryContainer.Instance.play && !StoryContainer.Instance.pause && StoryContainer.actTextbaustein == 15)
         {

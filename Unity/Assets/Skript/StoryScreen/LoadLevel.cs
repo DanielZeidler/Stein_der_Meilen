@@ -17,8 +17,6 @@ public class LoadLevel : MonoBehaviour {
         if(scene.Length > 0)
         {
             SceneManager.LoadScene(scene, LoadSceneMode.Single);
-            StoryContainer.Instance.play = true;
-            StoryContainer.Instance.pause = true;
 }
         
     }

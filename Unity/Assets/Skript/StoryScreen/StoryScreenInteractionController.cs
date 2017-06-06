@@ -24,9 +24,8 @@ public class StoryScreenInteractionController : MonoBehaviour
 
     public static Dictionary<string, Button> erfindungenButtonMap;
     public Button minispieleButton;
-
-    private RectTransform timelineMarkerFlare;
-    private ParticleSystem dustStorm;
+    
+    private ParticleSystem.MainModule dustStorm;
 
     private static Text storyText;
     private static ScrollRect scrollRect;
@@ -78,9 +77,8 @@ public class StoryScreenInteractionController : MonoBehaviour
         infoBoxText = GameObject.Find("InfoBoxText").GetComponent<Text>();
         InfoBoxImage = GameObject.Find("InfoBoxImage").GetComponent<Image>();
         itemPanel = GameObject.Find("ItemPanel");
-
-        timelineMarkerFlare = GameObject.Find("TimelineMarkerFlare").GetComponent<RectTransform>();
-        dustStorm = GameObject.Find("DustStorm").GetComponent<ParticleSystem>();
+        
+        dustStorm = GameObject.Find("DustStorm").GetComponent<ParticleSystem>().main;
 
         btnMap.Add("2,2MiovChrButton", GameObject.Find("2,2MiovChrButton").GetComponent<Button>());
         btnMap.Add("500000vChrButton", GameObject.Find("500000vChrButton").GetComponent<Button>());
@@ -190,7 +188,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         if (erfindungenMap["RadButton"].isClicked)
         {
             btnMap["4JtsdvChrButton"].onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                GameManager.Instance.accessMinispiel2 = true;
                 if (StoryContainer.accessStoryPart < 5)
                 {
                     StoryContainer.accessStoryPart = 5;
@@ -200,7 +198,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         if (erfindungenMap["SchriftButton"].isClicked)
         {
             btnMap["3500vChrButton"].onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                GameManager.Instance.accessMinispiel3 = true;
                 if (StoryContainer.accessStoryPart < 6)
                 {
                     StoryContainer.accessStoryPart = 6;
@@ -210,7 +208,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         if (erfindungenMap["GlasButton"].isClicked)
         {
             btnMap["1800vChrButton"].onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                GameManager.Instance.accessMinispiel4 = true;
                 if (StoryContainer.accessStoryPart < 8)
                 {
                     StoryContainer.accessStoryPart = 8;
@@ -220,7 +218,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         if (erfindungenMap["SchiesspulverButton"].isClicked)
         {
             btnMap["1044Button"].onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                GameManager.Instance.accessMinispiel5 = true;
                 if (StoryContainer.accessStoryPart < 9)
                 {
                     StoryContainer.accessStoryPart = 9;
@@ -230,7 +228,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         if (erfindungenMap["WindmuehleButton"].isClicked)
         {
             btnMap["1180Button"].onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                GameManager.Instance.accessMinispiel6 = true;
                 if (StoryContainer.accessStoryPart < 10)
                 {
                     StoryContainer.accessStoryPart = 10;
@@ -240,7 +238,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         if (erfindungenMap["BuchdruckButton"].isClicked)
         {
             btnMap["1450Button"].onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                GameManager.Instance.accessMinispiel7 = true;
                 if (StoryContainer.accessStoryPart < 14)
                 {
                     StoryContainer.accessStoryPart = 14;
@@ -250,7 +248,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         if (erfindungenMap["FernrohrButton"].isClicked)
         {
             btnMap["1608Button"].onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                GameManager.Instance.accessMinispiel8 = true;
                 if (StoryContainer.accessStoryPart < 16)
                 {
                     StoryContainer.accessStoryPart = 16;
@@ -260,7 +258,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         if (erfindungenMap["DampfmaschineButton"].isClicked)
         {
             btnMap["1712Button"].onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                GameManager.Instance.accessMinispiel9 = true;
                 if (StoryContainer.accessStoryPart < 17)
                 {
                     StoryContainer.accessStoryPart = 17;
@@ -270,7 +268,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         if (erfindungenMap["GluebirneButton"].isClicked)
         {
             btnMap["1880Button"].onClick.AddListener(delegate {
-                GameManager.Instance.accessMinispiel0 = true;
+                GameManager.Instance.accessMinispiel10 = true;
                 if (StoryContainer.accessStoryPart < 19)
                 {
                     StoryContainer.accessStoryPart = 19;
@@ -281,103 +279,60 @@ public class StoryScreenInteractionController : MonoBehaviour
 
         if (StoryContainer.actTextbaustein < 1 && StoryContainer.actTextbaustein >= 0)
         {
-            timelineMarkerFlare.anchorMin = new Vector2(0, 0);
-            timelineMarkerFlare.anchorMax = new Vector2(0, 0);
             dustStorm.maxParticles = 110;
         }
         else if (StoryContainer.actTextbaustein < 2 && StoryContainer.actTextbaustein >= 1)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["2,2MiovChrButton"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 110;
         }
         else if (StoryContainer.actTextbaustein < 4 && StoryContainer.actTextbaustein >= 2)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["500000vChrButton"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 100;
         }
         else if (StoryContainer.actTextbaustein < 5 && StoryContainer.actTextbaustein >= 4)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["4JtsdvChrButton"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 90;
         }
         else if (StoryContainer.actTextbaustein < 6 && StoryContainer.actTextbaustein >= 5)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["3500vChrButton"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 80;
         }
         else if (StoryContainer.actTextbaustein < 7 && StoryContainer.actTextbaustein >= 6)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["1800vChrButton"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 70;
         }
         else if (StoryContainer.actTextbaustein < 9 && StoryContainer.actTextbaustein >= 7)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["1044Button"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 60;
         }
         else if (StoryContainer.actTextbaustein < 10 && StoryContainer.actTextbaustein >= 9)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["1180Button"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 50;
         }
         else if (StoryContainer.actTextbaustein < 14 && StoryContainer.actTextbaustein >= 10)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["1450Button"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 40;
         }
         else if (StoryContainer.actTextbaustein < 15 && StoryContainer.actTextbaustein >= 14)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["1608Button"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 30;
         }
         else if (StoryContainer.actTextbaustein < 17 && StoryContainer.actTextbaustein >= 15)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["1712Button"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 20;
         }
         else if (StoryContainer.actTextbaustein < 19 && StoryContainer.actTextbaustein >= 17)
         {
-            Vector2 value = calcMiddleOfRect(btnMap["1880Button"].GetComponent<RectTransform>());
-            timelineMarkerFlare.anchorMin = value;
-            timelineMarkerFlare.anchorMax = value;
             dustStorm.maxParticles = 10;
         }
         else
         {
-            timelineMarkerFlare.anchorMin = new Vector2(0, 0); ;
-            timelineMarkerFlare.anchorMax = new Vector2(0, 0); ;
             dustStorm.maxParticles = 0;
         }
 
         
     }
-
-
-    private Vector2 calcMiddleOfRect(RectTransform origRec)
-    {
-        return new Vector2((origRec.anchorMax.x + origRec.anchorMin.x)/2 - 0.003f, 0.5f);
-    }
-
+    
     public void setText()
     {
         storyText.text = "";

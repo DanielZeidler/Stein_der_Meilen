@@ -9,9 +9,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<int, bool> minispielAccess;
 
     public Scene actScene;
-
     
-
     public bool accessMinispiel0 = false;
     public bool accessMinispiel1 = false;
     public bool accessMinispiel2 = false;
@@ -65,7 +63,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if(accessMinispiel0 && StoryScreenInteractionController.Instance.minispieleButton != null) StoryScreenInteractionController.Instance.minispieleButton.interactable = true;
-        if (StoryScreenInteractionController.erfindungenButtonMap.Count > 0 && actScene.name == "StoryScreen") 
+        if (StoryScreenInteractionController.erfindungenButtonMap != null && actScene.name == "StoryScreen") 
         {
             foreach (Button btn in StoryScreenInteractionController.erfindungenButtonMap.Values) buttonMap[btn.name] = btn.interactable;
         }
