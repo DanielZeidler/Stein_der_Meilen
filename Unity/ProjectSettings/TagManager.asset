@@ -6,6 +6,14 @@ TagManager:
   tags:
   - ErfindungButton
   - Fire
+  - Blatt
+  - Holz
+  - Aeste
+  - Steine
+  - Apfel
+  - Feuerstein
+  - Regenwurm
+  - background
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,21 @@ public class draganddrop : MonoBehaviour
 {
     private Vector3 screenPoint;
     private Vector3 offset;
+    public GameObject obj;
+    private Vector2 start;
+
+    private void Start()
+    {
+        start = obj.transform.position;
+    }
+
+    public void Update()
+    {
+      if (!obj.GetComponent<Renderer>().isVisible)
+        {
+            obj.transform.position = start;
+        }
+    }
 
     void OnMouseDown()
     {
