@@ -5,19 +5,39 @@ using UnityEngine.EventSystems;
 
 public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler {
 
+
+	// TODO
+	/*
+	 * Hilfen nach Timer implementieren
+	 * 
+	 * Texte fuer Hilfe machen
+	 * 
+	 * Button zum weitermachen erstellen
+	 * 
+	 */
+
+	//MeinTimer timer = new MeinTimer ();
+
 	public int healthCount = 2; // Lebenspunkte fuer Baeume
+	private float zeitschranke = 30f;
 	public int gameFortschritt = 0; // Spielfortschritt
 	public bool meatDone = false;
 	public bool fireBuild = false;
 	public bool wolle = false;
 	public bool brotDone = false;
 
-	public enum Passend	{AXT, STEIN, DOLCH, SICHEL, SCHABER, FEUERFAKEL, FEUERSTEIN, BACKGROUND, NONE}; // ENUM fuer Werkzeuge die gehen
+	public enum Passend	{AXT, STEIN, DOLCH, SICHEL, SCHABER, FEUERFAKEL, FEUERSTEIN, BACKGROUND, WASSER, NONE}; // ENUM fuer Werkzeuge die gehen
 	public Passend destroy = Passend.NONE; // InitialWerkzeug
 
-	public enum AuchPassend	{AXT, STEIN, DOLCH, SICHEL, SCHABER, FEUERFAKEL, FEUERSTEIN, BACKGROUND, NONE}; // Weitere Werkzeuge die gehen
+	public enum AuchPassend	{AXT, STEIN, DOLCH, SICHEL, SCHABER, FEUERFAKEL, FEUERSTEIN, BACKGROUND, WASSER, NONE}; // Weitere Werkzeuge die gehen
 	public AuchPassend tooDestroy = AuchPassend.NONE; // Initital Alternativ Werkzeug
 
+	MeinTimer myTime = new MeinTimer ();
+
+	public void Update () {
+		
+		print (MeinTimer.timer);
+	}
 
 	public void OnPointerEnter (PointerEventData eventData) {
 		//Debug.Log ("OnPointerEnter to " + gameObject.name);
@@ -27,6 +47,23 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
 	public void OnDrop (PointerEventData eventData) {
 		Debug.Log (eventData.pointerDrag.name + " was dragged to " + gameObject.name);
+
+		// Check ob Spiel bestanden & weiter
+
+
+		if (meatDone && fireBuild && wolle && brotDone) {
+			// Spiel geschafft, weiter gehts
+		}
+
+		// Hilfen nach Zeit einblenden
+
+		if (myTime.getTimer() > zeitschranke) {
+
+			//switch cases
+
+		}
+
+	
 
 		Vector3 objPos = this.gameObject.transform.position;  // Position des Objekts, auf das gezogen wurde
 
@@ -51,6 +88,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 						// Spielfortschritt
 						wolle = true;
 						gameFortschritt ++;
+						myTime.setTimer (0f); // resettet Timer
 
 						Destroy (this.gameObject);
 				}
@@ -76,6 +114,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 									GameObject.Find("Fire").transform.position = objPos;
 									fireBuild = true;
 									gameFortschritt ++;
+									myTime.setTimer (0f); // resettet Timer
 
 									Destroy (this.gameObject);
 
@@ -98,44 +137,45 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
 							// Brutzel Sound
 
-
+				 
 							GameObject.Find("FleischGar").transform.position = objPos;
 							// Spielfortschritt
 							meatDone = true;
 							gameFortschritt ++;
+							print (MeinTimer.timer);
+							myTime.setTimer (0f); // resettet Timer
+					//
 
 							Destroy (this.gameObject);
 
 						}
 
 				if (gameObject.name == "Weizen") {
-
-					// Ernte Sound
-
-					Destroy (this.gameObject);
-
-					if (d.name == "Stein") {
-						// TODO Mehl hinzufuegen
-						GameObject.Find ("Mehl").transform.position = objPos;
-					}
-					// TODO WeizenKoerner hinzufuegen
-					else if (d.name == "Sichel") {
 						GameObject.Find ("WeizenKoerner").transform.position = objPos;
-					}
-
-					Destroy (this.gameObject);
+						Destroy (this.gameObject);
 
 				}
-
 							if (gameObject.name == "WeizenKoerner") {
-
-								Destroy (this.gameObject);
-								if (d.name == "Stein") {
-									// TODO Mehl hinzufuegen
 									GameObject.Find ("Mehl").transform.position = objPos;
+									Destroy (this.gameObject);
 								}
 							
-							}
+										if (gameObject.name == "Mehl") {
+												GameObject.Find ("Brotteig").transform.position = objPos;
+												Destroy (this.gameObject);
+										}
+													if (gameObject.name == "Mehl") {
+															GameObject.Find ("Brotteig").transform.position = objPos;
+															Destroy (this.gameObject);
+													}
+																if (gameObject.name == "Brotteig") {
+																	GameObject.Find ("Brot").transform.position = objPos;
+																	brotDone = true;
+																	gameFortschritt++;
+																	myTime.setTimer (0f); // resettet Timer
+																	Destroy (this.gameObject);
+																}
+					
 
 				d.parentToReturnTo = this.transform;
 			}

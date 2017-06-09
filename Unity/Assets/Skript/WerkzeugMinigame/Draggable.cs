@@ -7,7 +7,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
 	public Transform parentToReturnTo = null;
 
-	public enum Art {AXT, DOLCH, SICHEL, SCHABER, FEUERFAKEL, FEUERSTEIN, STEIN, KEIN}; // Enum fuer Art des Werkzeuges
+	public enum Art {AXT, DOLCH, SICHEL, SCHABER, FEUERFAKEL, FEUERSTEIN, STEIN, WASSER, KEIN}; // Enum fuer Art des Werkzeuges
 	public Art werkzeug = Art.KEIN;
 
 	public void OnBeginDrag (PointerEventData eventData) {
