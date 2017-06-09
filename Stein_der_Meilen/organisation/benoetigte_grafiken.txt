@@ -1,0 +1,71 @@
+Erfindungen (Icons):
+
+-Feuer
+-Werkzeuge
+
+-Rad 
+-Schrift
+-Glas
+
+-Schießpulver
+-Buchdruck
+-Windmühle
+
+-Fernrohr
+-Dampfmaschine
+-Elektrizität
+
+
+
+Situationen (evtl. Animation):
+
+-Menschen fliehen vor Tieren
+-jagende Menschen mit Speeren
+-Menschen essen rohes Fleisch
+-Menschen bereiten Nahrung über dem Feuer zu
+-Menschen tragen Kisten von A nah B
+-rollende Wägen mit Waren
+-Menschen kommunizieren mit Zeichensprache
+-Menschen mit beritzten Tafeln in der Hand
+-Menschen Trinken Wasser aus dem Fluss
+-Menschen mit Gläsern/Trinkgefäßen in der Hand
+-Menschen bekämpfen sich mit Nahkampfwaffen
+-Menschen die aufeinander Schießen
+-Menschen mahlen Getreide händisch
+-eine Windmühle in Betrieb
+-Menschen schreiben Bücher ab
+-viele lesende Menschen mit Büchern in der Hand
+-Menschen schauen in die Sterne
+-Menschen schauen mit Fernrohr in die Sterne
+-Menschen schleppen Wasser an die Oberfläche
+-Wasserhebung durch Dampfmaschine
+-Menschen sitzen im Dunkeln
+-Licht geht an
+
+
+Grafiktemplates:
+-Menschen(verschiedene Größen) + verschiedene Gegenstände für o.g. Situationen
+-Windmühle
+-Tiere
+-Bäume(verschieden Arten, Größen, Farben)
+-2 Siedlungen
+-Wagen (mit Kisten)
+-Sternenhimmel
+-Wasserhebung durch Dampfmaschine
+-Glühbirne
+
+Figuren:
+
+-Leonardo
+-Gutenberg
+-Lipperhey
+-Edison
+
+
+
+Interface:
+
+-Zeitstrahl in 11 Zuständen (1 je Erfindung)
+-drehende Erdscheibe
+-Menü/Spielbildschirm
+

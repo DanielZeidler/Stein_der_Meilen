@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1250197759227962}
+  m_IsPrefabParent: 1
+--- !u!1 &1250197759227962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224330780932875028}
+  - component: {fileID: 114324851098986398}
+  m_Layer: 5
+  m_Name: StoryContainerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114324851098986398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250197759227962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d4bcc77440bc4c80638d016d5547d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbausteine:
+  - "Leonardo: Hallo! Mein Name ist Leonardo Da Vinci, meines Zeichens Erfinder, K\xFCnstler
+    und Philosoph. Ich komme in der Stunde meiner gr\xF6\xDFten Not zu dir. Die Geschichtsschreibung
+    ist durcheinander gekommen.Es gibt L\xF6cher in der Zeit, die ich mir selber nicht
+    erkl\xE4ren kann. Lebenswichtige Technologien und Erfindungen sind verloren gegangen.
+    Die Menschen sind v\xF6llig hilflos. Du wirst bald sehen, was ich meine. Nur mithilfe
+    des \"Steines der Meilen\" k\xF6nnen wir wieder Ordnung in das Zeitgef\xFCge bringen.
+    Dazu m\xFCssen wir die Meilensteine der Menschheit rekonstruieren. Lass uns keine
+    Zeit verlieren!"
+  - "Leonardo: Als die Menschen noch nichts hatten, au\xDFer sich selbst, war ihr
+    Leben nicht so einfach, wie das der Menschen heute. In einer Zeit, die du heute
+    als \"Steinzeit\" kennst, begann man Hilfsmittel zu nutzen um Materialien zu bearbeiten
+    und gr\xF6\xDFere Dinge zu schaffen. Dar\xFCber hinaus wurde so die Jagt erleichtert.
+    Kannst du dir denken, worum es geht?"
+  - "Leonardo: Richtig! Das \xE4lteste Werkzeug, eine Art Faustkeil, reicht \xFCber
+    2,4 Millionen Jahre zur\xFCck und wurde im heutigen Afrika gefunden. Schnell wurden
+    daraus Jagdmittel entwickelt.Bald darauf sehnten sich die Menschen nach mehr Licht
+    und W\xE4rme..."
+  - "Leonardo: Ja, das Feuer. In der Natur gab es schon immer Funken und Br\xE4nde.
+    Doch das Leben der Menschen \xE4nderte sich schlagartig, als sie lernten das Feuer
+    zu erhalten und f\xFCr sich zu nutzen. So konnten sie zum Beispiel Nahrung zubereiten.
+    Es sollte aber noch viele Jahre dauern, bis der Mensch selbst Feuer entz\xFCnden
+    konnte. Das Feuer war auch f\xFCr meine eigene Arbeit gewinnbringend. So habe
+    ich zum Beispiel meine erste Flugmaschine mit hei\xDFer Luft angetrieben. Herzlichen
+    Gl\xFCckwunsch! Du hast den ersten Meilenstein erreicht. Nur noch drei weitere
+    fehlen uns, um den \"Stein der Meilen\" zu erhalten und alles wieder in's Lot
+    zu bringen."
+  - "Leonardo: Als die ersten Siedlungen gegr\xFCndet wurden und die Menschen sich
+    niederlie\xDFen, brauchte man einen Weg, um G\xFCter von Ort zu Ort zu transportieren.
+    Womit konnte das wohl gelingen?"
+  - "Leonardo: Genau! Seit dem Jahr 4000 v.Chr. nutzen die Menschen R\xE4der um Transportmittel
+    zu bauen. Vorher wurden haupts\xE4chlich Schlitten genutzt. Wo eine Zivilisation
+    entsteht, war bald auch ein einheitlicher Kommunikationsweg vorhanden..."
+  - "Leonardo: Ohne die Erfindung der Schrift w\xE4re die Menschheit niemals so weit
+    gekommen. Nun konnte man Informationen f\xFCr die Nachwelt festhalten. Bereits
+    ca. 2700 v.Chr. existierte eine recht verbreitete Form, die sogenannte Keilschrift.
+    \xC4ltere Enddeckungen gehen sogar noch weitere 3000 Jahre zur\xFCck. Meine Arbeit
+    hat die Schrift jedenfalls erst m\xF6glich gemacht. Eine unserer bisherigen Enddeckungen
+    half den Menschen nun dabei, einen v\xF6llig neuen Rohstoff herzustellen, der
+    heute kaum mehr wegzudenken ist und damals vor allem zur Gef\xE4\xDFherstellung
+    diente."
+  - "Leonardo: Das ist richtig. Glas existiert bereits seit knapp 4000 Jahren. Kannst
+    du dir das vorstellen? Die Herstellung war f\xFCr damalige Verh\xE4ltnisse extrem
+    aufwendig. Wir haben den zweiten Meilenstein erreicht. Sehr gut! Bald haben wir
+    es geschafft und die Welt ist wieder in Ordnung."
+  - "Leonardo: Wir machen einen gro\xDFen Sprung \xFCber die Zeitenwende und befinden
+    uns im Jahr 1044 n.Chr.. Die Welt der Waffen wird durch eine Enddeckung in China
+    revolutioniert, die effektiven und t\xF6dlichen Nahkampf m\xF6glich machte. Was
+    ist wohl gemeint?"
+  - "Leonardo: Ein dunkles Kapitel der Geschichte. Nie zuvor forderten Kriege so viele
+    Todesopfer, wie nach der Erfindung des Schwarzpulvers. Andererseits konnte es
+    auch sinnvoll im Bergbau eingesetzt werden. Im Jahre 1180 vollbrachten die Menschen
+    in Flandern und der Normandie ein wahres Meisterst\xFCck der Technik und erschufen
+    Bauwerke, die mithilfe der Natur Arbeit verrichten konnte. Der Grundstein daf\xFCr
+    wurde von einer Errungenschaft gelegt, die wir schon gesehen haben..."
+  - "Leonardo: Die ersten Windm\xFChlen standen nicht, wie Viele denken, in den Niederlanden,
+    sondern in Belgien, Frankreich und England. Eine geniale Idee, nach der Erfindung
+    der Wasserm\xFChlen, nun auch den Wind zu nutzen um Getreide zu mahlen und diverse
+    andere Arbeiten zu verrichten. Im Jahre 1450, zwei Jahre vor meiner Geburt, entwickelte
+    ein Deutscher namens Johannes Gutenberg eine Weltneuheit, die die Medienwelt revolutionierte
+    und dabei half, eine Errungenschaft effektiv zu verbreiten, \xFCber die wir bereits
+    gesprochen haben."
+  - "Leonardo: Ich w\xFCnschte, ich h\xE4tte Gutenberg einmal kennengelernt. Er war
+    in den letzten Z\xFCgen seines Lebens, als ich noch ein Junge war. Durch seinen
+    Einfallsreichtum konnten fortan Flugbl\xE4tter und Pamphlete rasend schnell vervielf\xE4ltigt
+    und massenhaft Bibeln gedruckt werden. Ich w\xFCrde ihn so gern fragen, was sein
+    Antrieb war."
+  - "Gutenberg: Das kann ich dir sagen, Leonardo. Es ist so, dass ich schon immer
+    ein sehr religi\xF6ser Mensch war. Anfangs habe ich Wallfahrtsspiegel f\xFCr Pilgerreisen
+    hergestellt und mithilfe meines Druckverfahrens der beweglichen Lettern konnte
+    das Wort Gottes zu jedem nach Hause getragen werden. Bald schon sollte jeder eine
+    Bibel besitzen k\xF6nnen. F\xFCr die Kirche lie\xDF ich Ablassbriefe drucken um
+    jedem die M\xF6glichkeit zu geben, sich von jedweden S\xFCnden freizukaufen. Ich
+    hoffe, das war Erkl\xE4rung genug. Lasst euch nicht weiter von eurem Vorhaben
+    abbringen."
+  - "Leonardo: Eine seltsame Begegnung. Wir stehen kurz vor unserem Ziel. Ich wei\xDF
+    es. Wir d\xFCrfen jetzt nicht aufh\xF6ren. Weiter geht\u2019s!"
+  - "Leonardo: Wir befinden uns nunmehr in einem hochtechnisiertem Zeitalter, viele
+    Jahre nach meinem Tod. Ein niederl\xE4ndischer Instrumentenbauer namens Jacob
+    Metius aus Alkmaar entwickelte ein Werkzeug um in weite Ferne sehen zu k\xF6nnen."
+  - "Hans Lipperhey: Moment mal! Ich bin der Erfinder des Fernrohres, nicht dieser
+    Metius. Gestatten, Hans Lipperhey. Ich arbeitete als Brillenmacher als ich die
+    Enddeckung machte. Doch viele Andere beanspruchten meine Entdeckung f\xFCr sich
+    und wie so viele gro\xDFe Erfindungen, wurde auch mein Fernrohr schnell f\xFCr
+    milit\xE4rische Zwecke missbraucht. Finanziell hatte ich leider auch nichts davon,
+    denn andere Menschen meldeten zur gleichen Zeit \xE4hnliche Patente an. Ich w\xFCnsche
+    mir nur, das man sich an meinen Namen erinnert, denn ich war der Erste."
+  - "Leonardo: Wie dem auch sei. Lange war umstritten, wer die Entdeckung f\xFCr sich
+    beanspruchen konnte. Diesem Thema wurde sogar ein ganzes Buch gewidmet \u201E\xDCber
+    den wahren Erfinder des Teleskops\u201C. Was danach kam, war wahrlich faszinierend.
+    Die industrielle Revolution startete 1712 und ausgel\xF6st wurde sie durch eine
+    bestimmte Erfindung."
+  - "Leonardo: Die Dampfmaschine wurde on Thomas Newcomen konstruiert und eingesetzt
+    um Wasser aus Bergwerken an die Oberfl\xE4che zu bekommen, ohne dass die Menschen
+    es selbst schleppen mussten. Ein gro\xDFer Meilenstein der Menschheitsgeschichte
+    fehlt noch. Ohne diesen k\xF6nntest du dieses Spiel nicht spielen. Die gesamte
+    moderne Zivilisation beruht auf ihm. Was k\xF6nnte das wohl sein?"
+  - "Edison: So ganz stimmt das nicht. Ich habe das Konzept von anderen T\xFCftlern,
+    wie zum Beispiel William Grove, \xFCbernommen und weiterentwickelt. Ich konnte
+    mir zu Lebzeiten nicht ausmalen, was ich ausgel\xF6st habe und wie hoch Entwickelt
+    die Menschheit heute ist. Ich sehe, du hast es geschafft. Die Welt ist wieder
+    in Ordnung. Dank dir konnte gr\xF6\xDFeres \u2039bel abgewendet werden. Du bist
+    nun im Besitz des \"Steines der Meilen\". Trage ihn stolz als Zeichen deines Wissens
+    und sei sicher, dass die Welt dir zu Dank verpflichtet ist."
+  - "Leonardo: Herzlichen Gl\xFCckwunsch mein Freund! Auch du bist durch diese Reise
+    ein gro\xDFes St\xFCck Weiser geworden. Ich bin Stolz auf dich."
+  play: 0
+  pause: 0
+  playSpeed: 0.04
+  rotationEarth: 0
+--- !u!224 &224330780932875028
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250197759227962}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -340.5, y: -191.50002}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
