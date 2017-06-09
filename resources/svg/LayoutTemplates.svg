@@ -28,7 +28,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1189002"
-     inkscape:cx="-1757.0946"
+     inkscape:cx="-1952.3756"
      inkscape:cy="-467.29801"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -19452,7 +19452,7 @@
     <path
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
-       inkscape:export-filename="D:\felix\Desktop\MPD\Lernspiel\Stein_der_Meilen\resources\images\Start_Minigame_Blue.png"
+       inkscape:export-filename="D:\felix\Desktop\MPD\Lernspiel\Stein_der_Meilen\resources\images\Start_Minigame_Red.png"
        inkscape:transform-center-y="-0.0019095212"
        transform="matrix(0.99999999,1.0353798e-4,-1.0353798e-4,0.99999999,-224.17037,239.70319)"
        inkscape:transform-center-x="-9.1822521"
@@ -19468,7 +19468,7 @@
        sodipodi:cx="-1760.4359"
        sodipodi:sides="3"
        id="path25586"
-       style="fill:#ab5a7e;fill-opacity:1;stroke:none;stroke-width:0.3125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ab5a7e;fill-opacity:1;stroke:none;stroke-width:0.3125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:"
        sodipodi:type="star" />
   </g>
 </svg>

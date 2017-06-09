@@ -5,11 +5,35 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg6262"
    version="1.1"
    viewBox="0 0 210 297"
    height="297mm"
-   width="210mm">
+   width="210mm"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Wolke3.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="1.7719388"
+     inkscape:cx="188.61449"
+     inkscape:cy="939.73523"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6262" />
   <defs
      id="defs6256" />
   <metadata
@@ -20,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -30,5 +54,70 @@
        id="path4496"
        d="M 55.595379,13.866073 C 51.596689,7.1465435 48.275279,6.7195735 42.260839,12.220533 38.011991,7.3749635 37.502279,1.3284035 27.43618,12.448663 9.5235497,-1.3541365 15.2795,13.929934 11.65567,16.417414 5.0075597,19.463273 8.5553697,26.529453 12.7896,28.985123 c 2.78494,4.261779 6.2092,7.961551 13.47629,2.27933 2.8399,1.76662 5.21835,4.981731 12.698558,-0.67293 6.746182,5.02309 9.23394,5.34847 12.662181,0 2.73609,-2.95167 5.62343,-1.16139 6.142111,-11.244779 0.93752,-5.138381 1.80661,-5.415871 -2.173361,-5.480661 z"
        style="fill:#cccccc;stroke:#000000;stroke-width:0.065;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+  <g
+     id="g4164"
+     transform="translate(40.455373,-58.453235)"
+     inkscape:export-filename="D:\felix\Desktop\MPD\Lernspiel\Stein_der_Meilen\resources\images\Minispiel_Feuer\Wolke3.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <g
+       id="g4151">
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.34;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4137"
+         cx="50.6754"
+         cy="85.044647"
+         rx="11.016391"
+         ry="5.1997366" />
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.34;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4139"
+         cx="48.560249"
+         cy="80.990608"
+         rx="6.786097"
+         ry="5.7285233" />
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.34;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4141"
+         cx="57.549625"
+         cy="78.346672"
+         rx="6.2573094"
+         ry="6.081048" />
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.34;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4143"
+         cx="63.718803"
+         cy="83.722679"
+         rx="6.4335718"
+         ry="6.3454413" />
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.34;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4145"
+         cx="58.254673"
+         cy="88.129227"
+         rx="4.8472123"
+         ry="4.0540318" />
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.34;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4147"
+         cx="49.882217"
+         cy="89.451195"
+         rx="6.8742275"
+         ry="3.7896383" />
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.34;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4149"
+         cx="41.862286"
+         cy="86.630997"
+         rx="5.5522609"
+         ry="4.3184252" />
+    </g>
+    <path
+       sodipodi:nodetypes="csc"
+       inkscape:connector-curvature="0"
+       id="path4160"
+       d="m 49.42829,83.176899 c 0,0 1.660218,2.741761 4.672541,2.864793 2.469108,0.100846 3.973334,-2.649244 3.973334,-2.649244"
+       style="fill:none;fill-rule:evenodd;stroke:#d7d3d3;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
 </svg>
