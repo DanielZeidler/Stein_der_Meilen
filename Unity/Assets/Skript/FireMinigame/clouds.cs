@@ -5,12 +5,12 @@ using UnityEngine;
 public class clouds : MonoBehaviour {
 
     public GameObject cloud;
-    private Vector3 start;
+    public Vector3 start;
     public float speed;
 
 	// Use this for initialization
 	void Start () {
-        start = cloud.transform.position;
+        //start = cloud.transform.position;
 	}
 	
 	// Update is called once per frame

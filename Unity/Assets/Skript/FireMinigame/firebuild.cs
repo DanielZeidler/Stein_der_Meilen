@@ -20,6 +20,7 @@ public class firebuild : MonoBehaviour {
     public Text blatttext;
     public GameObject finishbutton;
     public GameObject textimage;
+    public GameObject lagerfeuer;
 
     // Use this for initialization
     void Start () {
