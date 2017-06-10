@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MeinTimer : MonoBehaviour{
 
+	// TODO Singleton implem wie in fortschritt
+
+
 	public static float timer = 0f; // Float fuer Timer
 
 	void Update() {

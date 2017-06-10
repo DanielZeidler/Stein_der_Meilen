@@ -18,13 +18,9 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
 	//MeinTimer timer = new MeinTimer ();
 
+
 	public int healthCount = 2; // Lebenspunkte fuer Baeume
 	private float zeitschranke = 30f;
-	public int gameFortschritt = 0; // Spielfortschritt
-	public bool meatDone = false;
-	public bool fireBuild = false;
-	public bool wolle = false;
-	public bool brotDone = false;
 
 	public enum Passend	{AXT, STEIN, DOLCH, SICHEL, SCHABER, FEUERFAKEL, FEUERSTEIN, BACKGROUND, WASSER, NONE}; // ENUM fuer Werkzeuge die gehen
 	public Passend destroy = Passend.NONE; // InitialWerkzeug
@@ -33,10 +29,14 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 	public AuchPassend tooDestroy = AuchPassend.NONE; // Initital Alternativ Werkzeug
 
 	MeinTimer myTime = new MeinTimer ();
+	Fortschritt fortschritt = Fortschritt.Instance;
 
 	public void Update () {
 		
-		print (MeinTimer.timer);
+		if (fortschritt.getBrotDone() || fortschritt.getWolle() || fortschritt.getFireBuild() || fortschritt.getMeatDone()) {
+			print ("all done");
+			GameObject.Find ("Canvas").transform.FindChild ("ErfolgreichBeendet").gameObject.SetActive (true);
+		}
 	}
 
 	public void OnPointerEnter (PointerEventData eventData) {
@@ -51,9 +51,6 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 		// Check ob Spiel bestanden & weiter
 
 
-		if (meatDone && fireBuild && wolle && brotDone) {
-			// Spiel geschafft, weiter gehts
-		}
 
 		// Hilfen nach Zeit einblenden
 
@@ -86,8 +83,12 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
 						GameObject.Find("Wolle").transform.position = objPos;
 						// Spielfortschritt
-						wolle = true;
-						gameFortschritt ++;
+						fortschritt.setWolle(true);
+						fortschritt.setGameFortschritt (1);
+
+					GameObject.Find ("Hilfstexte").transform.FindChild ("HilfeBaeume").gameObject.SetActive (true);
+
+						
 						myTime.setTimer (0f); // resettet Timer
 
 						Destroy (this.gameObject);
@@ -112,8 +113,14 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 								
 
 									GameObject.Find("Fire").transform.position = objPos;
-									fireBuild = true;
-									gameFortschritt ++;
+					if (!fortschritt.getFireBuild ()) {
+						print ("fire not Build");
+					}
+									fortschritt.setFireBuild (true);
+					if (fortschritt.getFireBuild ()) {
+						print ("fire Build");
+					}
+									fortschritt.setGameFortschritt (1);
 									myTime.setTimer (0f); // resettet Timer
 
 									Destroy (this.gameObject);
@@ -136,16 +143,12 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 						if (gameObject.name == "FleischRoh") {
 
 							// Brutzel Sound
-
 				 
 							GameObject.Find("FleischGar").transform.position = objPos;
 							// Spielfortschritt
-							meatDone = true;
-							gameFortschritt ++;
-							print (MeinTimer.timer);
+							fortschritt.setMeatDone(true);
+							fortschritt.setGameFortschritt (1);
 							myTime.setTimer (0f); // resettet Timer
-					//
-
 							Destroy (this.gameObject);
 
 						}
@@ -161,17 +164,17 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 								}
 							
 										if (gameObject.name == "Mehl") {
-												GameObject.Find ("Brotteig").transform.position = objPos;
+												GameObject.Find ("Teig").transform.position = objPos;
 												Destroy (this.gameObject);
 										}
 													if (gameObject.name == "Mehl") {
-															GameObject.Find ("Brotteig").transform.position = objPos;
+															GameObject.Find ("Teig").transform.position = objPos;
 															Destroy (this.gameObject);
 													}
-																if (gameObject.name == "Brotteig") {
+																if (gameObject.name == "Teig") {
 																	GameObject.Find ("Brot").transform.position = objPos;
-																	brotDone = true;
-																	gameFortschritt++;
+																	fortschritt.setBrotDone (true);
+																	fortschritt.setGameFortschritt (1);
 																	myTime.setTimer (0f); // resettet Timer
 																	Destroy (this.gameObject);
 																}
