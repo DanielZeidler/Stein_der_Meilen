@@ -832,7 +832,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aaac295dd78747a3aeab9d850715d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCount: 3
   destroy: 0
   tooDestroy: 6
 --- !u!1001 &385036409
@@ -1384,7 +1383,7 @@ Prefab:
     - target: {fileID: 114077619346336790, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
       propertyPath: tooDestroy
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da1ff2976e8c7402a9e6ebc4029da287, type: 2}
@@ -2103,7 +2102,7 @@ Prefab:
     - target: {fileID: 114077619346336790, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
       propertyPath: destroy
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114279144680334432, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
@@ -2113,7 +2112,7 @@ Prefab:
     - target: {fileID: 114077619346336790, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
       propertyPath: tooDestroy
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1125593944139634, guid: da1ff2976e8c7402a9e6ebc4029da287, type: 2}
       propertyPath: m_TagString
@@ -2433,7 +2432,7 @@ Prefab:
     - target: {fileID: 114077619346336790, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
       propertyPath: tooDestroy
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da1ff2976e8c7402a9e6ebc4029da287, type: 2}
@@ -3212,7 +3211,7 @@ Prefab:
     - target: {fileID: 114077619346336790, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
       propertyPath: tooDestroy
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224538861913008902, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
@@ -3756,7 +3755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aaac295dd78747a3aeab9d850715d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCount: 3
   destroy: 7
   tooDestroy: 7
 --- !u!114 &1775794136
@@ -3917,7 +3915,7 @@ Prefab:
     - target: {fileID: 114077619346336790, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
       propertyPath: tooDestroy
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1125593944139634, guid: da1ff2976e8c7402a9e6ebc4029da287, type: 2}
       propertyPath: m_TagString
@@ -4148,7 +4146,7 @@ Prefab:
     - target: {fileID: 114077619346336790, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
       propertyPath: destroy
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114279144680334432, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
@@ -4158,7 +4156,7 @@ Prefab:
     - target: {fileID: 114077619346336790, guid: da1ff2976e8c7402a9e6ebc4029da287,
         type: 2}
       propertyPath: tooDestroy
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1125593944139634, guid: da1ff2976e8c7402a9e6ebc4029da287, type: 2}
       propertyPath: m_TagString

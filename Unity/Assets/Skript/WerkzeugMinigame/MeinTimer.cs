@@ -2,9 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeinTimer : MonoBehaviour{
+public class MeinTimer : ScriptableObject{
 
-	// TODO Singleton implem wie in fortschritt
+	private static MeinTimer instance;
+
+	private MeinTimer() {}
+
+	public static MeinTimer Instance
+	{
+		get 
+		{
+			if (instance == null)
+			{
+				instance = new MeinTimer();
+			}
+			return instance;
+		}
+	}
 
 
 	public static float timer = 0f; // Float fuer Timer

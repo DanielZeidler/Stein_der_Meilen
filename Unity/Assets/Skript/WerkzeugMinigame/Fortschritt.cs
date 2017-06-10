@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fortschritt : MonoBehaviour {
+public class Fortschritt : ScriptableObject{
 
 	private static Fortschritt instance;
 
