@@ -8,23 +8,14 @@ public class draganddrop : MonoBehaviour
     private Vector3 screenPoint;
     private Vector3 offset;
     public GameObject obj;
-    private Vector2 start;
+    private Vector2 start = new Vector2();
 
-    private void Start()
-    {
-        start = obj.transform.position;
-    }
+    public bool drag = false;
 
-    public void Update()
-    {
-      if (!obj.GetComponent<Renderer>().isVisible)
-        {
-            obj.transform.position = start;
-        }
-    }
 
     void OnMouseDown()
     {
+        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 
@@ -35,5 +26,12 @@ public class draganddrop : MonoBehaviour
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         transform.position = curPosition;
+
+        drag = true;
+    }
+
+    void OnMouseUp()
+    {
+        drag = false;
     }
 }

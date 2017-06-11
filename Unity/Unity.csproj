@@ -89,6 +89,8 @@
     <Compile Include="Assets\Skript\FireMinigame\draganddrop.cs" />
     <Compile Include="Assets\Skript\FireMinigame\firebuild.cs" />
     <Compile Include="Assets\Skript\FireMinigame\hover.cs" />
+    <Compile Include="Assets\Skript\Minispiel1\CollisionDe.cs" />
+    <Compile Include="Assets\Skript\Minispiel1\Minispiel1Controller.cs" />
     <Compile Include="Assets\Skript\MinispieleOverview\MinispielAccessController.cs" />
     <Compile Include="Assets\Skript\StoryScreen\EarthAnimationController.cs" />
     <Compile Include="Assets\Skript\StoryScreen\GameManager.cs" />
