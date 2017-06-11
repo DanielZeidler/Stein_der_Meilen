@@ -2959,7 +2959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: MinigameWerkzeug
+  scene: Minispiel1
 --- !u!1 &898237739
 GameObject:
   m_ObjectHideFlags: 0

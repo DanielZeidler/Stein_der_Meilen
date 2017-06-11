@@ -8,7 +8,6 @@ public class draganddrop : MonoBehaviour
     private Vector3 screenPoint;
     private Vector3 offset;
     public GameObject obj;
-    private Vector2 start = new Vector2();
 
     public bool drag = false;
 

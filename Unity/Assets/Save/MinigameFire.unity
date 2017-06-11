@@ -866,6 +866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 603692449}
+  drag: 0
 --- !u!50 &603692454
 Rigidbody2D:
   serializedVersion: 4
@@ -918,7 +919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.4}
+  m_AnchoredPosition: {x: 0, y: -0.39999998}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &652702595
@@ -1069,6 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 768887614}
+  drag: 0
 --- !u!50 &768887619
 Rigidbody2D:
   serializedVersion: 4
@@ -1346,6 +1348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 819614901}
+  drag: 0
 --- !u!50 &819614906
 Rigidbody2D:
   serializedVersion: 4
@@ -1935,6 +1938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1377967714}
+  drag: 0
 --- !u!50 &1377967719
 Rigidbody2D:
   serializedVersion: 4
@@ -1986,6 +1990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1406850672}
+  drag: 0
 --- !u!50 &1406850674
 Rigidbody2D:
   serializedVersion: 4
@@ -2259,6 +2264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1663931119}
+  drag: 0
 --- !u!50 &1663931121
 Rigidbody2D:
   serializedVersion: 4
@@ -2565,7 +2571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: MinispielOverview
+  scene: StoryScreen
 --- !u!1 &1958357337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,6 +2603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1958357337}
+  drag: 0
 --- !u!50 &1958357339
 Rigidbody2D:
   serializedVersion: 4

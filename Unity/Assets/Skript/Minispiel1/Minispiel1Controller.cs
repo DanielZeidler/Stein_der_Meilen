@@ -79,6 +79,13 @@ public class Minispiel1Controller : MonoBehaviour {
         {
             firework.Play();
             finished = true;
+            if (StoryContainer.accessStoryPart < 2)
+            {
+                StoryContainer.accessStoryPart = 2;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
         }
     }
 }

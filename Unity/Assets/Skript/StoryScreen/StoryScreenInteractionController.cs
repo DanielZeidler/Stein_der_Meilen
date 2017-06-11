@@ -172,10 +172,12 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             btnMap["2,2MiovChrButton"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel0 = true;
+                /*
                 if (StoryContainer.accessStoryPart < 2)
                 {
                     StoryContainer.accessStoryPart = 2;
                 }
+                */
                 infoBoxText.text = infotexte[1];
                 InfoBoxImage.enabled = true;
                 foreach (ParticleSystem partSys in GameObject.Find("StoryHintMarker").GetComponentsInChildren<ParticleSystem>())
@@ -195,11 +197,12 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             btnMap["500000vChrButton"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel1 = true;
-                if (StoryContainer.accessStoryPart < 4)
+             /*
+              if (StoryContainer.accessStoryPart < 4)
                 {
                     StoryContainer.accessStoryPart = 4;
                 }
-                    
+              */      
             });
         }
         if (erfindungenMap["RadButton"].isClicked)

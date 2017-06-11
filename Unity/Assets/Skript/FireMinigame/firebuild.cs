@@ -73,6 +73,14 @@ public class firebuild : MonoBehaviour {
             finishtext.enabled = true;
             finishbutton.SetActive(true);
             count++;
+
+            if (StoryContainer.accessStoryPart < 4)
+            {
+                StoryContainer.accessStoryPart = 4;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
         }
 
         //Textfelder
