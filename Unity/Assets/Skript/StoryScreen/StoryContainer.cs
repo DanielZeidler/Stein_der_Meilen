@@ -4,13 +4,14 @@ using UnityEngine.UI;
 
 public class StoryContainer : MonoBehaviour
 {
+    public bool reset = false;
 
     public string[] textbausteine;
 
     public static int accessStoryPart = 1;
     public static int actTextbaustein = 0;
     public static int actLetter;
-    public static string actText = "";
+    public static string actText = "Begrüßung BlaBlaBla";
 
     public bool play = false;
     public bool pause = false;
@@ -44,5 +45,27 @@ public class StoryContainer : MonoBehaviour
             Destroy(gameObject);
         }
     }
- 
+
+    private void Update()
+    {
+        if (reset)
+        {
+            accessStoryPart = 1;
+            actTextbaustein = 0;
+            actLetter = 0;
+            actText = "Begrüßung BlaBlaBla";
+
+            play = false;
+            pause = false;
+            mute = false;
+            
+
+            interaction = false;
+            resetInfoBox = false;
+
+            rotationEarth = false;
+
+            reset = false;
+        }
+    }
 }

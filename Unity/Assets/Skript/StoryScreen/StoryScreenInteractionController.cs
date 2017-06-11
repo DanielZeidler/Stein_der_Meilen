@@ -13,6 +13,8 @@ using UnityEngine.UI;
 
 public class StoryScreenInteractionController : MonoBehaviour
 {
+    public static bool start = true;
+
     public string[] infotexte;
     
     private Text infoBoxText;
@@ -67,8 +69,13 @@ public class StoryScreenInteractionController : MonoBehaviour
         backgroundMusic = GameObject.Find("ErdeWrapper").GetComponent<AudioSource>();
 
         backgroundMusic.Stop();
-
-        if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
+        if (start)
+        {
+            StoryContainer.Instance.play = false;
+            StoryContainer.Instance.pause = false;
+            storyText.text = "Begrüßung BlaBlaBla";
+        }
+        if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause && !start)
         {
             StoryContainer.Instance.play = true;
             setText();
@@ -77,7 +84,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             StoryContainer.Instance.pause = false;
         }
-        if (GameObject.Find("ScrollRect").GetComponent<ScrollRect>() != null)
+        if (GameObject.Find("ScrollRect").GetComponent<ScrollRect>() != null && !start)
         {
             Canvas.ForceUpdateCanvases();
             GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
@@ -130,7 +137,7 @@ public class StoryScreenInteractionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (storyText != null)
+        if (storyText != null && !start)
         {
             storyText.text = StoryContainer.actText.Substring(0, StoryContainer.actLetter);
         }

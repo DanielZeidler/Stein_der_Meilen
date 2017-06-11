@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public bool reset = false;
+
     private Dictionary<string, bool> buttonMap;
     public Dictionary<int, bool> minispielAccess;
 
@@ -62,7 +64,25 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        if (reset)
+        {
+            accessMinispiel0 = false;
+            accessMinispiel1 = false;
+            accessMinispiel2 = false;
+            accessMinispiel3 = false;
+            accessMinispiel4 = false;
+            accessMinispiel5 = false;
+            accessMinispiel6 = false;
+            accessMinispiel7 = false;
+            accessMinispiel8 = false;
+            accessMinispiel9 = false;
+            accessMinispiel10 = false;
+
+            reset = false;
+        }
+
         if(accessMinispiel0 && StoryScreenInteractionController.Instance.minispieleButton != null) StoryScreenInteractionController.Instance.minispieleButton.interactable = true;
+
         if (StoryScreenInteractionController.erfindungenButtonMap != null && actScene.name == "StoryScreen") 
         {
             foreach (Button btn in StoryScreenInteractionController.erfindungenButtonMap.Values) buttonMap[btn.name] = btn.interactable;
