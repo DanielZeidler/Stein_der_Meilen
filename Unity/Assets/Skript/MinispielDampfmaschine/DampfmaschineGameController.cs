@@ -24,6 +24,11 @@ public class DampfmaschineGameController : MonoBehaviour {
 
 
     private Animator animator;
+    private bool trigger1;
+    private bool triggerFinish;
+
+    public int counter;
+    private ParticleSystem firework;
 
     private void Awake()
     {
@@ -43,9 +48,16 @@ public class DampfmaschineGameController : MonoBehaviour {
         animator.SetBool(1, false);
         animator.SetBool(2, false);
         animator.SetBool(3, false);
+        
+        trigger1 = false;
+        triggerFinish = false;
+
+        counter = 0;
     }
     // Use this for initialization
     void Start () {
+        firework = GameObject.Find("Fireworks").GetComponent<ParticleSystem>();
+
         ventilObenEinSprite.sprite = ventilZu;
         ventilObenAusSprite.sprite = ventilZu;
         ventilUntenEinSprite.sprite = ventilZu;
@@ -54,7 +66,21 @@ public class DampfmaschineGameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+        if(animator.GetCurrentAnimatorClipInfoCount(0) == 1)
+        {
+            trigger1 = true;
+        }
+        if (animator.GetCurrentAnimatorClipInfoCount(0) == 0 && trigger1)
+        {
+            trigger1 = false;
+            counter++;
+        }
+        if(!triggerFinish && counter == 2)
+        {
+            triggerFinish = true;
+            firework.Play();
+        }
 	}
 
     public void toggleVentil(Ventil ventil)
