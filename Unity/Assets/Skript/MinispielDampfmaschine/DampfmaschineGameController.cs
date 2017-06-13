@@ -15,19 +15,34 @@ public class DampfmaschineGameController : MonoBehaviour {
     private SpriteRenderer ventilUntenEinSprite;
     private SpriteRenderer ventilUntenAusSprite;
 
-    private bool ventilObenEin;
-    private bool ventilObenAus;
-    private bool ventilUntenEin;
-    private bool ventilUntenAus;
+    public bool ventilObenEin;
+    public bool ventilObenAus;
+    public bool ventilUntenEin;
+    public bool ventilUntenAus;
 
     public enum Ventil { VENTIL_OBEN_EIN,VENTIL_OBEN_AUS,VENTIL_UNTEN_EIN,VENTIL_UNTEN_AUS};
 
+
+    private Animator animator;
+
     private void Awake()
     {
+        animator = GameObject.Find("DampfmaschineWrapper").GetComponent<Animator>();
+
         ventilObenEinSprite = GameObject.Find("ventilObenEin").GetComponent<SpriteRenderer>();
         ventilObenAusSprite = GameObject.Find("ventilObenAus").GetComponent<SpriteRenderer>();
         ventilUntenEinSprite = GameObject.Find("ventilUntenEin").GetComponent<SpriteRenderer>();
         ventilUntenAusSprite = GameObject.Find("ventilUntenAus").GetComponent<SpriteRenderer>();
+
+        ventilObenEin = false;
+        ventilObenAus = false; 
+        ventilUntenEin = false; 
+        ventilUntenAus = false;
+
+        animator.SetBool(0, false);
+        animator.SetBool(1, false);
+        animator.SetBool(2, false);
+        animator.SetBool(3, false);
     }
     // Use this for initialization
     void Start () {
@@ -46,31 +61,63 @@ public class DampfmaschineGameController : MonoBehaviour {
     {
         if (ventil == Ventil.VENTIL_OBEN_AUS)
         {
-            if(ventilObenAusSprite.sprite == ventilZu)
+            if (ventilObenAusSprite.sprite == ventilZu)
             {
                 ventilObenAusSprite.sprite = ventilOffen;
-            }else ventilObenAusSprite.sprite = ventilZu;
+                ventilObenAus = true;
+                animator.SetBool("ObenAus", true);
+            }
+            else
+            {
+                ventilObenAusSprite.sprite = ventilZu;
+                ventilObenAus = false;
+                animator.SetBool("ObenAus", false);
+            }
         }
         else if (ventil == Ventil.VENTIL_OBEN_EIN)
         {
-            if(ventilObenEinSprite.sprite == ventilZu)
+            if (ventilObenEinSprite.sprite == ventilZu)
             {
                 ventilObenEinSprite.sprite = ventilOffen;
-            }else ventilObenEinSprite.sprite = ventilZu;
+                ventilObenEin = true;
+                animator.SetBool("ObenEin", true);
+            }
+            else
+            {
+                ventilObenEinSprite.sprite = ventilZu;
+                ventilObenEin = false;
+                animator.SetBool("ObenEin", false);
+            }
         }
         else if (ventil == Ventil.VENTIL_UNTEN_AUS)
         {
-            if(ventilUntenAusSprite.sprite == ventilZu)
+            if (ventilUntenAusSprite.sprite == ventilZu)
             {
                 ventilUntenAusSprite.sprite = ventilOffen;
-            }else ventilUntenAusSprite.sprite = ventilZu;
+                ventilUntenAus = true;
+                animator.SetBool("UntenAus", true);
+            }
+            else
+            {
+                ventilUntenAusSprite.sprite = ventilZu;
+                ventilUntenAus = false;
+                animator.SetBool("UntenAus", false);
+            }
         }
         else if (ventil == Ventil.VENTIL_UNTEN_EIN)
         {
             if (ventilUntenEinSprite.sprite == ventilZu)
             {
                 ventilUntenEinSprite.sprite = ventilOffen;
-            }else ventilUntenEinSprite.sprite = ventilZu;
+                ventilUntenEin = true;
+                animator.SetBool("UntenEin", true);
+            }
+            else
+            {
+                ventilUntenEinSprite.sprite = ventilZu;
+                ventilUntenEin = false;
+                animator.SetBool("UntenEin", false);
+            }
         }
     }
 }
