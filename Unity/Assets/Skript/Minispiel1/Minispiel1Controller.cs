@@ -11,10 +11,10 @@ public class Minispiel1Controller : MonoBehaviour {
     private bool getreide = false;
     private bool baum = false;
 
-    public static int counterTier = 0;
-    public static int counterStein = 0;
-    public static int counterGetreide = 0;
-    public static int counterBaum = 0;
+    public int counterTier = 0;
+    public int counterStein = 0;
+    public int counterGetreide = 0;
+    public int counterBaum = 0;
 
 
     public Sprite defaultBaum;
@@ -33,10 +33,6 @@ public class Minispiel1Controller : MonoBehaviour {
     private SpriteRenderer GetreideSprite;
 
     private ParticleSystem firework;
-    private void Awake()
-    {
-        
-    }
 
     private void Start()
     {
@@ -88,4 +84,42 @@ public class Minispiel1Controller : MonoBehaviour {
             }
         }
     }
+    public enum Counter { TIER, BAUM, STEIN, GETREIDE };
+
+    public int getCounter(Counter c)
+    {
+        if(c == Counter.BAUM)
+        {
+            return this.counterBaum;
+        }else if(c == Counter.GETREIDE)
+        {
+            return this.counterGetreide;
+        }else if(c == Counter.STEIN)
+        {
+            return this.counterStein;
+        }else if(c == Counter.TIER)
+        {
+            return this.counterTier;
+        }else return 0;
+    }
+    public void setCounter(Counter c,int value)
+    {
+        if (c == Counter.BAUM)
+        {
+            this.counterBaum = value;
+        }
+        else if (c == Counter.GETREIDE)
+        {
+            this.counterGetreide = value;
+        }
+        else if (c == Counter.STEIN)
+        {
+            this.counterStein = value;
+        }
+        else if (c == Counter.TIER)
+        {
+            this.counterTier = value;
+        }
+    }
+
 }

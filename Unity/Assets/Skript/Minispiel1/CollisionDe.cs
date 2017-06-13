@@ -5,7 +5,12 @@ using UnityEngine;
 public class CollisionDe : MonoBehaviour {
 
     public GameObject Ziel;
+    private Minispiel1Controller miniCon;
 
+    private void Awake()
+    {
+        this.miniCon = GameObject.Find("Main Camera").GetComponent<Minispiel1Controller>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (Ziel.name.Equals(collision.gameObject.name))
@@ -19,18 +24,18 @@ public class CollisionDe : MonoBehaviour {
     {
         if (sceneObj.name == "baum")
         {
-            Minispiel1Controller.counterBaum++;
+            miniCon.setCounter(Minispiel1Controller.Counter.BAUM, miniCon.getCounter(Minispiel1Controller.Counter.BAUM) + 1);
         }else if (sceneObj.name == "stein")
         {
-            Minispiel1Controller.counterStein++;
+            miniCon.setCounter(Minispiel1Controller.Counter.STEIN, miniCon.getCounter(Minispiel1Controller.Counter.STEIN) + 1);
         }
         else if (sceneObj.name == "schaf")
         {
-            Minispiel1Controller.counterTier++;
+            miniCon.setCounter(Minispiel1Controller.Counter.TIER, miniCon.getCounter(Minispiel1Controller.Counter.TIER) + 1);
         }
         else if (sceneObj.name == "weizen")
         {
-            Minispiel1Controller.counterGetreide++;
+            miniCon.setCounter(Minispiel1Controller.Counter.GETREIDE, miniCon.getCounter(Minispiel1Controller.Counter.GETREIDE) + 1);
         }
     }
 
