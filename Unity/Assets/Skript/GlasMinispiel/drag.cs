@@ -22,6 +22,5 @@ public class drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public void OnEndDrag(PointerEventData eventData)
     {
         this.transform.position = positionToReturnTo;
-        Debug.Log("OnEndDrag");
     }
 }
