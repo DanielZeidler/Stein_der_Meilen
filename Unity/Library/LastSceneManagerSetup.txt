@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Save/MinigameGlas.unity
+- path: Assets/Save/MinigameSchrift.unity
   isLoaded: 1
   isActive: 1
