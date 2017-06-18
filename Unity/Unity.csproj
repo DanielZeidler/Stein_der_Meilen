@@ -91,6 +91,9 @@
     <Compile Include="Assets\Skript\FireMinigame\hover.cs" />
     <Compile Include="Assets\Skript\GlasMinispiel\drag.cs" />
     <Compile Include="Assets\Skript\GlasMinispiel\dropzone.cs" />
+    <Compile Include="Assets\Skript\GlasMinispiel\mouseover.cs" />
+    <Compile Include="Assets\Skript\MinigameSchrift\Counter.cs" />
+    <Compile Include="Assets\Skript\MinigameSchrift\schriftDropzone.cs" />
     <Compile Include="Assets\Skript\Minispiel1\CollisionDe.cs" />
     <Compile Include="Assets\Skript\Minispiel1\Minispiel1Controller.cs" />
     <Compile Include="Assets\Skript\MinispielDampfmaschine\DampfmaschineGameController.cs" />

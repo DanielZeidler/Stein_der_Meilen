@@ -9,6 +9,15 @@ public class dropzone : MonoBehaviour, IDropHandler
     public Scrollbar progress;
     public float progression = 0;
 
+    public GameObject start;
+    public GameObject falsch1;
+    public GameObject falsch2;
+    public GameObject falsch3;
+    public GameObject falsch4;
+    public GameObject falsch5;
+    public GameObject finish;
+    public GameObject finishbutton;
+
     public int countF;
     public int countK;
     public int countP;
@@ -17,6 +26,14 @@ public class dropzone : MonoBehaviour, IDropHandler
 
     public void OnDrop (PointerEventData eventData)
      {
+
+        start.SetActive(false);
+        falsch1.SetActive(false);
+        falsch2.SetActive(false);
+        falsch3.SetActive(false);
+        falsch4.SetActive(false);
+        falsch5.SetActive(false);
+
         if (eventData.pointerDrag.name == "Feldspat")
         {
             countF++;
@@ -104,6 +121,8 @@ public class dropzone : MonoBehaviour, IDropHandler
         if (progression + value > 0.95f)
         {
             Debug.Log("finish");
+            finish.SetActive(true);
+            finishbutton.SetActive(true);
             progress.size = 0;
         }
 
@@ -118,22 +137,27 @@ public class dropzone : MonoBehaviour, IDropHandler
         switch(numb)
         {
             case 1:
+                falsch1.SetActive(true);
                 countK = countP = countQ = countS = 0;
                 break;
 
             case 2:
+                falsch2.SetActive(true);
                 countF = countP = countQ = countS = 0;
                 break;
 
             case 3:
+                falsch3.SetActive(true);
                 countK = countF = countQ = countS = 0;
                 break;
 
             case 4:
+                falsch4.SetActive(true);
                 countK = countP = countF = countS = 0;
                 break;
 
             case 5:
+                falsch5.SetActive(true);
                 countK = countP = countQ = countF = 0;
                 break;
         }
