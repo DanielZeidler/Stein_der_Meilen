@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DampfmaschineGameController : MonoBehaviour {
 
@@ -9,6 +10,13 @@ public class DampfmaschineGameController : MonoBehaviour {
 
     public Sprite startDampfmaschine;
     public Sprite runDampfmaschine;
+    private Text storyText;
+    private ScrollRect scrollRect;
+    
+    public string oeffneVentileText;
+    public string gewonnen;
+    public string counterString;
+    private Text counterRect;
 
     private SpriteRenderer ventilObenEinSprite;
     private SpriteRenderer ventilObenAusSprite;
@@ -43,25 +51,26 @@ public class DampfmaschineGameController : MonoBehaviour {
         ventilObenAus = false; 
         ventilUntenEin = false; 
         ventilUntenAus = false;
-
-        animator.SetBool(0, false);
-        animator.SetBool(1, false);
-        animator.SetBool(2, false);
-        animator.SetBool(3, false);
-        
+    
         trigger1 = false;
         triggerFinish = false;
 
         counter = 0;
+        counterRect = GameObject.Find("CounterRect").GetComponentInChildren<Text>();
     }
     // Use this for initialization
     void Start () {
         firework = GameObject.Find("Fireworks").GetComponent<ParticleSystem>();
 
+        storyText = GameObject.Find("HintText").GetComponent<Text>();
+        scrollRect = GameObject.Find("ScrollRect").GetComponent<ScrollRect>();
+
         ventilObenEinSprite.sprite = ventilZu;
         ventilObenAusSprite.sprite = ventilZu;
         ventilUntenEinSprite.sprite = ventilZu;
         ventilUntenAusSprite.sprite = ventilZu;
+
+        counterRect.text = counterString;
     }
 	
 	// Update is called once per frame
@@ -76,11 +85,15 @@ public class DampfmaschineGameController : MonoBehaviour {
             trigger1 = false;
             counter++;
         }
-        if(!triggerFinish && counter == 2)
+        if(!triggerFinish && counter == 3)
         {
             triggerFinish = true;
             firework.Play();
+            storyText.text = gewonnen;
         }
+
+        
+       counterRect.text = counterString + " " + (3-counter);
 	}
 
     public void toggleVentil(Ventil ventil)
@@ -144,6 +157,33 @@ public class DampfmaschineGameController : MonoBehaviour {
                 ventilUntenEin = false;
                 animator.SetBool("UntenEin", false);
             }
+        }
+    }
+
+    public void setHintText()
+    {
+        if (storyText != null)
+        {
+            StartCoroutine(TextScroll(oeffneVentileText));
+        }
+
+    }
+
+    private IEnumerator TextScroll(string lineOfText)
+    {
+        int letter = 0;
+
+        while (letter < lineOfText.Length)
+        {
+                Canvas.ForceUpdateCanvases();
+                if (scrollRect != null)
+                {
+                    scrollRect.verticalNormalizedPosition = 0f;
+                    Canvas.ForceUpdateCanvases();
+                    storyText.text += lineOfText[letter];
+                }
+                letter++;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

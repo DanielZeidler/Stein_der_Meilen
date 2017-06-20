@@ -24,6 +24,7 @@ public class startDust : MonoBehaviour {
                 psys.Play();
             }
             StartCoroutine(changeBackgroundImage());
+            gC.setHintText();
         }
     }
 
