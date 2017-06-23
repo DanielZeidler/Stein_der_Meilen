@@ -99,6 +99,7 @@
     <Compile Include="Assets\Skript\MinispielDampfmaschine\DampfmaschineGameController.cs" />
     <Compile Include="Assets\Skript\MinispielDampfmaschine\startDust.cs" />
     <Compile Include="Assets\Skript\MinispielDampfmaschine\toggleVentil.cs" />
+    <Compile Include="Assets\Skript\MinispielRad\drop.cs" />
     <Compile Include="Assets\Skript\MinispielRad\onclick.cs" />
     <Compile Include="Assets\Skript\MinispielRad\onmouseover.cs" />
     <Compile Include="Assets\Skript\MinispieleOverview\MinispielAccessController.cs" />
