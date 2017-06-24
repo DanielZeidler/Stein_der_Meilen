@@ -132,18 +132,18 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 15753829}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 380993274}
   - {fileID: 766971654}
-  m_Father: {fileID: 1512768047}
-  m_RootOrder: 2
+  m_Father: {fileID: 1073285821}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.80002, y: -66.95}
+  m_AnchoredPosition: {x: -374.8, y: 17.850006}
   m_SizeDelta: {x: 119.7, y: 93.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15753831
@@ -187,12 +187,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 15753829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e895dbd4d4299d458e39cf85a96e788, type: 3}
+  m_Script: {fileID: 11500000, guid: cf68c7cd57e352046a7c79ad3a0a6421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kiste: 0
-  wirdsichtbar: {fileID: 1494277930}
-  "wirdzerst\xF6rt": {fileID: 0}
+  dragged: 0
+  wegsee1: {fileID: 766971652}
+  wegsee2: {fileID: 380993272}
+  wagenmit: {fileID: 1494277930}
+  wagenmit2: {fileID: 1140989857}
+  wagenohne: {fileID: 1194904008}
+  wagenohne2: {fileID: 1905668188}
 --- !u!1 &109596006
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,17 +220,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 109596006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1348343775}
-  m_Father: {fileID: 1512768047}
-  m_RootOrder: 5
+  m_Children: []
+  m_Father: {fileID: 1070917460}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 167, y: -78.899994}
+  m_AnchoredPosition: {x: -3.899994, y: 0.7000046}
   m_SizeDelta: {x: 94, y: 74.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109596008
@@ -277,7 +280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &272649466
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -325,10 +328,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272649465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -62.049973, y: -241.23, z: -2}
+  m_LocalPosition: {x: -123.74997, y: -288.53, z: -2}
   m_LocalScale: {x: 1.2432868, y: 1.5352427, z: 1}
   m_Children: []
-  m_Father: {fileID: 592514993}
+  m_Father: {fileID: 813669552}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &380993272
@@ -396,8 +399,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -123.29001, y: -118.31, z: -2}
   m_LocalScale: {x: 0.99087125, y: 1.1516371, z: 1}
-  m_Children:
-  - {fileID: 1494277931}
+  m_Children: []
   m_Father: {fileID: 15753830}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -416,7 +418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &485061880
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -464,11 +466,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 485061879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -224.17998, y: -232.81, z: -2}
+  m_LocalPosition: {x: -313.97998, y: -221.86, z: -2}
   m_LocalScale: {x: 0.8236092, y: 1.584306, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1905668189}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 691171419}
+  m_Father: {fileID: 1932590659}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &490287323
 GameObject:
@@ -480,6 +483,7 @@ GameObject:
   - component: {fileID: 490287324}
   - component: {fileID: 490287326}
   - component: {fileID: 490287325}
+  - component: {fileID: 490287327}
   m_Layer: 5
   m_Name: Wald
   m_TagString: Untagged
@@ -493,17 +497,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 490287323}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 918682827}
-  m_Father: {fileID: 1512768047}
+  - {fileID: 1998787508}
+  m_Father: {fileID: 1073285821}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59.7, y: -75.8}
+  m_AnchoredPosition: {x: -226.7, y: 9}
   m_SizeDelta: {x: 128, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490287325
@@ -539,87 +543,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 490287323}
---- !u!1 &515550965
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 515550966}
-  - component: {fileID: 515550969}
-  - component: {fileID: 515550968}
-  - component: {fileID: 515550967}
-  m_Layer: 5
-  m_Name: wagenohneKiste
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &515550966
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 515550965}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1360447763}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102.5, y: 17.850006}
-  m_SizeDelta: {x: 60.4, y: 21.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &515550967
+--- !u!114 &490287327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 515550965}
+  m_GameObject: {fileID: 490287323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4eccce30dbba44ebf5750e86476cbd, type: 3}
+  m_Script: {fileID: 11500000, guid: ace0d72daea70b945bea76454c4a60f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionToReturnTo: {x: 0, y: 0, z: 0}
---- !u!114 &515550968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 515550965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d8dce0d87008a3d448e4354822af59c0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &515550969
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 515550965}
+  dragged: 0
+  wegwald: {fileID: 1998787507}
+  wagenmit: {fileID: 918682826}
+  wagenohne: {fileID: 1194904008}
 --- !u!1 &592514992
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +570,7 @@ GameObject:
   - component: {fileID: 592514994}
   - component: {fileID: 592514996}
   m_Layer: 5
-  m_Name: wagenmitkiste
+  m_Name: wagenberg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,14 +585,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 272649467}
-  m_Father: {fileID: 813669552}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 1073285821}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61.7, y: -47.3}
+  m_AnchoredPosition: {x: -436.49997, y: 140.19997}
   m_SizeDelta: {x: 62.5, y: 28.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &592514994
@@ -702,87 +639,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionToReturnTo: {x: 0, y: 0, z: 0}
---- !u!1 &680134590
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 680134591}
-  - component: {fileID: 680134594}
-  - component: {fileID: 680134593}
-  - component: {fileID: 680134592}
-  m_Layer: 5
-  m_Name: wagenohneKiste
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &680134591
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 680134590}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1827225463}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102.5, y: 17.850021}
-  m_SizeDelta: {x: 60.4, y: 21.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &680134592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 680134590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4eccce30dbba44ebf5750e86476cbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  positionToReturnTo: {x: 0, y: 0, z: 0}
---- !u!114 &680134593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 680134590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d8dce0d87008a3d448e4354822af59c0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &680134594
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 680134590}
 --- !u!1 &691171418
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,15 +663,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 691171418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1.2141681, y: 0.6311912, z: 1}
   m_Children: []
-  m_Father: {fileID: 2105191055}
+  m_Father: {fileID: 485061881}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141.6, y: 46}
+  m_AnchoredPosition: {x: 300.96793, y: 169.07088}
   m_SizeDelta: {x: 46, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691171420
@@ -916,8 +772,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -122.40997, y: -118.72, z: -2}
   m_LocalScale: {x: 1.1559587, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1258322856}
+  m_Children: []
   m_Father: {fileID: 15753830}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -945,17 +800,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 813669551}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 592514993}
-  m_Father: {fileID: 1512768047}
-  m_RootOrder: 0
+  - {fileID: 272649467}
+  m_Father: {fileID: 1073285821}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.8, y: 102.7}
+  m_AnchoredPosition: {x: -374.8, y: 187.50002}
   m_SizeDelta: {x: 199.8, y: 115.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813669553
@@ -999,12 +854,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 813669551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e895dbd4d4299d458e39cf85a96e788, type: 3}
+  m_Script: {fileID: 11500000, guid: b36d45827d5a044439a9b94541fb3057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kiste: 0
-  wirdsichtbar: {fileID: 592514992}
-  "wirdzerst\xF6rt": {fileID: 1194904008}
+  dragged: 0
+  wegberg: {fileID: 272649465}
+  wagenmit: {fileID: 592514992}
+  wagenohne: {fileID: 1194904008}
 --- !u!1 &833045926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,16 +973,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 847096995}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1512768047}
-  m_RootOrder: 4
+  m_Father: {fileID: 1073285821}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 218.3, y: 102.7}
+  m_AnchoredPosition: {x: 51.300003, y: 187.50002}
   m_SizeDelta: {x: 108.9, y: 85.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &847096997
@@ -1258,7 +1114,7 @@ GameObject:
   - component: {fileID: 918682829}
   - component: {fileID: 918682828}
   m_Layer: 5
-  m_Name: wagenmitkiste
+  m_Name: wagenholz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1273,15 +1129,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1998787508}
-  - {fileID: 1222875000}
-  m_Father: {fileID: 490287324}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 1073285821}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 53.4, y: -29.3}
+  m_AnchoredPosition: {x: -173.30005, y: -20.299992}
   m_SizeDelta: {x: 55.1, y: 26.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918682828
@@ -1391,6 +1245,348 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1031200793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1031200794}
+  - component: {fileID: 1031200797}
+  - component: {fileID: 1031200796}
+  - component: {fileID: 1031200795}
+  m_Layer: 5
+  m_Name: feld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1031200794
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031200793}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1932590659}
+  m_Father: {fileID: 1073285821}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -185.6, y: 118.3}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1031200795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031200793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd15ffa879cf7c34c83a53d74fc3f1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragged: 0
+  wegfeld: {fileID: 485061879}
+  "gro\xDFesfeld": {fileID: 1633186522}
+  wagenmit: {fileID: 2105191054}
+  wagenmit2: {fileID: 1140989857}
+  wagenohne: {fileID: 1194904008}
+  wagenohne2: {fileID: 1905668188}
+--- !u!114 &1031200796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031200793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1031200797
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031200793}
+--- !u!1 &1070917459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1070917460}
+  - component: {fileID: 1070917463}
+  - component: {fileID: 1070917462}
+  - component: {fileID: 1070917461}
+  m_Layer: 5
+  m_Name: Siedlung
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1070917460
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1070917459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 109596007}
+  - {fileID: 2119991703}
+  - {fileID: 1827225463}
+  - {fileID: 1360447763}
+  m_Father: {fileID: 1512768047}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 170.9, y: -79.6}
+  m_SizeDelta: {x: 17.1, y: 16.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1070917461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1070917459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbd9b30a36ab4e449d1537985150a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
+  wagen: {fileID: 1194904008}
+  steinsiedlung: {fileID: 1827225462}
+  wagenberg: {fileID: 592514992}
+  wagenwasser: {fileID: 1494277930}
+  wagenholz: {fileID: 918682826}
+  holzsiedlung: {fileID: 2119991702}
+  wagenfeld: {fileID: 2105191054}
+  bewohnersiedlung: {fileID: 1360447762}
+--- !u!114 &1070917462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1070917459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1070917463
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1070917459}
+--- !u!1 &1073285820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1073285821}
+  - component: {fileID: 1073285824}
+  - component: {fileID: 1073285823}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1073285821
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073285820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1194904009}
+  - {fileID: 1905668189}
+  - {fileID: 813669552}
+  - {fileID: 490287324}
+  - {fileID: 15753830}
+  - {fileID: 847096996}
+  - {fileID: 1494277931}
+  - {fileID: 1140989858}
+  - {fileID: 592514993}
+  - {fileID: 2105191055}
+  - {fileID: 918682827}
+  - {fileID: 1031200794}
+  m_Father: {fileID: 1512768047}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 166.99998, y: -84.8}
+  m_SizeDelta: {x: 17.1, y: 16.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1073285823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073285820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1073285824
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073285820}
+--- !u!1 &1140989857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1140989858}
+  - component: {fileID: 1140989861}
+  - component: {fileID: 1140989860}
+  - component: {fileID: 1140989859}
+  m_Layer: 5
+  m_Name: wagenwasser2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1140989858
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1140989857}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1073285821}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -305.5, y: 47.549988}
+  m_SizeDelta: {x: 62.5, y: 28.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1140989859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1140989857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4eccce30dbba44ebf5750e86476cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionToReturnTo: {x: 0, y: 0, z: 0}
+--- !u!114 &1140989860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1140989857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 367f43d279ef765478b6e528005ec5ad, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1140989861
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1140989857}
 --- !u!1 &1194904008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,7 +1599,7 @@ GameObject:
   - component: {fileID: 1194904011}
   - component: {fileID: 1194904010}
   m_Layer: 5
-  m_Name: wagenohneKiste
+  m_Name: wagenohnekiste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1419,12 +1615,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2119991703}
+  m_Father: {fileID: 1073285821}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102.5, y: 17.850037}
+  m_AnchoredPosition: {x: -59.799988, y: 25.5}
   m_SizeDelta: {x: 60.4, y: 21.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194904010
@@ -1535,174 +1731,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1222874998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -322.43002, y: -82.78, z: -2}
+  m_LocalPosition: {x: -286.63, y: -92.98001, z: -2}
   m_LocalScale: {x: 1.205063, y: 1.2713653, z: 1}
   m_Children: []
-  m_Father: {fileID: 918682827}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1258322855
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1258322856}
-  - component: {fileID: 1258322858}
-  - component: {fileID: 1258322857}
-  - component: {fileID: 1258322859}
-  m_Layer: 5
-  m_Name: wagenmitkiste
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1258322856
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1258322855}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 0.8650828, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 766971654}
+  m_Father: {fileID: 1998787508}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165.845, y: 148.41998}
-  m_SizeDelta: {x: 62.5, y: 28.1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1258322857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1258322855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 367f43d279ef765478b6e528005ec5ad, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1258322858
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1258322855}
---- !u!114 &1258322859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1258322855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4eccce30dbba44ebf5750e86476cbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  positionToReturnTo: {x: 0, y: 0, z: 0}
---- !u!1 &1348343774
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1348343775}
-  - component: {fileID: 1348343777}
-  - component: {fileID: 1348343776}
-  - component: {fileID: 1348343778}
-  m_Layer: 5
-  m_Name: wagenohneKiste
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1348343775
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348343774}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 109596007}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65, y: 11.949997}
-  m_SizeDelta: {x: 60.4, y: 21.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1348343776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348343774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d8dce0d87008a3d448e4354822af59c0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1348343777
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348343774}
---- !u!114 &1348343778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348343774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4eccce30dbba44ebf5750e86476cbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  positionToReturnTo: {x: 0, y: 0, z: 0}
 --- !u!1 &1360447762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,14 +1763,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 515550966}
-  m_Father: {fileID: 1512768047}
-  m_RootOrder: 8
+  m_Children: []
+  m_Father: {fileID: 1070917460}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 204.5, y: -84.8}
+  m_AnchoredPosition: {x: 33.599976, y: -5.2000046}
   m_SizeDelta: {x: 169, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360447764
@@ -1784,12 +1817,12 @@ GameObject:
   - component: {fileID: 1494277932}
   - component: {fileID: 1494277934}
   m_Layer: 5
-  m_Name: wagenmitkiste
+  m_Name: wagenwasser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1494277931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1797,15 +1830,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1494277930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 1.0092129, y: 0.8683291, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 380993274}
-  m_RootOrder: 0
+  m_Father: {fileID: 1073285821}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194.3643, y: 128.52138}
+  m_AnchoredPosition: {x: -305.5, y: 47.549988}
   m_SizeDelta: {x: 62.5, y: 28.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494277932
@@ -1938,16 +1971,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 813669552}
-  - {fileID: 1932590659}
-  - {fileID: 15753830}
-  - {fileID: 490287324}
-  - {fileID: 847096996}
-  - {fileID: 109596007}
-  - {fileID: 2119991703}
-  - {fileID: 1827225463}
-  - {fileID: 1360447763}
-  - {fileID: 1633186523}
+  - {fileID: 1073285821}
+  - {fileID: 1070917460}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1982,14 +2007,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2105191055}
-  m_Father: {fileID: 1512768047}
-  m_RootOrder: 9
+  m_Children: []
+  m_Father: {fileID: 1932590659}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.700012, y: 36}
+  m_AnchoredPosition: {x: -0.000015258789, y: 0}
   m_SizeDelta: {x: 122.3, y: 133.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1633186524
@@ -2051,14 +2075,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 680134591}
-  m_Father: {fileID: 1512768047}
-  m_RootOrder: 7
+  m_Children: []
+  m_Father: {fileID: 1070917460}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 204.5, y: -84.8}
+  m_AnchoredPosition: {x: 33.599976, y: -5.2000046}
   m_SizeDelta: {x: 169, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1827225464
@@ -2106,7 +2129,7 @@ GameObject:
   - component: {fileID: 1905668191}
   - component: {fileID: 1905668190}
   m_Layer: 5
-  m_Name: wagenohneKiste
+  m_Name: wagenohnekistesee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2121,14 +2144,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 485061881}
-  m_Father: {fileID: 1932590659}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 1073285821}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89.8, y: 10.95}
+  m_AnchoredPosition: {x: -270.50006, y: 131.75}
   m_SizeDelta: {x: 60.4, y: 21.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905668190
@@ -2186,7 +2208,6 @@ GameObject:
   - component: {fileID: 1932590659}
   - component: {fileID: 1932590661}
   - component: {fileID: 1932590660}
-  - component: {fileID: 1932590662}
   m_Layer: 5
   m_Name: Feldklein
   m_TagString: Untagged
@@ -2200,17 +2221,18 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1932590658}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1905668189}
-  m_Father: {fileID: 1512768047}
-  m_RootOrder: 1
+  - {fileID: 1633186523}
+  - {fileID: 485061881}
+  m_Father: {fileID: 1031200794}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.7, y: 36}
+  m_AnchoredPosition: {x: 4.9000244, y: 2.5000153}
   m_SizeDelta: {x: 122.3, y: 133.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1932590660
@@ -2246,20 +2268,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1932590658}
---- !u!114 &1932590662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1932590658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e895dbd4d4299d458e39cf85a96e788, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kiste: 0
-  wirdsichtbar: {fileID: 1905668188}
-  "wirdzerst\xF6rt": {fileID: 680134590}
 --- !u!1 &1998787507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,7 +2284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1998787508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2286,13 +2294,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 918682827}
+  m_Children:
+  - {fileID: 1222875000}
+  m_Father: {fileID: 490287324}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35.80001, y: 10.200012}
+  m_AnchoredPosition: {x: 17.599983, y: -19.09999}
   m_SizeDelta: {x: 25, y: 29.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998787509
@@ -2340,12 +2349,12 @@ GameObject:
   - component: {fileID: 2105191057}
   - component: {fileID: 2105191056}
   m_Layer: 5
-  m_Name: wagenmitkiste
+  m_Name: wagenfeld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2105191055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2355,14 +2364,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 691171419}
-  m_Father: {fileID: 1633186523}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 1073285821}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.5, y: 0}
+  m_AnchoredPosition: {x: -105.20001, y: 120.8}
   m_SizeDelta: {x: 62.5, y: 28.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105191056
@@ -2436,14 +2444,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1194904009}
-  m_Father: {fileID: 1512768047}
-  m_RootOrder: 6
+  m_Children: []
+  m_Father: {fileID: 1070917460}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 204.5, y: -84.80002}
+  m_AnchoredPosition: {x: 33.599976, y: -5.20002}
   m_SizeDelta: {x: 169, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119991704
