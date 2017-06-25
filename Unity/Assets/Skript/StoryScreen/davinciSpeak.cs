@@ -18,7 +18,7 @@ public class davinciSpeak : MonoBehaviour {
     }
     void Update()
     {
-        if (StoryContainer.actTextbaustein != 12 && StoryContainer.actTextbaustein != 15 && StoryContainer.actTextbaustein != 18)
+        if (StoryContainer.actTextbaustein != 12 && StoryContainer.actTextbaustein != 15 && StoryContainer.actTextbaustein != 19)
         {
             spRenderer.enabled = true;
         }
@@ -27,7 +27,7 @@ public class davinciSpeak : MonoBehaviour {
             spRenderer.enabled = false;
         }
 
-        if (StoryContainer.Instance.play && !StoryContainer.Instance.pause && StoryContainer.actTextbaustein != 12 && StoryContainer.actTextbaustein != 15 && StoryContainer.actTextbaustein != 18)
+        if (StoryContainer.Instance.play && !StoryContainer.Instance.pause && StoryContainer.actTextbaustein != 12 && StoryContainer.actTextbaustein != 15 && StoryContainer.actTextbaustein != 19)
         {
             animator.StopPlayback();
         }

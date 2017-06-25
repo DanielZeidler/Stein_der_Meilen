@@ -43,11 +43,40 @@ public class EarthAnimationController : MonoBehaviour
         foreach (SpriteRenderer spRen in GameObject.Find("wagenWrapper").GetComponentsInChildren<SpriteRenderer>()) tmp.Add(spRen);
         animWrapperMap.Add("wagenWrapper", tmp.ToArray());
         tmp = new List<SpriteRenderer>();
+        
+        foreach (SpriteRenderer spRen in GameObject.Find("menschenZeichensprWrapper").GetComponentsInChildren<SpriteRenderer>()) tmp.Add(spRen);
+        animWrapperMap.Add("menschenZeichensprWrapper", tmp.ToArray());
+        tmp = new List<SpriteRenderer>();
+
+        foreach (SpriteRenderer spRen in GameObject.Find("menschPfuetzeWrapper").GetComponentsInChildren<SpriteRenderer>()) tmp.Add(spRen);
+        animWrapperMap.Add("menschPfuetzeWrapper", tmp.ToArray());
+        tmp = new List<SpriteRenderer>();
 
         foreach (SpriteRenderer spRen in GameObject.Find("menschSteintafelWrapper").GetComponentsInChildren<SpriteRenderer>()) tmp.Add(spRen);
         animWrapperMap.Add("menschSteintafelWrapper", tmp.ToArray());
         tmp = new List<SpriteRenderer>();
 
+        foreach (SpriteRenderer spRen in GameObject.Find("menschGlasWrapper").GetComponentsInChildren<SpriteRenderer>()) tmp.Add(spRen);
+        animWrapperMap.Add("menschGlasWrapper", tmp.ToArray());
+        tmp = new List<SpriteRenderer>();
+
+        foreach (SpriteRenderer spRen in GameObject.Find("menschWaffenWrapper").GetComponentsInChildren<SpriteRenderer>()) tmp.Add(spRen);
+        animWrapperMap.Add("menschWaffenWrapper", tmp.ToArray());
+        tmp = new List<SpriteRenderer>();
+
+        foreach (SpriteRenderer spRen in GameObject.Find("menschGetreideWrapper").GetComponentsInChildren<SpriteRenderer>()) tmp.Add(spRen);
+        animWrapperMap.Add("menschGetreideWrapper", tmp.ToArray());
+        tmp = new List<SpriteRenderer>();
+
+        foreach (SpriteRenderer spRen in GameObject.Find("menschFernglasWrapper").GetComponentsInChildren<SpriteRenderer>()) tmp.Add(spRen);
+        animWrapperMap.Add("menschFernglasWrapper", tmp.ToArray());
+        tmp = new List<SpriteRenderer>();
+
+        foreach (SpriteRenderer spRen in GameObject.Find("windmuehleWrapper").GetComponentsInChildren<SpriteRenderer>()) tmp.Add(spRen);
+        animWrapperMap.Add("windmuehleWrapper", tmp.ToArray());
+        tmp = new List<SpriteRenderer>();
+
+        
     }
 
     // Update is called once per frame
@@ -82,13 +111,77 @@ public class EarthAnimationController : MonoBehaviour
         {
             foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
             StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschenZeichensprWrapper"]) spRen.enabled = true;
             foreach (SpriteRenderer spRen in animWrapperMap["wagenWrapper"]) spRen.enabled = true;
         }
         else if (StoryContainer.actTextbaustein == 6)
         {
             foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
             StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschPfuetzeWrapper"]) spRen.enabled = true;
             foreach (SpriteRenderer spRen in animWrapperMap["menschSteintafelWrapper"]) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 7)
+        {
+            foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschGlasWrapper"]) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 8)
+        {
+            foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschWaffenWrapper"]) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 9)
+        {
+            foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschGetreideWrapper"]) spRen.enabled = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschWaffenWrapper"]) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 10)
+        {
+            foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["windmuehleWrapper"]) spRen.enabled = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschSteintafelWrapper"]) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 11)
+        {
+            foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschSteintafelWrapper"]) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 15)
+        {
+            foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschFernglasWrapper"]) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 16)
+        {
+            foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschFernglasWrapper"]) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 17)
+        {
+            foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["fliehenderMenschWrapper"]) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 18)
+        {
+            foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["fliehenderMenschWrapper"]) spRen.enabled = true;
+        }
+        else if (StoryContainer.actTextbaustein == 19)
+        {
+            foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            StoryContainer.Instance.rotationEarth = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["fliehenderMenschWrapper"]) spRen.enabled = true;
         }
         else
         {

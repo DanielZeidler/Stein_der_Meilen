@@ -38,44 +38,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50d4bcc77440bc4c80638d016d5547d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reset: 0
   textbausteine:
   - "Leonardo: Hallo! Mein Name ist Leonardo Da Vinci, meines Zeichens Erfinder, K\xFCnstler
     und Philosoph. Ich komme in der Stunde meiner gr\xF6\xDFten Not zu dir. Die Geschichtsschreibung
-    ist durcheinander gekommen.Es gibt L\xF6cher in der Zeit, die ich mir selber nicht
-    erkl\xE4ren kann. Lebenswichtige Technologien und Erfindungen sind verloren gegangen.
-    Die Menschen sind v\xF6llig hilflos. Du wirst bald sehen, was ich meine. Nur mithilfe
-    des \"Steines der Meilen\" k\xF6nnen wir wieder Ordnung in das Zeitgef\xFCge bringen.
-    Dazu m\xFCssen wir die Meilensteine der Menschheit rekonstruieren. Lass uns keine
-    Zeit verlieren!"
+    ist durcheinander gekommen. Es gibt L\xF6cher in der Zeit, die ich mir selber
+    nicht erkl\xE4ren kann. Lebenswichtige Technologien und Erfindungen sind verloren
+    gegangen. Die Menschen sind v\xF6llig hilflos. Du wirst bald sehen, was ich meine.
+    Nur mithilfe des \"Steines der Meilen\" k\xF6nnen wir wieder Ordnung in das Zeitgef\xFCge
+    bringen. Dazu m\xFCssen wir  die Meilensteine der Menschheit rekonstruieren. Lass
+    uns keine Zeit verlieren!"
   - "Leonardo: Als die Menschen noch nichts hatten, au\xDFer sich selbst, war ihr
-    Leben nicht so einfach, wie das der Menschen heute. In einer Zeit, die du heute
-    als \"Steinzeit\" kennst, begann man Hilfsmittel zu nutzen um Materialien zu bearbeiten
-    und gr\xF6\xDFere Dinge zu schaffen. Dar\xFCber hinaus wurde so die Jagt erleichtert.
-    Kannst du dir denken, worum es geht?"
+    Leben nicht so einfach,  wie das der Menschen heute. In einer Zeit, die du heute
+    als \"Steinzeit\" kennst, begann man  Hilfsmittel zu nutzen um Materialien zu
+    bearbeiten und gr\xF6\xDFere Dinge zu schaffen. Dar\xFCber hinaus wurde so die
+    Jagt erleichtert. Kannst du dir denken, worum es geht?"
   - "Leonardo: Richtig! Das \xE4lteste Werkzeug, eine Art Faustkeil, reicht \xFCber
-    2,4 Millionen Jahre zur\xFCck und wurde im heutigen Afrika gefunden. Schnell wurden
-    daraus Jagdmittel entwickelt.Bald darauf sehnten sich die Menschen nach mehr Licht
-    und W\xE4rme..."
+    2,4 Millionen Jahre zur\xFCck  und wurde im heutigen Afrika gefunden. Schnell
+    wurden daraus Jagdmittel entwickelt. Bald darauf sehnten sich die Menschen nach
+    mehr Licht und W\xE4rme..."
   - "Leonardo: Ja, das Feuer. In der Natur gab es schon immer Funken und Br\xE4nde.
     Doch das Leben der Menschen \xE4nderte sich schlagartig, als sie lernten das Feuer
     zu erhalten und f\xFCr sich zu nutzen. So konnten sie zum Beispiel Nahrung zubereiten.
-    Es sollte aber noch viele Jahre dauern, bis der Mensch selbst Feuer entz\xFCnden
-    konnte. Das Feuer war auch f\xFCr meine eigene Arbeit gewinnbringend. So habe
-    ich zum Beispiel meine erste Flugmaschine mit hei\xDFer Luft angetrieben. Herzlichen
-    Gl\xFCckwunsch! Du hast den ersten Meilenstein erreicht. Nur noch drei weitere
-    fehlen uns, um den \"Stein der Meilen\" zu erhalten und alles wieder in's Lot
-    zu bringen."
+    Es sollte aber noch viele Jahre dauern, bis der Mensch selbst Feuer  entz\xFCnden
+    konnte. Das Feuer war \xFCbrigens auch f\xFCr meine eigene Arbeit gewinnbringend.
+    So habe ich zum Beispiel meine erste Flugmaschine mit hei\xDFer Luft angetrieben.
+    Herzlichen Gl\xFCckwunsch! Du hast den ersten Meilenstein erreicht. Nur noch drei
+    weitere fehlen uns, um den  \"Stein der Meilen\" zu erhalten und alles wieder
+    ins Lot zu bringen."
   - "Leonardo: Als die ersten Siedlungen gegr\xFCndet wurden und die Menschen sich
     niederlie\xDFen, brauchte man einen Weg, um G\xFCter von Ort zu Ort zu transportieren.
     Womit konnte das wohl gelingen?"
-  - "Leonardo: Genau! Seit dem Jahr 4000 v.Chr. nutzen die Menschen R\xE4der um Transportmittel
-    zu bauen. Vorher wurden haupts\xE4chlich Schlitten genutzt. Wo eine Zivilisation
-    entsteht, war bald auch ein einheitlicher Kommunikationsweg vorhanden..."
+  - "Leonardo: Genau! Seit dem Jahr 4000 v. Chr. nutzen die Menschen R\xE4der um Transportmittel
+    zu bauen. Vorher wurden  haupts\xE4chlich Schlitten genutzt.  Wo eine Zivilisation
+    entsteht, war bald auch ein einheitlicher Kommunikationsweg vonn\xF6ten..."
   - "Leonardo: Ohne die Erfindung der Schrift w\xE4re die Menschheit niemals so weit
     gekommen. Nun konnte man Informationen f\xFCr die Nachwelt festhalten. Bereits
-    ca. 2700 v.Chr. existierte eine recht verbreitete Form, die sogenannte Keilschrift.
-    \xC4ltere Enddeckungen gehen sogar noch weitere 3000 Jahre zur\xFCck. Meine Arbeit
-    hat die Schrift jedenfalls erst m\xF6glich gemacht. Eine unserer bisherigen Enddeckungen
+    ca. 2700 v. Chr. existierte eine recht verbreitete Form, die sogenannte Keilschrift.
+    \xC4ltere Entdeckungen gehen sogar noch weitere 3000 Jahre zur\xFCck. Die Schrift
+    hat meine Arbeit jedenfalls erst m\xF6glich gemacht. Eine unserer bisherigen Entdeckungen
     half den Menschen nun dabei, einen v\xF6llig neuen Rohstoff herzustellen, der
     heute kaum mehr wegzudenken ist und damals vor allem zur Gef\xE4\xDFherstellung
     diente."
@@ -84,8 +85,8 @@ MonoBehaviour:
     aufwendig. Wir haben den zweiten Meilenstein erreicht. Sehr gut! Bald haben wir
     es geschafft und die Welt ist wieder in Ordnung."
   - "Leonardo: Wir machen einen gro\xDFen Sprung \xFCber die Zeitenwende und befinden
-    uns im Jahr 1044 n.Chr.. Die Welt der Waffen wird durch eine Enddeckung in China
-    revolutioniert, die effektiven und t\xF6dlichen Nahkampf m\xF6glich machte. Was
+    uns im Jahr 1044 n. Chr.. Die Welt der Waffen wird durch eine Entdeckung in China
+    revolutioniert, die effektiven und t\xF6dlichen Fernkampf m\xF6glich machte. Was
     ist wohl gemeint?"
   - "Leonardo: Ein dunkles Kapitel der Geschichte. Nie zuvor forderten Kriege so viele
     Todesopfer, wie nach der Erfindung des Schwarzpulvers. Andererseits konnte es
@@ -103,7 +104,7 @@ MonoBehaviour:
   - "Leonardo: Ich w\xFCnschte, ich h\xE4tte Gutenberg einmal kennengelernt. Er war
     in den letzten Z\xFCgen seines Lebens, als ich noch ein Junge war. Durch seinen
     Einfallsreichtum konnten fortan Flugbl\xE4tter und Pamphlete rasend schnell vervielf\xE4ltigt
-    und massenhaft Bibeln gedruckt werden. Ich w\xFCrde ihn so gern fragen, was sein
+    und massenhaft Bibel gedruckt werden. Ich w\xFCrde ihn so gern fragen, was sein
     Antrieb war."
   - "Gutenberg: Das kann ich dir sagen, Leonardo. Es ist so, dass ich schon immer
     ein sehr religi\xF6ser Mensch war. Anfangs habe ich Wallfahrtsspiegel f\xFCr Pilgerreisen
@@ -118,23 +119,25 @@ MonoBehaviour:
   - "Leonardo: Wir befinden uns nunmehr in einem hochtechnisiertem Zeitalter, viele
     Jahre nach meinem Tod. Ein niederl\xE4ndischer Instrumentenbauer namens Jacob
     Metius aus Alkmaar entwickelte ein Werkzeug um in weite Ferne sehen zu k\xF6nnen."
-  - "Hans Lipperhey: Moment mal! Ich bin der Erfinder des Fernrohres, nicht dieser
+  - "Hans Lipperhey:  Moment mal! Ich bin der Erfinder des Fernrohres, nicht dieser
     Metius. Gestatten, Hans Lipperhey. Ich arbeitete als Brillenmacher als ich die
-    Enddeckung machte. Doch viele Andere beanspruchten meine Entdeckung f\xFCr sich
+    Entdeckung machte. Doch viele Andere beanspruchten meine Entdeckung f\xFCr sich
     und wie so viele gro\xDFe Erfindungen, wurde auch mein Fernrohr schnell f\xFCr
     milit\xE4rische Zwecke missbraucht. Finanziell hatte ich leider auch nichts davon,
     denn andere Menschen meldeten zur gleichen Zeit \xE4hnliche Patente an. Ich w\xFCnsche
     mir nur, das man sich an meinen Namen erinnert, denn ich war der Erste."
-  - "Leonardo: Wie dem auch sei. Lange war umstritten, wer die Entdeckung f\xFCr sich
-    beanspruchen konnte. Diesem Thema wurde sogar ein ganzes Buch gewidmet \u201E\xDCber
-    den wahren Erfinder des Teleskops\u201C. Was danach kam, war wahrlich faszinierend.
+  - "Leonardo: Wie Dem auch sei. Lange war umstritten, wer die Entdeckung f\xFCr sich
+    beanspruchen konnte. Diesem Thema wurde sogar ein ganzes Buch gewidmet: \"\xDCber
+    den wahren Erfinder des Teleskops\". Was danach kam, war wahrlich faszinierend.
     Die industrielle Revolution startete 1712 und ausgel\xF6st wurde sie durch eine
     bestimmte Erfindung."
-  - "Leonardo: Die Dampfmaschine wurde on Thomas Newcomen konstruiert und eingesetzt
+  - "Leonardo: Die Dampfmaschine wurde von Thomas Newcomen konstruiert und eingesetzt
     um Wasser aus Bergwerken an die Oberfl\xE4che zu bekommen, ohne dass die Menschen
     es selbst schleppen mussten. Ein gro\xDFer Meilenstein der Menschheitsgeschichte
     fehlt noch. Ohne diesen k\xF6nntest du dieses Spiel nicht spielen. Die gesamte
     moderne Zivilisation beruht auf ihm. Was k\xF6nnte das wohl sein?"
+  - "Leonardo: ...und es wurde Licht. Thomas Edison meldete 1880 das Patent f\xFCr
+    die Gl\xFChbirne an, die er ganz alleine entwickelt hatte."
   - "Edison: So ganz stimmt das nicht. Ich habe das Konzept von anderen T\xFCftlern,
     wie zum Beispiel William Grove, \xFCbernommen und weiterentwickelt. Ich konnte
     mir zu Lebzeiten nicht ausmalen, was ich ausgel\xF6st habe und wie hoch Entwickelt
@@ -146,6 +149,7 @@ MonoBehaviour:
     ein gro\xDFes St\xFCck Weiser geworden. Ich bin Stolz auf dich."
   play: 0
   pause: 0
+  mute: 0
   playSpeed: 0.04
   rotationEarth: 0
 --- !u!224 &224330780932875028

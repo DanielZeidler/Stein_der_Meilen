@@ -19,7 +19,7 @@ public class edisonSpeak : MonoBehaviour
     }
     void Update()
     {
-        if (StoryContainer.actTextbaustein == 18)
+        if (StoryContainer.actTextbaustein == 19)
         {
             spRenderer.enabled = true;
         }
@@ -27,7 +27,7 @@ public class edisonSpeak : MonoBehaviour
         {
             spRenderer.enabled = false;
         }
-        if (StoryContainer.Instance.play && !StoryContainer.Instance.pause && StoryContainer.actTextbaustein == 18)
+        if (StoryContainer.Instance.play && !StoryContainer.Instance.pause && StoryContainer.actTextbaustein == 19)
         {
             animator.StopPlayback();
         }

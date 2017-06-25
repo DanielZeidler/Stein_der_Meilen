@@ -13,6 +13,8 @@ using UnityEngine.UI;
 
 public class StoryScreenInteractionController : MonoBehaviour
 {
+    public string begruessung;
+
     public static bool start = true;
 
     public string[] infotexte;
@@ -73,7 +75,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             StoryContainer.Instance.play = false;
             StoryContainer.Instance.pause = false;
-            storyText.text = "Begrüßung BlaBlaBla";
+            storyText.text = begruessung;
         }
         if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause && !start)
         {
@@ -197,12 +199,6 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             btnMap["500000vChrButton"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel1 = true;
-             /*
-              if (StoryContainer.accessStoryPart < 4)
-                {
-                    StoryContainer.accessStoryPart = 4;
-                }
-              */      
             });
         }
         if (erfindungenMap["RadButton"].isClicked)
@@ -291,7 +287,7 @@ public class StoryScreenInteractionController : MonoBehaviour
                 GameManager.Instance.accessMinispiel10 = true;
                 if (StoryContainer.accessStoryPart < 19)
                 {
-                    StoryContainer.accessStoryPart = 19;
+                    StoryContainer.accessStoryPart = 20;
                 }
             });
         }
@@ -337,11 +333,11 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             dustStorm.maxParticles = 30;
         }
-        else if (StoryContainer.actTextbaustein < 17 && StoryContainer.actTextbaustein >= 15)
+        else if (StoryContainer.actTextbaustein < 18 && StoryContainer.actTextbaustein >= 15)
         {
             dustStorm.maxParticles = 20;
         }
-        else if (StoryContainer.actTextbaustein < 19 && StoryContainer.actTextbaustein >= 17)
+        else if (StoryContainer.actTextbaustein < 20 && StoryContainer.actTextbaustein >= 18)
         {
             dustStorm.maxParticles = 10;
         }
