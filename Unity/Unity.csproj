@@ -96,6 +96,9 @@
     <Compile Include="Assets\Skript\MinigameSchrift\schriftDropzone.cs" />
     <Compile Include="Assets\Skript\Minispiel1\CollisionDe.cs" />
     <Compile Include="Assets\Skript\Minispiel1\Minispiel1Controller.cs" />
+    <Compile Include="Assets\Skript\MinispielBuchdruck\BuchdruckController.cs" />
+    <Compile Include="Assets\Skript\MinispielBuchdruck\collisionStayTrigger.cs" />
+    <Compile Include="Assets\Skript\MinispielBuchdruck\letterContainer.cs" />
     <Compile Include="Assets\Skript\MinispielDampfmaschine\DampfmaschineGameController.cs" />
     <Compile Include="Assets\Skript\MinispielDampfmaschine\startDust.cs" />
     <Compile Include="Assets\Skript\MinispielDampfmaschine\toggleVentil.cs" />
