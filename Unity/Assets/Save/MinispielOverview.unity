@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: StoryScreen
+  scene: MinispielBuchdruck
 --- !u!1 &61327658
 GameObject:
   m_ObjectHideFlags: 0
@@ -7502,7 +7502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: StoryScreen
+  scene: MinigameDampfmaschine
 --- !u!1 &1369868936
 GameObject:
   m_ObjectHideFlags: 0

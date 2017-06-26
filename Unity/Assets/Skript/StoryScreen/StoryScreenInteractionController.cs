@@ -255,10 +255,6 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             btnMap["1450Button"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel7 = true;
-                if (StoryContainer.accessStoryPart < 14)
-                {
-                    StoryContainer.accessStoryPart = 14;
-                }
             });
         }
         if (erfindungenMap["FernrohrButton"].isClicked)
@@ -275,10 +271,6 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             btnMap["1712Button"].onClick.AddListener(delegate {
                 GameManager.Instance.accessMinispiel9 = true;
-                if (StoryContainer.accessStoryPart < 17)
-                {
-                    StoryContainer.accessStoryPart = 17;
-                }
             });
         }
         if (erfindungenMap["GluebirneButton"].isClicked)
