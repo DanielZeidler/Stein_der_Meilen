@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Save/MinigameDampfmaschine.unity
+- path: Assets/Save/StoryScreen.unity
   isLoaded: 1
   isActive: 1

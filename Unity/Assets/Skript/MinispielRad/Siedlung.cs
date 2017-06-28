@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Siedlung : MonoBehaviour, IDropHandler
 {
     public int count = 0;
+    public int counter = 0;
     public GameObject wagen;
 
     public GameObject steinsiedlung;
@@ -21,6 +22,8 @@ public class Siedlung : MonoBehaviour, IDropHandler
 
     public GameObject bewohnersiedlung;
 
+    public GameObject finishjo;
+
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -29,12 +32,14 @@ public class Siedlung : MonoBehaviour, IDropHandler
             wagen.SetActive(true);
             steinsiedlung.SetActive(true);
             wagenberg.SetActive(false);
+            counter++;
         }
 
         if (eventData.pointerDrag.name == "wagenwasser")
         {
             wagen.SetActive(true);
             count++;
+            counter++;
             wagenwasser.SetActive(false);
         }
 
@@ -43,18 +48,25 @@ public class Siedlung : MonoBehaviour, IDropHandler
             wagen.SetActive(true);
             holzsiedlung.SetActive(true);
             wagenholz.SetActive(false);
+            counter++;
         }
 
         if (eventData.pointerDrag.name == "wagenfeld")
         {
             wagen.SetActive(true);
             count++;
+            counter++;
             wagenfeld.SetActive(false);
         }
 
         if (count == 2)
         {
             bewohnersiedlung.SetActive(true);
+        }
+
+        if (counter == 4)
+        {
+            finishjo.SetActive(true);
         }
     }
 

@@ -22,4 +22,10 @@ EditorBuildSettings:
     guid: aec5432d8ee65ee4287d31810f443356
   - enabled: 1
     path: Assets/Save/MinigameDampfmaschine.unity
-    guid: 00000000000000000000000000000000
+    guid: 40beb69d7a2320c419a04133c3d217e7
+  - enabled: 1
+    path: Assets/Save/MinigameRad.unity
+    guid: cfa19cea4fa764f4ca6cf18549a3d7c2
+  - enabled: 1
+    path: Assets/Save/MinigameGlas.unity
+    guid: 4c3d065374e8fbe48aec608079d5fa0d
