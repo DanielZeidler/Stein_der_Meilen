@@ -14,7 +14,6 @@ public class collisionStayTrigger : MonoBehaviour {
     
     void OnTriggerStay2D(Collider2D collision)
     {
-
         if (gameObject.GetComponent<letterContainer>().letter == collision.GetComponent<letterContainer>().letter)
         {
             string name = gameObject.name;

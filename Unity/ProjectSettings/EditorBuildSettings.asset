@@ -29,3 +29,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Save/MinigameGlas.unity
     guid: 4c3d065374e8fbe48aec608079d5fa0d
+  - enabled: 1
+    path: Assets/Save/MinigameSchrift.unity
+    guid: 93d370980d6924c08b6f7ced17c65ade
+  - enabled: 1
+    path: Assets/Save/MinigameSchiesspulver.unity
+    guid: 33eea9b0496581741a37af0b45bd8f1d
+  - enabled: 1
+    path: Assets/Save/MinigameLinsen.unity
+    guid: 00000000000000000000000000000000

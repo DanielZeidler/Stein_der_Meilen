@@ -21,6 +21,7 @@ public class BuchdruckController : MonoBehaviour {
     public bool boolletter15;
     public bool boolletter16;
 
+    private draganddrop[] ddArray;
     private ParticleSystem firework;
     private bool finish;
 
@@ -29,6 +30,8 @@ public class BuchdruckController : MonoBehaviour {
     private void Awake()
     {
         animator = GameObject.Find("SzeneObjectWrapper").GetComponent<Animator>();
+        ddArray = new draganddrop[15];
+        ddArray = GameObject.Find("LettersWrapper").GetComponentsInChildren<draganddrop>();
     }
     // Use this for initialization
     void Start () {
@@ -39,6 +42,10 @@ public class BuchdruckController : MonoBehaviour {
 	void Update () {
        if(!finish && boolletter1 && boolletter2 && boolletter3 && boolletter4 && boolletter5 && boolletter6 && boolletter7 && boolletter8 && boolletter9 && boolletter10 && boolletter11 && boolletter12 && boolletter13 && boolletter14 && boolletter15 && boolletter16)
         {
+            foreach (draganddrop dd in ddArray)
+            {
+                dd.drag = false;
+            }
             animator.SetBool("finish", true);
             firework.Play();
             finish = true;

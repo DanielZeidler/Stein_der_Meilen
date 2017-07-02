@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: StoryScreen
+  scene: MinigameSchrift
 --- !u!1 &266585055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: StoryScreen
+  scene: MinigameSchiesspulver
 --- !u!1 &369641260
 GameObject:
   m_ObjectHideFlags: 0
@@ -9959,7 +9959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc497e8d558d4c4a9bad17000dc132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: StoryScreen
+  scene: MinigameLinsen
 --- !u!1 &1955123167
 GameObject:
   m_ObjectHideFlags: 0
