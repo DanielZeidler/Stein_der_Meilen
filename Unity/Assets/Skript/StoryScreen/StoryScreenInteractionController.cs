@@ -258,6 +258,7 @@ public class StoryScreenInteractionController : MonoBehaviour
                 if (btn == btnMap["3500vChrButton"])
                 {
                     btn.onClick.AddListener(delegate {
+                        startFeedback(true);
                         GameManager.Instance.accessMinispiel3 = true;
                         if (StoryContainer.accessStoryPart < 6)
                         {
@@ -281,6 +282,7 @@ public class StoryScreenInteractionController : MonoBehaviour
                 if (btn == btnMap["1800vChrButton"])
                 {
                     btn.onClick.AddListener(delegate {
+                        startFeedback(true);
                         GameManager.Instance.accessMinispiel4 = true;
                         if (StoryContainer.accessStoryPart < 8)
                         {
@@ -304,6 +306,7 @@ public class StoryScreenInteractionController : MonoBehaviour
                 if (btn == btnMap["1044Button"])
                 {
                     btn.onClick.AddListener(delegate {
+                        startFeedback(true);
                         GameManager.Instance.accessMinispiel5 = true;
                         if (StoryContainer.accessStoryPart < 9)
                         {
@@ -327,6 +330,7 @@ public class StoryScreenInteractionController : MonoBehaviour
                 if (btn == btnMap["1180Button"])
                 {
                     btn.onClick.AddListener(delegate {
+                        startFeedback(true);
                         GameManager.Instance.accessMinispiel6 = true;
                         if (StoryContainer.accessStoryPart < 10)
                         {
@@ -350,6 +354,7 @@ public class StoryScreenInteractionController : MonoBehaviour
                 if (btn == btnMap["1450Button"])
                 {
                     btn.onClick.AddListener(delegate {
+                        startFeedback(true);
                         GameManager.Instance.accessMinispiel7 = true;
                     });
                 }
@@ -369,6 +374,7 @@ public class StoryScreenInteractionController : MonoBehaviour
                 if (btn == btnMap["1608Button"])
                 {
                     btn.onClick.AddListener(delegate {
+                        startFeedback(true);
                         GameManager.Instance.accessMinispiel8 = true;
                         if (StoryContainer.accessStoryPart < 16)
                         {
@@ -392,6 +398,7 @@ public class StoryScreenInteractionController : MonoBehaviour
                 if (btn == btnMap["1712Button"])
                 {
                     btn.onClick.AddListener(delegate {
+                        startFeedback(true);
                         GameManager.Instance.accessMinispiel9 = true;
                     });
                 }
@@ -411,6 +418,7 @@ public class StoryScreenInteractionController : MonoBehaviour
                 if (btn == btnMap["1880Button"])
                 {
                     btn.onClick.AddListener(delegate {
+                        startFeedback(true);
                         GameManager.Instance.accessMinispiel10 = true;
                         if (StoryContainer.accessStoryPart < 19)
                         {

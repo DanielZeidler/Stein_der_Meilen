@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Save/Intro.unity
+    guid: aad572d4ba3472245b1fb0ed41ca2ba2
+  - enabled: 1
     path: Assets/Save/StoryScreen.unity
     guid: b0c6c4382b6a2a9438d5539f317694b2
   - enabled: 1
@@ -37,4 +40,4 @@ EditorBuildSettings:
     guid: 33eea9b0496581741a37af0b45bd8f1d
   - enabled: 1
     path: Assets/Save/MinigameLinsen.unity
-    guid: 00000000000000000000000000000000
+    guid: 77c7dfcdacafeee41ae11e2a027ea9db
