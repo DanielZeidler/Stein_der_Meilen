@@ -8,6 +8,8 @@ public class mittlerelinse : MonoBehaviour, IDropHandler
 {
     public GameObject linse;
     public GameObject richtig;
+    public static int count = 0;
+    public GameObject finish;
 
 
     public void OnDrop(PointerEventData eventData)
@@ -15,7 +17,12 @@ public class mittlerelinse : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag.name == "mittlere konkave Linse")
         {
             linse.SetActive(true);
-            richtig.SetActive(false);
+            mittlerelinse.count++;
+
+            if (mittlerelinse.count == 4)
+            {
+                finish.SetActive(true);
+            }
         }
     }
 

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Save/Intro.unity
+- path: Assets/Save/MinigameLinsen.unity
   isLoaded: 1
   isActive: 1

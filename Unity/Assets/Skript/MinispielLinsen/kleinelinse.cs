@@ -8,13 +8,13 @@ public class kleinelinse : MonoBehaviour, IDropHandler
 {
     public GameObject linse;
     public GameObject richtig;
+    
 
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag.name == "kleine konvexe Linse")
         {
             linse.SetActive(true);
-            richtig.SetActive(false);
         }
     }
 
