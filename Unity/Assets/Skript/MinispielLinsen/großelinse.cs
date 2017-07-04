@@ -11,12 +11,19 @@ public class großelinse : MonoBehaviour, IDropHandler
 
     public GameObject finish;
 
+    public GameObject text;
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag.name == "große Konvexe Linse")
         {
             linse.SetActive(true);
             mittlerelinse.count++;
+
+            if (mittlerelinse.count == 1)
+            {
+                text.SetActive(false);
+            }
 
             if (mittlerelinse.count == 4)
             {

@@ -10,6 +10,7 @@ public class mittlerelinse : MonoBehaviour, IDropHandler
     public GameObject richtig;
     public static int count = 0;
     public GameObject finish;
+    public GameObject text;
 
 
     public void OnDrop(PointerEventData eventData)
@@ -18,6 +19,11 @@ public class mittlerelinse : MonoBehaviour, IDropHandler
         {
             linse.SetActive(true);
             mittlerelinse.count++;
+
+            if (mittlerelinse.count == 1)
+            {
+                text.SetActive(false);
+            }
 
             if (mittlerelinse.count == 4)
             {
