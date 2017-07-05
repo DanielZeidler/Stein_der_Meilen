@@ -108,6 +108,63 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &64664067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 64664069}
+  - component: {fileID: 64664068}
+  m_Layer: 0
+  m_Name: AudioWrapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &64664068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 64664067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e2ef26cbce0044c9cd16df471115e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leonardo_1: {fileID: 8300000, guid: 727f3d621215b17499efc4e393ea5b76, type: 3}
+  leonardo_2: {fileID: 8300000, guid: bf3c1966412e39244b0ee9b922908908, type: 3}
+  leonardo_3: {fileID: 8300000, guid: 818ed24b264515648bb6b9aa50b3736a, type: 3}
+  leonardo_4: {fileID: 8300000, guid: 4fd10304b8077964d96e1bd39e44024f, type: 3}
+  leonardo_5: {fileID: 8300000, guid: 8867b4d6f7e6714408daaa39f2e08267, type: 3}
+  leonardo_6: {fileID: 8300000, guid: 14e5321cbe2e41245b898b3eb1278667, type: 3}
+  leonardo_7: {fileID: 8300000, guid: ebf8d4a8cafea9c4faeece00b4f354d2, type: 3}
+  leonardo_8: {fileID: 8300000, guid: 95e5d0bb6b5f7554eb6cde5d7f0cb1df, type: 3}
+  leonardo_9: {fileID: 8300000, guid: 552e896f5912870409cc2f2540065541, type: 3}
+  leonardo_10: {fileID: 8300000, guid: b095262e99737914c839f508490aa5bd, type: 3}
+  leonardo_11: {fileID: 8300000, guid: 6b7b41b297fee6a43bfd5e213455d40f, type: 3}
+  leonardo_12: {fileID: 8300000, guid: 3a7bb14ba554d90489fec1fd2b34ac65, type: 3}
+  leonardo_13: {fileID: 8300000, guid: b96faaf1a03ce3d438fe23d0f1adc06c, type: 3}
+  leonardo_14: {fileID: 8300000, guid: 4b6b5585da6568a48a064f74ba195a6b, type: 3}
+  leonardo_15: {fileID: 8300000, guid: 8f6b9bfbe350e73418da81288e34791e, type: 3}
+  leonardo_16: {fileID: 8300000, guid: 907eb3baa27b17e4e88da66db96989c8, type: 3}
+  leonardo_17: {fileID: 8300000, guid: d4625f4c5ced3c24c9e81f082d5e38c5, type: 3}
+--- !u!4 &64664069
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 64664067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.16948278, y: 3.0665052, z: 13.095703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &67651572
 GameObject:
   m_ObjectHideFlags: 0
@@ -9348,6 +9405,7 @@ GameObject:
   - component: {fileID: 1163736877}
   - component: {fileID: 1163736879}
   - component: {fileID: 1163736878}
+  - component: {fileID: 1163736880}
   m_Layer: 5
   m_Name: StoryPanel
   m_TagString: Untagged
@@ -9410,6 +9468,86 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1163736876}
+--- !u!82 &1163736880
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163736876}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 0
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1185137528
 GameObject:
   m_ObjectHideFlags: 0
@@ -9509,6 +9647,7 @@ MonoBehaviour:
   - 
   minispieleButton: {fileID: 0}
   backgroundMusic: {fileID: 0}
+  voiceText: {fileID: 0}
 --- !u!1 &1199990210
 GameObject:
   m_ObjectHideFlags: 0
@@ -21588,13 +21727,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d2220ab288bf38a40ae204dfd179bbb7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

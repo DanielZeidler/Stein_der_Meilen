@@ -56,6 +56,15 @@ public class galilei : MonoBehaviour, IDropHandler
         if (mittlerelinse.count == 4 && galilei.galil == 4 && kepler.keple == 4)
         {
             finish.SetActive(true);
+
+            GameManager.Instance.finishMinispiel8 = true;
+            if (StoryContainer.accessStoryPart < 16)
+            {
+                StoryContainer.accessStoryPart = 16;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
         }
     }
 

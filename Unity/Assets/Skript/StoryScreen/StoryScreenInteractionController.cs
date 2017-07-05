@@ -35,6 +35,8 @@ public class StoryScreenInteractionController : MonoBehaviour
     private static ScrollRect scrollRect;
 
     public AudioSource backgroundMusic;
+    public AudioSource voiceText;
+    private AudioController aC;
 
     private bool oldPlay;
     private bool oldPause;
@@ -72,6 +74,8 @@ public class StoryScreenInteractionController : MonoBehaviour
         scrollRect = GameObject.Find("ScrollRect").GetComponent<ScrollRect>();
         minispieleButton = GameObject.Find("MinispieleButton").GetComponent<Button>();
         backgroundMusic = GameObject.Find("ErdeWrapper").GetComponent<AudioSource>();
+        voiceText = GameObject.Find("StoryPanel").GetComponent<AudioSource>();
+        aC = GameObject.Find("AudioWrapper").GetComponent<AudioController>();
 
         backgroundMusic.Stop();
         if (start)
@@ -137,6 +141,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         erfindungenMap.Add("FernrohrButton", GameObject.Find("FernrohrButton").GetComponent<MouseClickOnItem>());
         erfindungenMap.Add("DampfmaschineButton", GameObject.Find("DampfmaschineButton").GetComponent<MouseClickOnItem>());
         erfindungenMap.Add("GluebirneButton", GameObject.Find("GluebirneButton").GetComponent<MouseClickOnItem>());
+
     }
 
     // Update is called once per frame
@@ -236,10 +241,6 @@ public class StoryScreenInteractionController : MonoBehaviour
                     btn.onClick.AddListener(delegate {
                         startFeedback(true);
                         GameManager.Instance.accessMinispiel2 = true;
-                        if (StoryContainer.accessStoryPart < 5)
-                        {
-                            StoryContainer.accessStoryPart = 5;
-                        }
                     });
                 }
                 else
@@ -260,10 +261,6 @@ public class StoryScreenInteractionController : MonoBehaviour
                     btn.onClick.AddListener(delegate {
                         startFeedback(true);
                         GameManager.Instance.accessMinispiel3 = true;
-                        if (StoryContainer.accessStoryPart < 6)
-                        {
-                            StoryContainer.accessStoryPart = 6;
-                        }
                     });
                 }
                 else
@@ -284,10 +281,6 @@ public class StoryScreenInteractionController : MonoBehaviour
                     btn.onClick.AddListener(delegate {
                         startFeedback(true);
                         GameManager.Instance.accessMinispiel4 = true;
-                        if (StoryContainer.accessStoryPart < 8)
-                        {
-                            StoryContainer.accessStoryPart = 8;
-                        }
                     });
                 }
                 else
@@ -308,10 +301,6 @@ public class StoryScreenInteractionController : MonoBehaviour
                     btn.onClick.AddListener(delegate {
                         startFeedback(true);
                         GameManager.Instance.accessMinispiel5 = true;
-                        if (StoryContainer.accessStoryPart < 9)
-                        {
-                            StoryContainer.accessStoryPart = 9;
-                        }
                     });
                 }
                 else
@@ -376,10 +365,6 @@ public class StoryScreenInteractionController : MonoBehaviour
                     btn.onClick.AddListener(delegate {
                         startFeedback(true);
                         GameManager.Instance.accessMinispiel8 = true;
-                        if (StoryContainer.accessStoryPart < 16)
-                        {
-                            StoryContainer.accessStoryPart = 16;
-                        }
                     });
                 }
                 else
@@ -494,32 +479,39 @@ public class StoryScreenInteractionController : MonoBehaviour
             if (StoryContainer.Instance.play && !StoryContainer.Instance.pause)
             {
                 StoryScreenInteractionController.Instance.backgroundMusic.Play();
+                StoryScreenInteractionController.Instance.voiceText.Play();
             }
             if (StoryContainer.Instance.play && StoryContainer.Instance.pause)
             {
                 StoryScreenInteractionController.Instance.backgroundMusic.Pause();
+                StoryScreenInteractionController.Instance.voiceText.Pause();
             }
             if (!StoryContainer.Instance.play && StoryContainer.Instance.pause)
             {
                 StoryScreenInteractionController.Instance.backgroundMusic.Pause();
+                StoryScreenInteractionController.Instance.voiceText.Pause();
             }
             if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
             {
                 StoryScreenInteractionController.Instance.backgroundMusic.Stop();
+                StoryScreenInteractionController.Instance.voiceText.Stop();
             }
             if (StoryContainer.Instance.mute)
             {
                 StoryScreenInteractionController.Instance.backgroundMusic.mute = true;
+                StoryScreenInteractionController.Instance.voiceText.mute = true;
             }
             if (!StoryContainer.Instance.mute)
             {
                 StoryScreenInteractionController.Instance.backgroundMusic.mute = false;
+                StoryScreenInteractionController.Instance.voiceText.mute = false;
             }
 
             oldMute = StoryContainer.Instance.mute;
             oldPause = StoryContainer.Instance.pause;
             oldPlay = StoryContainer.Instance.play;
         }
+
     }
     
     public void setText()
@@ -529,7 +521,27 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             StartCoroutine(TextScroll(StoryContainer.Instance.textbausteine[StoryContainer.actTextbaustein]));
         }
-
+        switch (StoryContainer.actTextbaustein)
+        {
+            case 1: voiceText.clip = aC.leonardo_1; break;
+            case 2: voiceText.clip = aC.leonardo_2; break;
+            case 3: voiceText.clip = aC.leonardo_3; break;
+            case 4: voiceText.clip = aC.leonardo_4; break;
+            case 5: voiceText.clip = aC.leonardo_5; break;
+            case 6: voiceText.clip = aC.leonardo_6; break;
+            case 7: voiceText.clip = aC.leonardo_7; break;
+            case 8: voiceText.clip = aC.leonardo_8; break;
+            case 9: voiceText.clip = aC.leonardo_9; break;
+            case 10: voiceText.clip = aC.leonardo_10; break;
+            case 11: voiceText.clip = aC.leonardo_11; break;
+            case 13: voiceText.clip = aC.leonardo_12; break;
+            case 14: voiceText.clip = aC.leonardo_13; break;
+            case 16: voiceText.clip = aC.leonardo_14; break;
+            case 17: voiceText.clip = aC.leonardo_15; break;
+            case 18: voiceText.clip = aC.leonardo_16; break;
+            case 20: voiceText.clip = aC.leonardo_17; break;
+            default: voiceText.clip = null;break;
+        }
     }
 
     private IEnumerator TextScroll(string lineOfText)

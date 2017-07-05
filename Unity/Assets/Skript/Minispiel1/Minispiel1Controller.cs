@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Minispiel1Controller : MonoBehaviour {
 
@@ -33,6 +34,7 @@ public class Minispiel1Controller : MonoBehaviour {
     private SpriteRenderer GetreideSprite;
 
     private ParticleSystem firework;
+    private Text storyText;
 
     private void Start()
     {
@@ -41,6 +43,8 @@ public class Minispiel1Controller : MonoBehaviour {
         TierSprite = GameObject.Find("schaf").GetComponent<SpriteRenderer>(); 
         SteinSprite = GameObject.Find("stein").GetComponent<SpriteRenderer>(); 
         GetreideSprite = GameObject.Find("weizen").GetComponent<SpriteRenderer>();
+
+        storyText = GameObject.Find("HintText").GetComponent<Text>();
 
         BaumSprite.sprite = defaultBaum;
         TierSprite.sprite = defaultTier;
@@ -75,6 +79,8 @@ public class Minispiel1Controller : MonoBehaviour {
         {
             firework.Play();
             finished = true;
+            storyText.text = "Gewonnen! Du kannst nun mit der Story weiter machen.";
+            GameManager.Instance.finishMinispiel0 = true;
             if (StoryContainer.accessStoryPart < 2)
             {
                 StoryContainer.accessStoryPart = 2;

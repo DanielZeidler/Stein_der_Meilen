@@ -33,63 +33,98 @@ public class MinispielAccessController : MonoBehaviour {
         {
             btnArray[1].interactable = true;
             imgArray[1].enabled = true;
-            finishPicArray[0].enabled = true;
         }
         if (GameManager.Instance.accessMinispiel2)
         {
             btnArray[2].interactable = true;
             imgArray[2].enabled = true;
-            finishPicArray[1].enabled = true;
         }
         if (GameManager.Instance.accessMinispiel3)
         {
             btnArray[3].interactable = true;
             imgArray[3].enabled = true;
-            finishPicArray[2].enabled = true;
         }
         if (GameManager.Instance.accessMinispiel4)
         {
             btnArray[4].interactable = true;
             imgArray[4].enabled = true;
-            finishPicArray[3].enabled = true;
         }
         if (GameManager.Instance.accessMinispiel5)
         {
             btnArray[5].interactable = true;
             imgArray[5].enabled = true;
-            finishPicArray[4].enabled = true;
         }
         if (GameManager.Instance.accessMinispiel6)
         {
             btnArray[6].interactable = true;
             imgArray[6].enabled = true;
-            finishPicArray[5].enabled = true;
         }
         if (GameManager.Instance.accessMinispiel7)
         {
             btnArray[7].interactable = true;
             imgArray[7].enabled = true;
-            finishPicArray[6].enabled = true;
         }
         if (GameManager.Instance.accessMinispiel8)
         {
             btnArray[8].interactable = true;
             imgArray[8].enabled = true;
-            finishPicArray[7].enabled = true;
         }
         if (GameManager.Instance.accessMinispiel9)
         {
             btnArray[9].interactable = true;
             imgArray[9].enabled = true;
-            finishPicArray[8].enabled = true;
         }
         if (GameManager.Instance.accessMinispiel10)
         {
             btnArray[10].interactable = true;
             imgArray[10].enabled = true;
-            finishPicArray[9].enabled = true;
         }
 
+
+        if (GameManager.Instance.finishMinispiel0)
+        {
+            finishPicArray[0].enabled = true;
+        }
+        if (GameManager.Instance.finishMinispiel1)
+        {
+            finishPicArray[1].enabled = true;
+        }
+        if (GameManager.Instance.finishMinispiel2)
+        {
+            finishPicArray[2].enabled = true;
+        }
+        if (GameManager.Instance.finishMinispiel3)
+        {
+            finishPicArray[3].enabled = true;
+        }
+        if (GameManager.Instance.finishMinispiel4)
+        {
+            finishPicArray[4].enabled = true;
+        }
+        if (GameManager.Instance.finishMinispiel5)
+        {
+            finishPicArray[5].enabled = true;
+        }
+        if (GameManager.Instance.finishMinispiel6)
+        {
+            finishPicArray[6].enabled = true;
+        }
+        if (GameManager.Instance.finishMinispiel7)
+        {
+            finishPicArray[7].enabled = true;
+        }
+        if (GameManager.Instance.finishMinispiel8)
+        {
+            finishPicArray[8].enabled = true;
+        }
+        if (GameManager.Instance.finishMinispiel9)
+        {
+            finishPicArray[9].enabled = true;
+        }
+        if (GameManager.Instance.finishMinispiel10)
+        {
+            finishPicArray[10].enabled = true;
+        }
 
     }
 

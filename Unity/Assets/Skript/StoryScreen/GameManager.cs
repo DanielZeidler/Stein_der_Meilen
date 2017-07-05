@@ -24,6 +24,18 @@ public class GameManager : MonoBehaviour
     public bool accessMinispiel9= false;
     public bool accessMinispiel10= false;
 
+    public bool finishMinispiel0 = false;
+    public bool finishMinispiel1 = false;
+    public bool finishMinispiel2 = false;
+    public bool finishMinispiel3 = false;
+    public bool finishMinispiel4 = false;
+    public bool finishMinispiel5 = false;
+    public bool finishMinispiel6 = false;
+    public bool finishMinispiel7 = false;
+    public bool finishMinispiel8 = false;
+    public bool finishMinispiel9 = false;
+    public bool finishMinispiel10 = false;
+
     private static GameManager _instance;
     public static GameManager Instance
     {
@@ -77,6 +89,18 @@ public class GameManager : MonoBehaviour
             accessMinispiel8 = false;
             accessMinispiel9 = false;
             accessMinispiel10 = false;
+
+            finishMinispiel0 = false;
+            finishMinispiel1 = false;
+            finishMinispiel2 = false;
+            finishMinispiel3 = false;
+            finishMinispiel4 = false;
+            finishMinispiel5 = false;
+            finishMinispiel6 = false;
+            finishMinispiel7 = false;
+            finishMinispiel8 = false;
+            finishMinispiel9 = false;
+            finishMinispiel10 = false;
 
             reset = false;
         }

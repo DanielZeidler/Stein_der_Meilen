@@ -30,6 +30,14 @@ public class schriftDropzone : MonoBehaviour, IDropHandler
 		if (counter.won()) {
 			// Win Game
 			print("You Won");
-		}
+            GameManager.Instance.finishMinispiel3 = true;
+            if (StoryContainer.accessStoryPart < 6)
+            {
+                StoryContainer.accessStoryPart = 6;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
 	}
 }

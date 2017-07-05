@@ -73,7 +73,7 @@ public class firebuild : MonoBehaviour {
             finishtext.enabled = true;
             finishbutton.SetActive(true);
             count++;
-
+            GameManager.Instance.finishMinispiel1 = true;
             if (StoryContainer.accessStoryPart < 4)
             {
                 StoryContainer.accessStoryPart = 4;

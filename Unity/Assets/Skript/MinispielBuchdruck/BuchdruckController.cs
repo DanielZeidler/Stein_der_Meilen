@@ -50,7 +50,7 @@ public class BuchdruckController : MonoBehaviour {
             firework.Play();
             finish = true;
             animator.SetBool("finish", true);
-
+            GameManager.Instance.finishMinispiel7 = true;
             if (StoryContainer.accessStoryPart < 14)
             {
                 StoryContainer.accessStoryPart = 14;

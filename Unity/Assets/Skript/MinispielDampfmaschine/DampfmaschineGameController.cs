@@ -90,7 +90,7 @@ public class DampfmaschineGameController : MonoBehaviour {
             triggerFinish = true;
             firework.Play();
             storyText.text = gewonnen;
-
+            GameManager.Instance.finishMinispiel9 = true;
             if (StoryContainer.accessStoryPart < 17)
             {
                 StoryContainer.accessStoryPart = 17;
