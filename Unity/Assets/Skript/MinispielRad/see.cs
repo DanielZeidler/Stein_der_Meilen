@@ -20,7 +20,7 @@ public class see : MonoBehaviour, IDropHandler
         {
             wegsee1.SetActive(true);
             wagenmit.SetActive(true);
-            wagenohne.transform.position = new Vector3(436.7f, 126.2f, 0);
+            wagenohne.transform.position = new Vector3(613.6133f, 152.1723f, 0f);
             wagenohne.SetActive(false);
             dragged = true;
         }
