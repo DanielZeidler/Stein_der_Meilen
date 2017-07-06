@@ -1,0 +1,19 @@
+Nach jedem Textblock:
+Musik und Sprachaufnahme weiter laufen lassen
+
+Nach erstem Textblock: 
+Button "Weiter"
+
+Buttontexte alle auf Deutsch
+
+Feuer bei zweiter Jahreszahl, bisher kommt Meldung falsch wenn man erst eine falsche Erfindung und dann die richtige genommen hat
+
+Minispiel Feuer:
+nicht spielbar, es erscheint sofort die Erfolgsmeldung
+
+Alle Minispiele:
+Musik einfügen
+
+Erfindungsauswahl:
+Bei MouseOver: Name der Erfindung einblenden
+Erfindungen auf Jahreszahl ziehen. Mauszeiger durch Erfindung ersetzen funktioniert im Browser nicht

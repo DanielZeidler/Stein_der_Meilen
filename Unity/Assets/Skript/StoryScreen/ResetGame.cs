@@ -23,6 +23,7 @@ public class ResetGame : MonoBehaviour {
             StoryContainer.Instance.play = true;
             StoryScreenInteractionController.Instance.setText();
             gameObject.GetComponentInChildren<Text>().text = "LeaveGame";
+            StoryScreenInteractionController.Instance.backgroundMusic.Play();
         }
     }
 

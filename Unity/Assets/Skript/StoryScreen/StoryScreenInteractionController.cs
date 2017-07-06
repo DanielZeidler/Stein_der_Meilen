@@ -77,12 +77,17 @@ public class StoryScreenInteractionController : MonoBehaviour
         voiceText = GameObject.Find("StoryPanel").GetComponent<AudioSource>();
         aC = GameObject.Find("AudioWrapper").GetComponent<AudioController>();
 
-        backgroundMusic.Stop();
+        
         if (start)
         {
             StoryContainer.Instance.play = false;
             StoryContainer.Instance.pause = false;
             storyText.text = begruessung;
+            backgroundMusic.Stop();
+        }
+        else
+        {
+            backgroundMusic.Play();
         }
         if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause && !start)
         {
@@ -478,22 +483,22 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             if (StoryContainer.Instance.play && !StoryContainer.Instance.pause)
             {
-                StoryScreenInteractionController.Instance.backgroundMusic.Play();
+              //  StoryScreenInteractionController.Instance.backgroundMusic.Play();
                 StoryScreenInteractionController.Instance.voiceText.Play();
             }
             if (StoryContainer.Instance.play && StoryContainer.Instance.pause)
             {
-                StoryScreenInteractionController.Instance.backgroundMusic.Pause();
+              //  StoryScreenInteractionController.Instance.backgroundMusic.Pause();
                 StoryScreenInteractionController.Instance.voiceText.Pause();
             }
             if (!StoryContainer.Instance.play && StoryContainer.Instance.pause)
             {
-                StoryScreenInteractionController.Instance.backgroundMusic.Pause();
+              //  StoryScreenInteractionController.Instance.backgroundMusic.Pause();
                 StoryScreenInteractionController.Instance.voiceText.Pause();
             }
             if (!StoryContainer.Instance.play && !StoryContainer.Instance.pause)
             {
-                StoryScreenInteractionController.Instance.backgroundMusic.Stop();
+              //  StoryScreenInteractionController.Instance.backgroundMusic.Stop();
                 StoryScreenInteractionController.Instance.voiceText.Stop();
             }
             if (StoryContainer.Instance.mute)
@@ -534,11 +539,14 @@ public class StoryScreenInteractionController : MonoBehaviour
             case 9: voiceText.clip = aC.leonardo_9; break;
             case 10: voiceText.clip = aC.leonardo_10; break;
             case 11: voiceText.clip = aC.leonardo_11; break;
+
             case 13: voiceText.clip = aC.leonardo_12; break;
             case 14: voiceText.clip = aC.leonardo_13; break;
+            case 15: voiceText.clip = aC.lipperhey_1; break;
             case 16: voiceText.clip = aC.leonardo_14; break;
             case 17: voiceText.clip = aC.leonardo_15; break;
             case 18: voiceText.clip = aC.leonardo_16; break;
+            case 19: voiceText.clip = aC.edison_1; break;
             case 20: voiceText.clip = aC.leonardo_17; break;
             default: voiceText.clip = null;break;
         }
@@ -566,7 +574,7 @@ public class StoryScreenInteractionController : MonoBehaviour
             yield return new WaitForSeconds(StoryContainer.Instance.playSpeed);
         }
 
-        StoryContainer.Instance.play = false;
+        //StoryContainer.Instance.play = false;
 
         if (scrollRect != null && storyText != null)
         {
