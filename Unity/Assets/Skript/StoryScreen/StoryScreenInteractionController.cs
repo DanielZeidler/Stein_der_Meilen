@@ -176,6 +176,13 @@ public class StoryScreenInteractionController : MonoBehaviour
                 InfoBoxImage.enabled = true;
                 foreach(ParticleSystem partSys in GameObject.Find("StoryHintMarker").GetComponentsInChildren<ParticleSystem>())
                 {
+                    if(partSys.gameObject.name == "ErfindungMarker")
+                    {
+                        partSys.gameObject.GetComponent<Transform>().position = erfindungenMap["WaffenButton"].gameObject.GetComponent<RectTransform>().position;
+                    }else if(partSys.gameObject.name == "ZeitMarker")
+                    {
+                        partSys.gameObject.GetComponent<Transform>().position = btnMap["2,2MiovChrButton"].gameObject.GetComponent<RectTransform>().position; 
+                    }
                     partSys.GetComponent<Renderer>().enabled = true;
                 }
 

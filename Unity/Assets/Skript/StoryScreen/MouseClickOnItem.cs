@@ -7,17 +7,15 @@ public class MouseClickOnItem : MonoBehaviour {
 
     public Texture2D cursorTexture;
     public Texture2D defaultTexture;
-    public CursorMode cursorMode = CursorMode.Auto;
+    public CursorMode cursorMode = CursorMode.ForceSoftware;
     public Vector2 hotSpot = Vector2.zero;
     public bool isClicked = false;
 
     private Vector2 cursorHotspot;
-    
 
-  
-    void Start()
+    private void Awake()
     {
-        Cursor.SetCursor(defaultTexture, hotSpot, cursorMode);
+        Cursor.SetCursor(defaultTexture, hotSpot, CursorMode.ForceSoftware);
     }
 
     public void OnMouseDown()
