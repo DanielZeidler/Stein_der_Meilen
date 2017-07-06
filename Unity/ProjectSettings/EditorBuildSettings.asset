@@ -41,3 +41,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Save/MinigameLinsen.unity
     guid: 77c7dfcdacafeee41ae11e2a027ea9db
+  - enabled: 1
+    path: Assets/Save/audiomenu.unity
+    guid: 6d20ce528643a2d4395838688a33effe
+  - enabled: 1
+    path: Assets/Save/help.unity
+    guid: 219aa211bf1b9094bb8466479eadbf13
+  - enabled: 1
+    path: Assets/Save/credits.unity
+    guid: f867ad259947244498098bb873a03504
