@@ -77,7 +77,16 @@ public class StoryScreenInteractionController : MonoBehaviour
         voiceText = GameObject.Find("StoryPanel").GetComponent<AudioSource>();
         aC = GameObject.Find("AudioWrapper").GetComponent<AudioController>();
 
-        
+        if (PlayerPrefs.HasKey("audio"))
+        {
+            AudioListener.volume = PlayerPrefs.GetFloat("audio");
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("audio", 1.0f);
+            PlayerPrefs.Save();
+        }
+
         if (start)
         {
             StoryContainer.Instance.play = false;
