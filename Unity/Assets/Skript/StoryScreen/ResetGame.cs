@@ -8,21 +8,21 @@ public class ResetGame : MonoBehaviour {
 
 	public void resetGameData()
     {
-        if(gameObject.GetComponentInChildren<Text>().text == "LeaveGame")
+        if(gameObject.GetComponentInChildren<Text>().text == "Spiel verlassen")
         {
             StoryScreenInteractionController.start = true;
             GameManager.Instance.reset = true;
             StoryContainer.Instance.reset = true;
 
             SceneManager.LoadScene("StoryScreen", LoadSceneMode.Single);
-            gameObject.GetComponentInChildren<Text>().text = "StartGame";
+            gameObject.GetComponentInChildren<Text>().text = "Spiel starten";
         }
         else
         {
             StoryScreenInteractionController.start = false;
             StoryContainer.Instance.play = true;
             StoryScreenInteractionController.Instance.setText();
-            gameObject.GetComponentInChildren<Text>().text = "LeaveGame";
+            gameObject.GetComponentInChildren<Text>().text = "Spiel verlassen";
             StoryScreenInteractionController.Instance.backgroundMusic.Play();
         }
     }
@@ -31,11 +31,11 @@ public class ResetGame : MonoBehaviour {
     {
         if (StoryScreenInteractionController.start)
         {
-            gameObject.GetComponentInChildren<Text>().text = "StartGame";
+            gameObject.GetComponentInChildren<Text>().text = "Spiel starten";
         }
         else
         {
-            gameObject.GetComponentInChildren<Text>().text = "LeaveGame";
+            gameObject.GetComponentInChildren<Text>().text = "Spiel verlassen";
         }
     }
 }

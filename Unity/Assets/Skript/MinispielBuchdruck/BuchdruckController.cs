@@ -42,22 +42,31 @@ public class BuchdruckController : MonoBehaviour {
 	void Update () {
        if(!finish && boolletter1 && boolletter2 && boolletter3 && boolletter4 && boolletter5 && boolletter6 && boolletter7 && boolletter8 && boolletter9 && boolletter10 && boolletter11 && boolletter12 && boolletter13 && boolletter14 && boolletter15 && boolletter16)
         {
-            foreach (draganddrop dd in ddArray)
-            {
-                dd.drag = false;
-            }
-            animator.SetBool("finish", true);
-            firework.Play();
-            finish = true;
-            animator.SetBool("finish", true);
-            GameManager.Instance.finishMinispiel7 = true;
-            if (StoryContainer.accessStoryPart < 14)
-            {
-                StoryContainer.accessStoryPart = 14;
-                StoryContainer.actTextbaustein += 1;
-                StoryContainer.actLetter = 0;
-                StoryContainer.actText = "";
-            }
+
+            StartCoroutine(FinishAnimation());
+        }
+    }
+
+    private IEnumerator FinishAnimation()
+    {
+
+        yield return new WaitForSeconds(1f);
+
+        foreach (draganddrop dd in ddArray)
+        {
+            dd.drag = false;
+        }
+        animator.SetBool("finish", true);
+        firework.Play();
+        finish = true;
+        animator.SetBool("finish", true);
+        GameManager.Instance.finishMinispiel7 = true;
+        if (StoryContainer.accessStoryPart < 14)
+        {
+            StoryContainer.accessStoryPart = 14;
+            StoryContainer.actTextbaustein += 1;
+            StoryContainer.actLetter = 0;
+            StoryContainer.actText = "";
         }
     }
 }

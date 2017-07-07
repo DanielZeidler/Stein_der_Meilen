@@ -145,6 +145,7 @@
     <Compile Include="Assets\Skript\StoryScreen\timelineMarkerController.cs" />
     <Compile Include="Assets\Skript\StoryScreen\toggleMenu.cs" />
     <Compile Include="Assets\Skript\audiomenu\audiochange.cs" />
+    <Compile Include="Assets\Skript\audiovolume.cs" />
     <Compile Include="Assets\Skript\help\helpcontroll.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ApplicationManager.cs" />

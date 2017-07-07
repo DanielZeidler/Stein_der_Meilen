@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1705580437784142}
+  m_IsPrefabParent: 1
+--- !u!1 &1705580437784142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4955986276790230}
+  - component: {fileID: 114254466179278710}
+  m_Layer: 0
+  m_Name: AudioWrapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4955986276790230
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705580437784142}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.16948278, y: 3.0665052, z: 13.095703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114254466179278710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705580437784142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e2ef26cbce0044c9cd16df471115e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leonardo_1: {fileID: 8300000, guid: 727f3d621215b17499efc4e393ea5b76, type: 3}
+  leonardo_2: {fileID: 8300000, guid: bf3c1966412e39244b0ee9b922908908, type: 3}
+  leonardo_3: {fileID: 8300000, guid: 818ed24b264515648bb6b9aa50b3736a, type: 3}
+  leonardo_4: {fileID: 8300000, guid: 4fd10304b8077964d96e1bd39e44024f, type: 3}
+  leonardo_5: {fileID: 8300000, guid: 8867b4d6f7e6714408daaa39f2e08267, type: 3}
+  leonardo_6: {fileID: 8300000, guid: 14e5321cbe2e41245b898b3eb1278667, type: 3}
+  leonardo_7: {fileID: 8300000, guid: ebf8d4a8cafea9c4faeece00b4f354d2, type: 3}
+  leonardo_8: {fileID: 8300000, guid: 95e5d0bb6b5f7554eb6cde5d7f0cb1df, type: 3}
+  leonardo_9: {fileID: 8300000, guid: 552e896f5912870409cc2f2540065541, type: 3}
+  leonardo_10: {fileID: 8300000, guid: b095262e99737914c839f508490aa5bd, type: 3}
+  leonardo_11: {fileID: 8300000, guid: 6b7b41b297fee6a43bfd5e213455d40f, type: 3}
+  leonardo_12: {fileID: 8300000, guid: 3a7bb14ba554d90489fec1fd2b34ac65, type: 3}
+  leonardo_13: {fileID: 8300000, guid: b96faaf1a03ce3d438fe23d0f1adc06c, type: 3}
+  leonardo_14: {fileID: 8300000, guid: 4b6b5585da6568a48a064f74ba195a6b, type: 3}
+  leonardo_15: {fileID: 8300000, guid: 8f6b9bfbe350e73418da81288e34791e, type: 3}
+  leonardo_16: {fileID: 8300000, guid: 907eb3baa27b17e4e88da66db96989c8, type: 3}
+  leonardo_17: {fileID: 8300000, guid: d4625f4c5ced3c24c9e81f082d5e38c5, type: 3}
+  lipperhey_1: {fileID: 8300000, guid: 32d23928e596eb942891bd7dd34cf356, type: 3}
+  edison_1: {fileID: 8300000, guid: af1093a4188eb5f46b042559226ebdd7, type: 3}

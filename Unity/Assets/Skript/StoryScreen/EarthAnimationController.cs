@@ -106,6 +106,7 @@ public class EarthAnimationController : MonoBehaviour
             foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
             StoryContainer.Instance.rotationEarth = true;
             foreach (SpriteRenderer spRen in animWrapperMap["menschKisteWrapper"]) spRen.enabled = true;
+            foreach (SpriteRenderer spRen in animWrapperMap["menschenZeichensprWrapper"]) spRen.enabled = true;
         }
         else if (StoryContainer.actTextbaustein == 5)
         {

@@ -200,248 +200,6 @@ public class StoryScreenInteractionController : MonoBehaviour
             StoryContainer.interaction = false;
         }
 
-        if (erfindungenMap["WaffenButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["2,2MiovChrButton"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel0 = true;
-                        infoBoxText.text = infotexte[1];
-                        InfoBoxImage.enabled = true;
-                        foreach (ParticleSystem partSys in GameObject.Find("StoryHintMarker").GetComponentsInChildren<ParticleSystem>())
-                        {
-                            partSys.GetComponent<Renderer>().enabled = false;
-                        }
-                        minispieleButton.onClick.AddListener(delegate
-                        {
-                            infoBoxText.text = "";
-                            InfoBoxImage.enabled = false;
-                            foreach (Button bton in erfindungenButtonMap.Values) bton.interactable = true;
-                        });
-                    });
-                }
-                else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-
-        if(erfindungenMap["FeuerButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["500000vChrButton"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel1 = true;
-                    });
-                }else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-        if (erfindungenMap["RadButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["4JtsdvChrButton"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel2 = true;
-                    });
-                }
-                else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-        if (erfindungenMap["SchriftButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["3500vChrButton"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel3 = true;
-                    });
-                }
-                else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-        if (erfindungenMap["GlasButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["1800vChrButton"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel4 = true;
-                    });
-                }
-                else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-        if (erfindungenMap["SchiesspulverButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["1044Button"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel5 = true;
-                    });
-                }
-                else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-        if (erfindungenMap["WindmuehleButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["1180Button"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel6 = true;
-                        if (StoryContainer.accessStoryPart < 10)
-                        {
-                            StoryContainer.accessStoryPart = 10;
-                        }
-                    });
-                }
-                else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-        if (erfindungenMap["BuchdruckButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["1450Button"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel7 = true;
-                    });
-                }
-                else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-        if (erfindungenMap["FernrohrButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["1608Button"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel8 = true;
-                    });
-                }
-                else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-        if (erfindungenMap["DampfmaschineButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["1712Button"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel9 = true;
-                    });
-                }
-                else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-        if (erfindungenMap["GluebirneButton"].isClicked)
-        {
-            foreach (Button btn in btnMap.Values)
-            {
-                btn.onClick.RemoveAllListeners();
-                if (btn == btnMap["1880Button"])
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(true);
-                        GameManager.Instance.accessMinispiel10 = true;
-                        if (StoryContainer.accessStoryPart < 19)
-                        {
-                            StoryContainer.accessStoryPart = 20;
-                        }
-                    });
-                }
-                else
-                {
-                    btn.onClick.AddListener(delegate {
-                        startFeedback(false);
-                    });
-                }
-            }
-        }
-
-
         if (StoryContainer.actTextbaustein < 1 && StoryContainer.actTextbaustein >= 0)
         {
             dustStorm.maxParticles = 110;
@@ -565,6 +323,269 @@ public class StoryScreenInteractionController : MonoBehaviour
             case 19: voiceText.clip = aC.edison_1; break;
             case 20: voiceText.clip = aC.leonardo_17; break;
             default: voiceText.clip = null;break;
+        }
+    }
+
+    public void setButtonInteraction()
+    {
+        if (erfindungenMap["WaffenButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["2,2MiovChrButton"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel0 = true;
+                        infoBoxText.text = infotexte[1];
+                        InfoBoxImage.enabled = true;
+                        foreach (ParticleSystem partSys in GameObject.Find("StoryHintMarker").GetComponentsInChildren<ParticleSystem>())
+                        {
+                            partSys.GetComponent<Renderer>().enabled = false;
+                        }
+                        minispieleButton.onClick.AddListener(delegate
+                        {
+                            infoBoxText.text = "";
+                            InfoBoxImage.enabled = false;
+                            foreach (Button bton in erfindungenButtonMap.Values) bton.interactable = true;
+                        });
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }else if (erfindungenMap["FeuerButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["500000vChrButton"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel1 = true;
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }else if (erfindungenMap["RadButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["4JtsdvChrButton"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel2 = true;
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }else if (erfindungenMap["SchriftButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["3500vChrButton"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel3 = true;
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }else if (erfindungenMap["GlasButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["1800vChrButton"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel4 = true;
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }else if (erfindungenMap["SchiesspulverButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["1044Button"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel5 = true;
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }else if (erfindungenMap["WindmuehleButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["1180Button"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel6 = true;
+                        if (StoryContainer.accessStoryPart < 10)
+                        {
+                            StoryContainer.accessStoryPart = 10;
+                        }
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }else if (erfindungenMap["BuchdruckButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["1450Button"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel7 = true;
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }else if (erfindungenMap["FernrohrButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["1608Button"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel8 = true;
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }else if (erfindungenMap["DampfmaschineButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["1712Button"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel9 = true;
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }else if (erfindungenMap["GluebirneButton"].isClicked)
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+                if (btn == btnMap["1880Button"])
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(true);
+                        GameManager.Instance.accessMinispiel10 = true;
+                        if (StoryContainer.accessStoryPart < 19)
+                        {
+                            StoryContainer.accessStoryPart = 20;
+                        }
+                    });
+                }
+                else
+                {
+                    btn.onClick.AddListener(delegate
+                    {
+                        startFeedback(false);
+                    });
+                }
+            }
+        }
+        else
+        {
+            foreach (Button btn in btnMap.Values)
+            {
+                btn.onClick.RemoveAllListeners();
+            }
         }
     }
 

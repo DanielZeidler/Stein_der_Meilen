@@ -10,17 +10,30 @@ public class MouseClickOnItem : MonoBehaviour {
     public CursorMode cursorMode = CursorMode.ForceSoftware;
     public Vector2 hotSpot = Vector2.zero;
     public bool isClicked = false;
-
+    private StoryScreenInteractionController sSIC;
     private Vector2 cursorHotspot;
+
+    private Button[] erfindungenButtonArray;
 
     private void Awake()
     {
         Cursor.SetCursor(defaultTexture, hotSpot, CursorMode.ForceSoftware);
+        sSIC = GameObject.Find("InfoBoxImage").GetComponent<StoryScreenInteractionController>();
+        erfindungenButtonArray = GameObject.FindObjectsOfType<Button>();
     }
 
     public void OnMouseDown()
     {
-        if(isClicked == false)
+
+        foreach(Button btn in erfindungenButtonArray)
+        {
+            if(btn.tag == "ErfindungButton")
+            {
+                if (btn.GetComponent<MouseClickOnItem>().isClicked && btn.gameObject.name != gameObject.name) btn.GetComponent<MouseClickOnItem>().isClicked = false;
+            }
+            
+        }
+        if (isClicked == false)
         {
             cursorHotspot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
             Cursor.SetCursor(cursorTexture, cursorHotspot, cursorMode);
@@ -30,6 +43,7 @@ public class MouseClickOnItem : MonoBehaviour {
             Cursor.SetCursor(defaultTexture, hotSpot, cursorMode);
             isClicked = false;
         }
+        
         foreach(Button btn in GameObject.FindObjectsOfType<Button>())
         {
             if(btn.tag != "ErfindungButton")
@@ -40,6 +54,7 @@ public class MouseClickOnItem : MonoBehaviour {
                 });
             }
         }
+        sSIC.setButtonInteraction();
     }
 
 }
