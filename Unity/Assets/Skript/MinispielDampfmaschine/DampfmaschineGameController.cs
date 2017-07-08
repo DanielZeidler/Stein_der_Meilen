@@ -91,13 +91,7 @@ public class DampfmaschineGameController : MonoBehaviour {
             firework.Play();
             storyText.text = gewonnen;
             GameManager.Instance.finishMinispiel9 = true;
-            if (StoryContainer.accessStoryPart < 17)
-            {
-                StoryContainer.accessStoryPart = 17;
-                StoryContainer.actTextbaustein += 1;
-                StoryContainer.actLetter = 0;
-                StoryContainer.actText = "";
-            }
+            
         }
 
         

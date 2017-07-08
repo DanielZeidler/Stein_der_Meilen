@@ -67,5 +67,111 @@ public class StoryContainer : MonoBehaviour
 
             reset = false;
         }
+
+        if (GameManager.Instance.finishMinispiel0)
+        {
+            if (StoryContainer.accessStoryPart < 2)
+            {
+                StoryContainer.accessStoryPart = 2;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
+        if (GameManager.Instance.finishMinispiel1)
+        {
+            if (StoryContainer.accessStoryPart < 4)
+            {
+                StoryContainer.accessStoryPart = 4;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
+        if (GameManager.Instance.finishMinispiel2)
+        {
+            if (StoryContainer.accessStoryPart < 5)
+            {
+                StoryContainer.accessStoryPart = 5;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
+        if (GameManager.Instance.finishMinispiel3)
+        {
+            if (StoryContainer.accessStoryPart < 6)
+            {
+                StoryContainer.accessStoryPart = 6;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
+        if (GameManager.Instance.finishMinispiel4)
+        {
+            if (StoryContainer.accessStoryPart < 8)
+            {
+                StoryContainer.accessStoryPart = 8;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
+        if (GameManager.Instance.finishMinispiel5)
+        {
+            if (StoryContainer.accessStoryPart < 9)
+            {
+                StoryContainer.accessStoryPart = 9;
+
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
+        if (GameManager.Instance.finishMinispiel6)
+        {
+
+        }
+        if (GameManager.Instance.finishMinispiel7)
+        {
+            if (StoryContainer.accessStoryPart < 14)
+            {
+                StoryContainer.accessStoryPart = 14;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
+        if (GameManager.Instance.finishMinispiel8)
+        {
+            if (StoryContainer.accessStoryPart < 16)
+            {
+                StoryContainer.accessStoryPart = 16;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
+        if (GameManager.Instance.finishMinispiel9)
+        {
+            if (StoryContainer.accessStoryPart < 17)
+            {
+                StoryContainer.accessStoryPart = 17;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
+        if (GameManager.Instance.finishMinispiel10)
+        {
+            if (StoryContainer.accessStoryPart < 18)
+            {
+                StoryContainer.accessStoryPart = 20;
+                StoryContainer.actTextbaustein += 1;
+                StoryContainer.actLetter = 0;
+                StoryContainer.actText = "";
+            }
+        }
     }
 }

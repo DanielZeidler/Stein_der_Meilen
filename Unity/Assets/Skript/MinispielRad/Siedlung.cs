@@ -68,13 +68,7 @@ public class Siedlung : MonoBehaviour, IDropHandler
         {
             finishjo.SetActive(true);
             GameManager.Instance.finishMinispiel2 = true;
-            if (StoryContainer.accessStoryPart < 5)
-            {
-                StoryContainer.accessStoryPart = 5;
-                StoryContainer.actTextbaustein += 1;
-                StoryContainer.actLetter = 0;
-                StoryContainer.actText = "";
-            }
+            
         }
     }
 

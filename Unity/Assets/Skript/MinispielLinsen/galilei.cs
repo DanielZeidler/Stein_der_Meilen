@@ -58,13 +58,7 @@ public class galilei : MonoBehaviour, IDropHandler
             finish.SetActive(true);
 
             GameManager.Instance.finishMinispiel8 = true;
-            if (StoryContainer.accessStoryPart < 16)
-            {
-                StoryContainer.accessStoryPart = 16;
-                StoryContainer.actTextbaustein += 1;
-                StoryContainer.actLetter = 0;
-                StoryContainer.actText = "";
-            }
+            
         }
     }
 

@@ -81,13 +81,7 @@ public class Minispiel1Controller : MonoBehaviour {
             finished = true;
             storyText.text = "Gewonnen! Du kannst nun mit der Story weiter machen.";
             GameManager.Instance.finishMinispiel0 = true;
-            if (StoryContainer.accessStoryPart < 2)
-            {
-                StoryContainer.accessStoryPart = 2;
-                StoryContainer.actTextbaustein += 1;
-                StoryContainer.actLetter = 0;
-                StoryContainer.actText = "";
-            }
+            
         }
     }
     public enum Counter { TIER, BAUM, STEIN, GETREIDE };

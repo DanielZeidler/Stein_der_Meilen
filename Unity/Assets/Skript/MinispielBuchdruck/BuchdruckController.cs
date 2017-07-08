@@ -61,12 +61,6 @@ public class BuchdruckController : MonoBehaviour {
         finish = true;
         animator.SetBool("finish", true);
         GameManager.Instance.finishMinispiel7 = true;
-        if (StoryContainer.accessStoryPart < 14)
-        {
-            StoryContainer.accessStoryPart = 14;
-            StoryContainer.actTextbaustein += 1;
-            StoryContainer.actLetter = 0;
-            StoryContainer.actText = "";
-        }
+        
     }
 }

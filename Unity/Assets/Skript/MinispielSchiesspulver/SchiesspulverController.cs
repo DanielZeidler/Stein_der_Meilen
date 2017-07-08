@@ -25,14 +25,7 @@ public class SchiesspulverController : MonoBehaviour {
             firework.Play();
             finish = true;
             GameManager.Instance.finishMinispiel5 = true;
-            if (StoryContainer.accessStoryPart < 9)
-            {
-                StoryContainer.accessStoryPart = 9;
-
-                StoryContainer.actTextbaustein += 1;
-                StoryContainer.actLetter = 0;
-                StoryContainer.actText = "";
-            }
+            
         }
     }
 }

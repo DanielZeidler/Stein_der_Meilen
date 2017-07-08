@@ -126,13 +126,7 @@ public class dropzone : MonoBehaviour, IDropHandler
             progress.size = 0;
 
             GameManager.Instance.finishMinispiel4 = true;
-            if (StoryContainer.accessStoryPart < 8)
-            {
-                StoryContainer.accessStoryPart = 8;
-                StoryContainer.actTextbaustein += 1;
-                StoryContainer.actLetter = 0;
-                StoryContainer.actText = "";
-            }
+            
         }
 
         progression += value;

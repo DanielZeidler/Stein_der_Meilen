@@ -74,13 +74,7 @@ public class firebuild : MonoBehaviour {
             finishbutton.SetActive(true);
             count++;
             GameManager.Instance.finishMinispiel1 = true;
-            if (StoryContainer.accessStoryPart < 4)
-            {
-                StoryContainer.accessStoryPart = 4;
-                StoryContainer.actTextbaustein += 1;
-                StoryContainer.actLetter = 0;
-                StoryContainer.actText = "";
-            }
+            
         }
 
         //Textfelder
