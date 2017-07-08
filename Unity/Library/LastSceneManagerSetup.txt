@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Save/StoryScreen.unity
+- path: "Assets/Save/MinigameMu\u0308hle.unity"
   isLoaded: 1
   isActive: 1
