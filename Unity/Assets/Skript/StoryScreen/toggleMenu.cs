@@ -34,15 +34,15 @@ public class toggleMenu : MonoBehaviour {
     {
         if (menuPanel != null)
         {
-            if (toggleMenuText.text == "hide menu")
+            if (toggleMenuText.text == "schließe Menü")
             {
-                toggleMenuText.text = "SHOW MENU";
+                toggleMenuText.text = "öffne Menü";
                 menuPanel.enabled = false;
                 setValue(false);
             }
-            else if(toggleMenuText.text == "SHOW MENU")
+            else if(toggleMenuText.text == "öffne Menü")
             {
-                toggleMenuText.text = "hide menu";
+                toggleMenuText.text = "schließe Menü";
                 menuPanel.enabled = true;
                 setValue(true);
             }
