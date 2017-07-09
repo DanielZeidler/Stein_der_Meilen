@@ -19,7 +19,6 @@ public class CounterMuehle : MonoBehaviour {
 	public bool won() {
 		if (count == 8) {
             GameManager.Instance.finishMinispiel6 = true;
-
             return true;
 		} else {
 			return false;

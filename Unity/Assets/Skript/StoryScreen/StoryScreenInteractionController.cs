@@ -560,10 +560,6 @@ public class StoryScreenInteractionController : MonoBehaviour
                     {
                         startFeedback(true);
                         GameManager.Instance.accessMinispiel10 = true;
-                        if (StoryContainer.accessStoryPart < 19)
-                        {
-                            StoryContainer.accessStoryPart = 20;
-                        }
                     });
                 }
                 else
