@@ -1,4 +1,4 @@
 sceneSetups:
-- path: "Assets/Save/MinigameMu\u0308hle.unity"
+- path: Assets/Save/MinispielBuchdruck.unity
   isLoaded: 1
   isActive: 1

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class letterContainer : MonoBehaviour {
 
-    public char letter;
+    public string letter;
 }
