@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Save/MinispielOverview.unity
+- path: Assets/Save/MinispielStrom.unity
   isLoaded: 1
   isActive: 1

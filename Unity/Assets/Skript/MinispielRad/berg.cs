@@ -17,7 +17,7 @@ public class berg : MonoBehaviour, IDropHandler
         {
             wegberg.SetActive(true);
             wagenmit.SetActive(true);
-            wagenohne.transform.position = new Vector3(613.6133f, 152.1723f, 0f);
+            wagenohne.transform.position = new Vector3(818.4512f, 228.2585f, 0f);
             wagenohne.SetActive(false);
             dragged = true;
         }
