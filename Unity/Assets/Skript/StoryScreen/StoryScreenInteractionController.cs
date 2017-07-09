@@ -13,8 +13,6 @@ using UnityEngine.UI;
 
 public class StoryScreenInteractionController : MonoBehaviour
 {
-    public string begruessung;
-
     public static bool start = true;
 
     public string[] infotexte;
@@ -91,7 +89,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             StoryContainer.Instance.play = false;
             StoryContainer.Instance.pause = false;
-            storyText.text = begruessung;
+            storyText.text = StoryContainer.Instance.begruessung;
             backgroundMusic.Stop();
         }
         else
@@ -166,6 +164,7 @@ public class StoryScreenInteractionController : MonoBehaviour
         {
             storyText.text = StoryContainer.actText.Substring(0, StoryContainer.actLetter);
         }
+        
 
         if (StoryContainer.resetInfoBox)
         {
@@ -477,10 +476,6 @@ public class StoryScreenInteractionController : MonoBehaviour
                     {
                         startFeedback(true);
                         GameManager.Instance.accessMinispiel6 = true;
-                        if (StoryContainer.accessStoryPart < 10)
-                        {
-                            StoryContainer.accessStoryPart = 10;
-                        }
                     });
                 }
                 else
@@ -632,7 +627,7 @@ public class StoryScreenInteractionController : MonoBehaviour
             StoryContainer.interaction = true;
         }
     }
-
+    
     private void startFeedback(bool boolean)
     {
         if (!feedBack)

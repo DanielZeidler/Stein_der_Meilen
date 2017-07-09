@@ -5,7 +5,6 @@ using UnityEngine;
 public class EarthAnimationController : MonoBehaviour
 {
     private Dictionary<string, SpriteRenderer[]> animWrapperMap;
-
     private void Awake()
     {
         animWrapperMap = new Dictionary<string, SpriteRenderer[]>();
@@ -108,7 +107,9 @@ public class EarthAnimationController : MonoBehaviour
         animWrapperMap.Add("windmuehleWrapper", tmp.ToArray());
         tmp = new List<SpriteRenderer>();
 
-        
+        foreach (SpriteRenderer spRen in GameObject.Find("CityWrapper").GetComponentsInChildren<SpriteRenderer>()) tmp.Add(spRen);
+        animWrapperMap.Add("CityWrapper", tmp.ToArray());
+        tmp = new List<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -224,6 +225,8 @@ public class EarthAnimationController : MonoBehaviour
         else if (StoryContainer.actTextbaustein == 20)
         {
             foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
+            foreach (SpriteRenderer spRen in animWrapperMap["CityWrapper"]) spRen.enabled = true; 
+            GameObject.Find("ErdeWrapper").GetComponent<Animator>().SetBool("FinishAnim", true);
             StoryContainer.Instance.rotationEarth = true;
         }
         else
@@ -232,4 +235,5 @@ public class EarthAnimationController : MonoBehaviour
             foreach (SpriteRenderer spRen in animWrapperMap["ErdeAnimWrapper"]) spRen.enabled = false;
         }
     }
+    
 }

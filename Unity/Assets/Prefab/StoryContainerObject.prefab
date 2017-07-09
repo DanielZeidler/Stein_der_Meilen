@@ -39,6 +39,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reset: 0
+  finish: 0
   textbausteine:
   - "Leonardo: Hallo! Mein Name ist Leonardo Da Vinci, meines Zeichens Erfinder, K\xFCnstler
     und Philosoph. Ich komme in der Stunde meiner gr\xF6\xDFten Not zu dir. Die Geschichtsschreibung
@@ -147,6 +148,7 @@ MonoBehaviour:
     und sei sicher, dass die Welt dir zu Dank verpflichtet ist."
   - "Leonardo: Herzlichen Gl\xFCckwunsch mein Freund! Auch du bist durch diese Reise
     ein gro\xDFes St\xFCck Weiser geworden. Ich bin Stolz auf dich."
+  begruessung: Klick auf "Spiel Starten" um das Abenteuer zu beginnen.
   play: 0
   pause: 0
   mute: 0
