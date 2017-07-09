@@ -194,7 +194,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Bringe die Glut an das Ende des Pfades ohne die W\xE4nde, welche aus Salpeter
-    (75%), Schwefel (10%) und Holzkohle besteht, zu ber\xFChren."
+    (75%), Schwefel (10%) und Holzkohle bestehen, zu ber\xFChren."
 --- !u!222 &45688591
 CanvasRenderer:
   m_ObjectHideFlags: 0

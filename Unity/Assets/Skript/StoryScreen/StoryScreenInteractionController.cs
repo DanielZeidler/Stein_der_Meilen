@@ -312,7 +312,7 @@ public class StoryScreenInteractionController : MonoBehaviour
             case 9: voiceText.clip = aC.leonardo_9; break;
             case 10: voiceText.clip = aC.leonardo_10; break;
             case 11: voiceText.clip = aC.leonardo_11; break;
-
+            case 12: voiceText.clip = aC.gutenberg_1; break;
             case 13: voiceText.clip = aC.leonardo_12; break;
             case 14: voiceText.clip = aC.leonardo_13; break;
             case 15: voiceText.clip = aC.lipperhey_1; break;
