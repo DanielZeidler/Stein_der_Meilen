@@ -93,6 +93,9 @@
     <Compile Include="Assets\Skript\GlasMinispiel\dropzone.cs" />
     <Compile Include="Assets\Skript\GlasMinispiel\mouseover.cs" />
     <Compile Include="Assets\Skript\Intro\IntroController.cs" />
+    <Compile Include="Assets\Skript\MinigMühle\CounterMuehle.cs" />
+    <Compile Include="Assets\Skript\MinigMühle\Hovertext.cs" />
+    <Compile Include="Assets\Skript\MinigMühle\MühleDropzone.cs" />
     <Compile Include="Assets\Skript\MinigameSchrift\Counter.cs" />
     <Compile Include="Assets\Skript\MinigameSchrift\schriftDropzone.cs" />
     <Compile Include="Assets\Skript\Minispiel1\CollisionDe.cs" />
@@ -119,6 +122,10 @@
     <Compile Include="Assets\Skript\MinispielSchiesspulver\CollisionTrigger.cs" />
     <Compile Include="Assets\Skript\MinispielSchiesspulver\ExitTrigger.cs" />
     <Compile Include="Assets\Skript\MinispielSchiesspulver\SchiesspulverController.cs" />
+    <Compile Include="Assets\Skript\MinispielStrom\dampf.cs" />
+    <Compile Include="Assets\Skript\MinispielStrom\lampe.cs" />
+    <Compile Include="Assets\Skript\MinispielStrom\leiter.cs" />
+    <Compile Include="Assets\Skript\MinispielStrom\schalter.cs" />
     <Compile Include="Assets\Skript\MinispieleOverview\MinispielAccessController.cs" />
     <Compile Include="Assets\Skript\PointerInitiator.cs" />
     <Compile Include="Assets\Skript\StoryScreen\AudioController.cs" />
