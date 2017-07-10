@@ -6,7 +6,8 @@ public class Counter : MonoBehaviour {
 		
 
 	private int count = 0;
-
+	public GameObject wonText;
+	public GameObject finish;
 
 	public void addCount() {
 		count += 1;
@@ -17,6 +18,8 @@ public class Counter : MonoBehaviour {
 
 	public bool won() {
 		if (count == 6) {
+			wonText.SetActive (true);
+			finish.SetActive (true);
 			return true;
 		} else {
 			return false;
