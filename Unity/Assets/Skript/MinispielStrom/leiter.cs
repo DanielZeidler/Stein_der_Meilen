@@ -27,6 +27,7 @@ public class leiter : MonoBehaviour, IDropHandler
         if (dampf.dampfd && dampf.dampftext && schalter.schalterd && schalter.schaltertext && lampe.lamped && lampe.lampetext && leiter.leitertext)
         {
             finish.SetActive(true);
+            GameManager.Instance.finishMinispiel10 = true;
         }
     }
 

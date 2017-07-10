@@ -36,6 +36,7 @@ public class lampe : MonoBehaviour, IDropHandler
         if (dampf.dampfd && dampf.dampftext && schalter.schalterd && schalter.schaltertext && lamped && lampetext && leiter.leitertext)
         {
             finish.SetActive(true);
+            GameManager.Instance.finishMinispiel10 = true;
         }
     }
 
